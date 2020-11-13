@@ -1,0 +1,4 @@
+- Tematica del sitio
+- Publico objetivo
+- Listado de 5 páginas referentes
+- Listado del grupo con una breve descripción de cada uno

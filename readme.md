@@ -1,6 +1,6 @@
 # Tematica del sitio
 - Ecommerce. Tienda de ropa Unisex. 
-**𝑽𝒊𝒗𝒆 𝒆𝒏 𝒑𝒂𝒛 𝒄𝒐𝒏 𝒕𝒖 esencia,𝒕𝒖𝒔 sentidos, 𝒄𝒐𝒏 𝒕𝒐𝒅𝒐 𝒍𝒐 𝒒𝒖𝒆 𝒓𝒆𝒑𝒓𝒆𝒔𝒆𝒏𝒕𝒂 𝒔𝒆𝒓 tú**
+***𝑽𝒊𝒗𝒆 𝒆𝒏 𝒑𝒂𝒛 𝒄𝒐𝒏 𝒕𝒖 esencia,𝒕𝒖𝒔 sentidos, 𝒄𝒐𝒏 𝒕𝒐𝒅𝒐 𝒍𝒐 𝒒𝒖𝒆 𝒓𝒆𝒑𝒓𝒆𝒔𝒆𝒏𝒕𝒂 𝒔𝒆𝒓 tú***
 
 # Publico objetivo
 - Nuestro negocio esta dirigido a usuarios de distintos géneros, jóvenes de entre 18 a 35 años que estan interesados en una apariencia de vestimenta neutral, eligen aquella ropa que les queda cómoda y les gusta a ellos personalmente más allá de la moda impuesta por el mercado. 
@@ -12,19 +12,19 @@
 - Utilizando una paleta neutral, no definiendo géneros al sitio en general.
 
 # Listado de 5 páginas referentes
--https://shoplamarel.com/
--https://curatedbyshop.com/shop/
--https://www.luciusstore.com/
--https://www.collusion.com/
--http://the-nohant.com/product/
--http://en.iamshop-online.com/
--http://en.iamshop-online.com/
+[enlace en línea](https://shoplamarel.com/)
+[enlace en línea](https://curatedbyshop.com/shop/)
+[enlace en línea](https://www.luciusstore.com/)
+[enlace en línea](https://www.collusion.com/)
+[enlace en línea](http://the-nohant.com/product/)
+[enlace en línea](http://en.iamshop-online.com/)
+[enlace en línea](http://en.iamshop-online.com/)
 
 # Listado del grupo con una breve descripción de cada uno
-ANA VASQUEZ: annie
-PIERINA ROLANDELLI:pieri
-JERONIMO DIETZ: jero
-MELINA ACOSTA: melii
+* ANA VASQUEZ: annie
+* PIERINA ROLANDELLI:pieri
+* JERONIMO DIETZ: jero
+* MELINA ACOSTA: melii
 
 
 # Resúmen MODA UNISEX

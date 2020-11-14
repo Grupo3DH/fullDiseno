@@ -12,13 +12,13 @@
 - Utilizando una paleta neutral, no definiendo géneros al sitio en general.
 
 # Listado de 5 páginas referentes
-[enlace en línea](https://shoplamarel.com/)
-[enlace en línea](https://curatedbyshop.com/shop/)
-[enlace en línea](https://www.luciusstore.com/)
-[enlace en línea](https://www.collusion.com/)
-[enlace en línea](http://the-nohant.com/product/)
-[enlace en línea](http://en.iamshop-online.com/)
-[enlace en línea](http://en.iamshop-online.com/)
+*[SHOP LAMAREL](https://shoplamarel.com/)
+*[CURATEDBYSHOP](https://curatedbyshop.com/shop/)
+*[LUCIUS STORE](https://www.luciusstore.com/)
+*[COLLUSION](https://www.collusion.com/)
+*[THE NOHANT](http://the-nohant.com/product/)
+*[I AM SHOP](http://en.iamshop-online.com/)
+*[YUNIK](https://yunikstore.com/)
 
 # Listado del grupo con una breve descripción de cada uno
 * ANA VASQUEZ: annie

@@ -2,6 +2,7 @@
 - Ecommerce. Tienda de ropa Unisex. 
 - Link prototipo presentación: https://xd.adobe.com/view/a2e61582-b8ff-4068-8fc8-8bd61b75f992-f7b5/?fullscreen
 - Link prototipo development: https://xd.adobe.com/view/a870d205-2f54-459a-ba70-204716902e6f-fd23/
+- Link XD: https://www.dropbox.com/s/poic8gos6ojncxg/fullDiseno.xd?dl=0
 
 ***𝑽𝒊𝒗𝒆 𝒆𝒏 𝒑𝒂𝒛 𝒄𝒐𝒏 𝒕𝒖 esencia,𝒕𝒖𝒔 sentidos, 𝒄𝒐𝒏 𝒕𝒐𝒅𝒐 𝒍𝒐 𝒒𝒖𝒆 𝒓𝒆𝒑𝒓𝒆𝒔𝒆𝒏𝒕𝒂 𝒔𝒆𝒓 tú***
 

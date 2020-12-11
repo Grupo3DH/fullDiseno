@@ -1,6 +1,7 @@
 # Tematica del sitio
 - Ecommerce. Tienda de ropa Unisex. 
-- Link prototipo: https://xd.adobe.com/view/c8c2c920-5171-479a-ac8d-6b49277884f4-9d91/?fullscreen
+- Link prototipo presentación: https://xd.adobe.com/view/a2e61582-b8ff-4068-8fc8-8bd61b75f992-f7b5/?fullscreen
+- Link prototipo development: https://xd.adobe.com/view/a870d205-2f54-459a-ba70-204716902e6f-fd23/
 
 ***𝑽𝒊𝒗𝒆 𝒆𝒏 𝒑𝒂𝒛 𝒄𝒐𝒏 𝒕𝒖 esencia,𝒕𝒖𝒔 sentidos, 𝒄𝒐𝒏 𝒕𝒐𝒅𝒐 𝒍𝒐 𝒒𝒖𝒆 𝒓𝒆𝒑𝒓𝒆𝒔𝒆𝒏𝒕𝒂 𝒔𝒆𝒓 tú***
 
@@ -23,7 +24,7 @@
 *[YUNIK](https://yunikstore.com/)
 
 # Listado del grupo con una breve descripción de cada uno
-* ANA VASQUEZ: annie
+* ANA VASQUEZ: Senior user experience and interface designer. Con 3 bebes gatunos, gamer, 'youtuber', "bass player", fotógrafa amateur.
 * PIERINA ROLANDELLI:pieri
 * JERONIMO DIETZ: jero
 * MELINA ACOSTA: melii

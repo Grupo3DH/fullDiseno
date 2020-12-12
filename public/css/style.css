@@ -1,0 +1,49 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body{
+    background-color: white;
+}
+
+.promo h3{
+    background-color: black;
+    color: white;
+    font-family: Goldman;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    padding: 15px 0px;
+    text-transform: uppercase;
+}
+
+nav{
+    display: flex;
+}
+
+nav ul li a{
+    color: #00636C;
+    background-color: transparent;
+    font-family: Goldman;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    list-style: none;
+}
+
+.img-header{
+    width: 100%;
+}
+
+
+
+.main-container{
+   
+}
+
+.main-container a img{
+    width: 100%;
+}

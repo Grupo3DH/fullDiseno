@@ -50,7 +50,7 @@ nav ul li a{
 
 .footerwhite{
     display: flex;
-    justify-content:center;
+    justify-content:space-between;
     
 }
 
@@ -58,22 +58,26 @@ nav ul li a{
     font-size: 13px;
     padding: 20px;
     background-color: tomato;
+    flex-grow: 1;
 
 }
 .consultas{
     align-items: center;
     background-color:blue;
     padding: 20px;
+    flex-grow: 1;
 }
 .cambios{
     align-items: center;
     background-color:violet;
     padding: 20px;
+    flex-grow: 1;
 }
 .redes{
     align-items: center;
     background-color:lightseagreen;
     padding: 20px;
+    flex-grow: 1;
 }
 
 .footerblack{

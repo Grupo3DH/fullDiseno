@@ -19,8 +19,12 @@ body{
     text-transform: uppercase;
 }
 
-nav{
+
+
+nav ul{
     display: flex;
+    list-style: none;
+    justify-content: flex-end;
 }
 
 nav ul li a{
@@ -32,18 +36,47 @@ nav ul li a{
     text-transform: uppercase;
     text-decoration: none;
     list-style: none;
+    
 }
 
 .img-header{
     width: 100%;
 }
 
-
-
-.main-container{
-   
-}
-
 .main-container a img{
     width: 100%;
+    
+}
+
+.footerwhite{
+    display: flex;
+    justify-content:center;
+    
+}
+
+.cuotas{
+    font-size: 13px;
+    padding: 20px;
+    background-color: tomato;
+
+}
+.consultas{
+    align-items: center;
+    background-color:blue;
+    padding: 20px;
+}
+.cambios{
+    align-items: center;
+    background-color:violet;
+    padding: 20px;
+}
+.redes{
+    align-items: center;
+    background-color:lightseagreen;
+    padding: 20px;
+}
+
+.footerblack{
+    background-color: black;
+    color: white;
 }

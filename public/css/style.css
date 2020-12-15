@@ -4,6 +4,11 @@
     box-sizing: 0;
 }
 
+body{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
 h1 {
     font-family: Goldman;
     font-size: 36px;
@@ -18,6 +23,7 @@ h2 {
 h3 {
     font-family: Goldman;
     font-size: 14px;
+    font-weight: normal;
 }
 
 h4 {
@@ -57,7 +63,7 @@ nav ul {
     justify-content: flex-end;
     list-style: none;
     color: #00636C;
-    background-color: transparent;
+    background-color: white;
     font-family: Goldman;
     font-size: 14px;
     font-weight: 400;
@@ -98,14 +104,21 @@ nav ul li{
 .footerWhite{
     display: flex;
     justify-content:space-between;
-    align-items: center;   
+    align-items: center;
+    justify-content: space-around; 
+    padding-left: 126px;  
+    padding-right: 126px;
+}
+
+footer hr {
+   
 }
 
 .cuotas, .consultas, .cambios,.redes{
     font-size: 13px;
-    
     text-align: center;
-    padding: 14px 126px;
+    padding-top: 14px;
+    padding-bottom: 14px;
 }
 
 .cuotas, .consultas, .cambios,.redes i{

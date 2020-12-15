@@ -4,11 +4,43 @@
     box-sizing: 0;
 }
 
-body{
-    background-color: white;
+h1 {
+    font-family: Goldman;
+    font-size: 36px;
 }
 
-.promo h3{
+h2 {
+    font-family: Goldman;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+h3 {
+    font-family: Goldman;
+    font-size: 14px;
+}
+
+h4 {
+    font-family: Roboto;
+    font-size: 36px;
+}
+
+p {
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 20px;
+    color: #373737;
+}
+
+a {
+    font-family: Goldman;
+    font-weight: normal;
+    font-size: 14px;
+    color: #00636C;
+    text-decoration: none;
+}
+
+.promo{
     background-color: black;
     color: white;
     font-family: Goldman;
@@ -17,17 +49,14 @@ body{
     text-align: center;
     padding: 15px 0px;
     text-transform: uppercase;
+    width: 100%;
 }
 
-
-
-nav ul{
+nav ul {
     display: flex;
     list-style: none;
     justify-content: flex-end;
-}
-
-nav ul li a{
+    z-index: 1;
     color: #00636C;
     background-color: transparent;
     font-family: Goldman;
@@ -36,18 +65,22 @@ nav ul li a{
     text-transform: uppercase;
     text-decoration: none;
     list-style: none;
+    width: 240px;
+    align-items: flex-end;    
+    justify-content: space-between;
     
 }
+
+
+
 
 .img-header{
+    position: absolute;
     width: 100%;
+  
 }
 
-.main-container a img{
-    width: 100%;
-    
-}
-
+ 
 .footerwhite{
     display: flex;
     justify-content:space-between;
@@ -83,4 +116,8 @@ nav ul li a{
 .footerblack{
     background-color: black;
     color: white;
+}
+
+.logoFondoBlanco {
+    fill:#101010;
 }

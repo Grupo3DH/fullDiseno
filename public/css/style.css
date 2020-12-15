@@ -54,9 +54,8 @@ a {
 
 nav ul {
     display: flex;
-    list-style: none;
     justify-content: flex-end;
-    z-index: 1;
+    list-style: none;
     color: #00636C;
     background-color: transparent;
     font-family: Goldman;
@@ -64,58 +63,73 @@ nav ul {
     font-weight: 400;
     text-transform: uppercase;
     text-decoration: none;
-    list-style: none;
-    width: 240px;
-    align-items: flex-end;    
-    justify-content: space-between;
+    list-style: none; 
+    z-index: 1;
+    position: absolute;
+    padding: 26px;
+
+     
+}
+
+nav ul li{
+    padding: 0px 5px;
+    font-size: 16px;
+   
+}
+
+.main-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     
 }
 
+.main-container a img{
+}
 
 
 
 .img-header{
-    position: absolute;
-    width: 100%;
-  
+    position: relative;
+    width: 100%; 
 }
 
  
-.footerwhite{
+.footerWhite{
     display: flex;
     justify-content:space-between;
+    align-items: center;   
+}
+
+.cuotas, .consultas, .cambios,.redes{
+    font-size: 13px;
+    
+    text-align: center;
+    padding: 14px 126px;
+}
+
+.cuotas, .consultas, .cambios,.redes i{
+    font-size: 42px;
+    margin: 13px;
+}
+
+
+
+
+.footerBlack{
+    display: flex;
+    background-color: black;
+    color: white;
+    height: 100px;
     
 }
 
-.cuotas{
-    font-size: 13px;
-    padding: 20px;
-    background-color: tomato;
-    flex-grow: 1;
-
-}
-.consultas{
-    align-items: center;
-    background-color:blue;
-    padding: 20px;
-    flex-grow: 1;
-}
-.cambios{
-    align-items: center;
-    background-color:violet;
-    padding: 20px;
-    flex-grow: 1;
-}
-.redes{
-    align-items: center;
-    background-color:lightseagreen;
-    padding: 20px;
-    flex-grow: 1;
-}
-
-.footerblack{
-    background-color: black;
-    color: white;
+.white{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    list-style: none;
+    
 }
 
 .logoFondoBlanco {

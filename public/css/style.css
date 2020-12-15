@@ -63,7 +63,6 @@ nav ul {
     justify-content: flex-end;
     list-style: none;
     color: #00636C;
-    background-color: white;
     font-family: Goldman;
     font-size: 14px;
     font-weight: 400;
@@ -134,17 +133,96 @@ footer hr {
     background-color: black;
     color: white;
     height: 100px;
+    justify-content: space-between;
+    padding: 0 15px;
     
+}
+
+.iconosFooter{
+    justify-content: space-around;
+    text-align: center;
+       
 }
 
 .white{
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
     list-style: none;
     
+    
+}
+
+.white li{
+    padding: 42px 10px;
 }
 
 .logoFondoBlanco {
     fill:#101010;
+}
+
+/* ======================
+    PRODUCT DETAIL
+===================== */
+
+main .imagenes{
+    display: flex;
+}
+
+main .imagenesPeque{
+    display: flex;
+    flex-direction: column;
+    margin-left:15px;
+}
+
+main .imagenesPeque img{
+    margin-bottom: 15px;
+}
+
+main{
+    display: flex;
+    margin-left: 25px;
+}
+.infoProducto{
+    margin-left: 30px;
+}
+
+.tituloPrecio h1{
+    font-family: Goldman;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.tituloPrecio h4{
+    font-family: Roboto;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.colores{
+    font-family: Goldman;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.colorProducto{
+    font-family: Goldman;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    border: 2px solid black ;
+    padding: 10px 20px ;
+    margin-top: 10px;
+}
+
+.descripcion h2{
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.descripcion p{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    color: #373737;
+    margin-bottom: 40px;
+    width: 606px;
 }

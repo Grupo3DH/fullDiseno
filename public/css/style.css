@@ -179,7 +179,7 @@ main .imagenesPeque img{
 
 main{
     display: flex;
-    margin-left: 25px;
+    
 }
 .infoProducto{
     margin-left: 30px;
@@ -225,4 +225,30 @@ main{
     color: #373737;
     margin-bottom: 40px;
     width: 606px;
+}
+
+select {
+    font-family: Roboto;
+    font-size: 16px;
+    margin: 60px 20px 20px 0px;
+    padding: 10px 20px;
+    border: 1px solid #717171;
+    border-radius: 8px;
+    color: #717171;
+}
+
+.agregarCarrito {
+    font-family: Goldman;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 1px solid #717171;
+    border-radius: 8px;
+    color: #717171;
+    background-color: #00636C;
+    color: white;
+}
+
+.guiaTalles {
+    display: flex;
+   margin-top: 35px;
 }

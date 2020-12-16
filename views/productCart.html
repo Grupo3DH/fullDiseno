@@ -12,31 +12,104 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../public/css/style.css">
 </head>
+
 <body>
-    <main>
-        <header>
-            <div class="promo">
-                <h3>Ejemplo promo 50% descuento en envíos</h3>
-            </div>
-            <a href="#">
-                <img class="logoFondoBlanco" src="../public/img/img-logo.svg" alt="">
-            </a>
+    <header>
+        <div class="promo">
+            <h3>Ejemplo promo 50% descuento en envíos</h3>
+        </div>
+        <div class="imagen">
             <nav>
                 <ul>
                     <li><a href="#"><i class="fa fa-search"></i></a></li>
                     <li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
                     <li><a href="#">Iniciar sesión</a></li>
                 </ul>
-            </nav>        
-        </header>
+    </header>
 
-        <section class=left>
-            <div class="articuloCarrito">
-                <div class="titulos">
-                    <h2></h2>
+    <div class="container">
+        <div class="izquierda">
+            <article class="producto-elegido">
+                <ul>
+                    <li>Articulos</li>
+                    <li>Catidad</li>
+                    <li>Precio</li>
+                    <li>Borrar</li>
+                </ul>
+                <hr>
+                <img src="/public/img/sueterVerde-3.JPG" alt="">
+                <h2>Buzo Verde</h2>
+                <h2>Color: verde militar</h2>
+                <button></button>
+                <h2>$768.00</h2>
+                <i class="fa fa-trash"></i>
+                <br>
+            </article>
+
+            <article class="agregar-elementos">
+                <br>
+                <img src="" alt="">
+                <h2>Buzo Verde</h2>
+                <h2>Color: verde militar</h2>
+                <button></button>
+                <h2>$768.00</h2>
+                <button type="text">Agregar</button>
+                <br>
+                <img src="" alt="">
+                <h2>Buzo Verde</h2>
+                <h2>Color: verde militar</h2>
+                <button></button>
+                <h2>$768.00</h2>
+                <button type="text">Agregar</button>
+                <br>
+                <img src="" alt="">
+                <h2>Buzo Verde</h2>
+                <h2>Color: verde militar</h2>
+                <button></button>
+                <h2>$768.00</h2>
+                <button type="text">Agregar</button>
+                <br>
+            </article>
+            
+            <section class="footerWhite">
+                <div class="cuotas"><i class="fa fa-credit-card"></i>
+                    <h2>Hasta 18 cuotas sin interés</h2>
                 </div>
-            </div>
+                <div class="consultas"><i class="fa fa-whatsapp"></i>
+                    <h2>Consultas</h2>
+                </div>
+                <div class="cambios"><i class="fa fa-retweet"></i>
+                    <h2>Tienes 30 días para cambios</h2>
+                </div>
+                </section>
+            
+        </div>
+        <div class="derecha">
+            <article>
+                <h2>Cupón de descuento</h2>
+                <button type="text">Ingresar código</button>
+                <button type="submit">Aplicar</button>
+            </article>
+            <article>
+                <h2>Tipo de envío</h2>
+                <select type="Seleccionar el tipo de envío" name="Envío" id="">
+                    <option disabled selected>Seleccionar el tipo de envío</option>
+                    <option value="T">Retirar en tienda</option>
+                    <option value="D">Envío a domicilio</option>
+                </select>
+            </article>
+            <article>
+                <ul>
+                    <li>Subtotal</li>
+                    <li>Descuento</li>
+                    <li>Envío</li>
+                    <li>I.V.A.</li>
+                </ul>
+            <br>
+            <h2>Total</h2>
+            </article>
 
-        </section>
-    </main>
+        </div>
+    </div>
 </body>
+</html>

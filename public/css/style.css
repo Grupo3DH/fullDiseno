@@ -46,6 +46,10 @@ a {
     text-decoration: none;
 }
 
+/* ======================
+         INDEX
+===================== */
+
 .promo{
     background-color: black;
     color: white;
@@ -251,4 +255,29 @@ select {
 .guiaTalles {
     display: flex;
    margin-top: 35px;
+}
+
+
+/* ======================
+      PRODUCT CART
+===================== */
+
+.container{
+    display: flex;
+}
+
+.izquierda{
+    background-color: cornflowerblue;
+}
+
+.producto-elegido ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+
+
+.derecha{
+    background-color: darkkhaki;
 }

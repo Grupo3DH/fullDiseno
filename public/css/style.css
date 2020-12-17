@@ -74,7 +74,7 @@ nav ul {
     text-decoration: none;
     list-style: none; 
     z-index: 1;
-    position: absolute;
+    
     padding: 26px;
 
      
@@ -264,20 +264,75 @@ select {
 
 .container{
     display: flex;
+    margin: 0 20px;
+    
 }
 
 .izquierda{
-    background-color: cornflowerblue;
+   width: 70%;
 }
 
-.producto-elegido ul{
+.table-titulo{
+    display: flex;    
+}
+
+.table-titulo .tituloArticulo{
+    margin-right: 35%;
+    margin-left: 5%;
+}
+
+.table-titulo .tituloCantidad{
+    margin-right: 15%;
+}
+
+.table-titulo .tituloPrecio{
+    margin-right: 10%;
+}
+
+.table-titulo .table-titulo{}
+
+.agrega-nosequeponer{
+    margin: 20px;
+}
+
+.producto-elegido{
     display: flex;
-    list-style: none;
     justify-content: space-between;
+    margin: 20px 0;
 }
 
+.producto-elegido .nombre-producto {
+    font-family: Roboto;
+    font-size: 20px;
+    color: #373737;
+    display: inline-grid;
+    padding: 20px;
+}
 
+.producto-elegido .precio {
+    font-family: Roboto;
+    font-size: 20px;
+   
+}
+
+.producto-elegido a {
+    font-size: 30px;
+}
+
+section .agregar-elemento1{
+    display: flex;
+    
+}
+
+section .agregar-elemento2{
+    display: flex;
+}
+
+section .agregar-elemento3{
+    display: flex;
+}
 
 .derecha{
     background-color: darkkhaki;
+    width: 30%;
 }

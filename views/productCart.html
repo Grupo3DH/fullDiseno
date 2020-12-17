@@ -29,7 +29,34 @@
 
     <div class="container">
         <div class="izquierda">
-            <article class="producto-elegido">
+            <section class="table-titulo">
+                <div class="tituloArticulo">
+                    <h2>Articulo</h2>
+                </div>
+                <div class="tituloCantidad">
+                    <h2>Cantidad</h2>
+                </div>
+                <div class="tituloPrecio">
+                    <h2>Precio</h2>
+                </div>
+                <div class="tituloBorrar">
+                    <h2>Borrar</h2>
+                </div>
+            </section>
+            <hr>
+            <section class="producto-elegido">
+
+                <img src="../public/img/sueterVerde-2.png" alt="">
+                <div class="nombre-producto">
+                    <h2>Buzo Verde</h2>
+                    <h2>Color: verde militar</h2>
+                </div>
+                <h2 class="precio">$768.00</h2>
+                <a class="carritoEnCart" href="#"><i class="fa fa-trash"></i></a>
+
+            </section>
+            <hr>
+            <!--<article class="producto-elegido">
                 <ul>
                     <li>Articulos</li>
                     <li>Catidad</li>
@@ -44,33 +71,41 @@
                 <h2>$768.00</h2>
                 <i class="fa fa-trash"></i>
                 <br>
-            </article>
-
-            <article class="agregar-elementos">
-                <br>
-                <img src="" alt="">
-                <h2>Buzo Verde</h2>
-                <h2>Color: verde militar</h2>
-                <button></button>
-                <h2>$768.00</h2>
-                <button type="text">Agregar</button>
-                <br>
-                <img src="" alt="">
-                <h2>Buzo Verde</h2>
-                <h2>Color: verde militar</h2>
-                <button></button>
-                <h2>$768.00</h2>
-                <button type="text">Agregar</button>
-                <br>
-                <img src="" alt="">
-                <h2>Buzo Verde</h2>
-                <h2>Color: verde militar</h2>
-                <button></button>
-                <h2>$768.00</h2>
-                <button type="text">Agregar</button>
-                <br>
-            </article>
-            
+            </article>-->
+            <h2 class="agrega-nosequeponer">Agregá a tu carrito</h2>
+            <hr>
+            <section>
+                <article class="agregar-elemento1">
+                    <br>
+                    <img src="../public/img/coupleHeader-1.jpg" alt="">
+                    <div>
+                        <h2>Buzo Blanco</h2>
+                        <h2>Color: Blanco</h2>
+                    </div>
+                    <h2>$768.00</h2>
+                    <button type="text">Agregar</button>
+                </article>
+                <article class="agregar-elemento2">
+                    <br>
+                    <img src="../public/img/camisaJean-1.jpg" alt="">
+                    <div>
+                        <h2>Camisa Blanca</h2>
+                        <h2>Color: Blanco</h2>
+                    </div>
+                    <h2>$768.00</h2>
+                    <button type="text">Agregar</button>
+                </article>
+                <article>
+                    <article class="agregar-elemento3">
+                        <img src="../public/img/fullOutfit-1.jpg" alt="">
+                        <div>
+                            <h2>Overal</h2>
+                            <h2>Color: Jean</h2>
+                        </div>
+                        <h2>$768.00</h2>
+                        <button type="text">Agregar</button>
+                    </article>
+            </section>
             <section class="footerWhite">
                 <div class="cuotas"><i class="fa fa-credit-card"></i>
                     <h2>Hasta 18 cuotas sin interés</h2>
@@ -81,13 +116,13 @@
                 <div class="cambios"><i class="fa fa-retweet"></i>
                     <h2>Tienes 30 días para cambios</h2>
                 </div>
-                </section>
-            
+            </section>
+
         </div>
         <div class="derecha">
             <article>
                 <h2>Cupón de descuento</h2>
-                <button type="text">Ingresar código</button>
+                <input type="text" placeholder="Inserte código"></input>
                 <button type="submit">Aplicar</button>
             </article>
             <article>
@@ -105,11 +140,30 @@
                     <li>Envío</li>
                     <li>I.V.A.</li>
                 </ul>
-            <br>
-            <h2>Total</h2>
+                <br>
+                <h2>Total</h2>
             </article>
 
         </div>
     </div>
+    <footer>
+        <section class="footerBlack">
+            <img src="../public/img/img-logo.svg" alt="logo de la marca">
+            <div class="iconosFooter">
+                <ul class="white">
+                    <li>
+                        <h3>Términos y Condiciones</h3>
+                    </li>
+                    <li>
+                        <h3>FAQs</h3>
+                    </li>
+                    <li><i class="fa fa-whatsapp"></i></li>
+                    <li><i class="fa fa-instagram"></i></li>
+                    <li><i class="fa fa-facebook"></i></li>
+                </ul>
+            </div>
+        </section>
+    </footer>
 </body>
+
 </html>

@@ -1,13 +1,16 @@
-*{
+/* ======================
+        GENERALES
+===================== */
+
+* {
     margin:0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    margin-left: 25px;
-    margin-right: 25px;
-}
+/* ======================
+      TIPOGRAFIAS
+===================== */
 
 h1 {
     font-family: Goldman;
@@ -47,42 +50,35 @@ a {
 }
 
 /* ======================
-         INDEX
+     HEADER-GENERAL
 ===================== */
 
-.promo{
+.promo {
     background-color: black;
     color: white;
-    font-family: Goldman;
-    font-size: 14px;
-    font-weight: 400;
     text-align: center;
     padding: 15px 0px;
     text-transform: uppercase;
     width: 100%;
 }
+
 nav {
     overflow: hidden;
     display:flex;
     justify-content: flex-end;
+    z-index: 1; 
 }
 
 nav ul {
     display: flex;
     list-style: none;
     color: #00636C;
-    font-family: Goldman;
-    font-size: 14px;
-    font-weight: 400;
     text-transform: uppercase;
     text-decoration: none;
     list-style: none; 
-    z-index: 1;
-    
+    position: absolute;
     padding: 26px;
-
-    
-       
+    z-index: 1;
 }
 
 nav ul li{
@@ -91,80 +87,81 @@ nav ul li{
    
 }
 
-.main-container{
+/* ======================
+         MAIN
+===================== */
+
+
+main {
+    margin: 20px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    
 }
-
-.main-container a img{
-}
-
-.img-header{
-    position: relative;
-    width: 100%; 
-}
-
  
-.footerWhite{
+
+/* ======================
+         FOOTER
+===================== */ 
+
+
+.footerWhite {
     display: flex;
-    justify-content:space-between;
+    flex-direction: column;
+    margin: -20px 20px 20px 20px;
+}
+
+.informacion {
+    display:flex;
+    padding: 14px 50px;
     align-items: center;
-    justify-content: space-around; 
-    padding-left: 126px;  
-    padding-right: 126px;
-}
-
-footer hr {
-   
-}
-
-.cuotas, .consultas, .cambios,.redes{
+    flex-direction: row;
+    justify-content:space-between;
     font-size: 13px;
-    text-align: center;
-    padding-top: 14px;
-    padding-bottom: 14px;
-}
-
-.cuotas, .consultas, .cambios,.redes i{
-    font-size: 42px;
-    margin: 13px;
-}
-
-
-
-
-.footerBlack{
-    display: flex;
-    background-color: black;
-    color: white;
-    height: 100px;
-    justify-content: space-between;
-    padding: 0 15px;
-    
-}
-
-.iconosFooter{
-    justify-content: space-around;
     text-align: center;
        
 }
 
-.white{
+.informacion i {
+    font-size: 42px;
+    margin: 13px;
+}
+
+.footerBlack {
     display: flex;
-    list-style: none;
-    
-    
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    height: 100px;    
+    padding: 0 15px;
+  
 }
 
-.white li{
-    padding: 42px 10px;
+.whiteIcons li{
+    text-align: center;
+    margin: 42px 10px;
 }
 
-.logoFondoBlanco {
-    fill:#101010;
+.whiteIcons {
+    display: flex;
+    list-style: none;  
 }
+
+/* ======================
+        INDEX.HTML
+===================== */ 
+
+
+.img-header {
+    position: relative;
+    width: 100%; 
+    z-index: 0;
+}
+
+.productosIndex a{
+    margin-bottom: 20px;
+}
+
 
 /* ======================
     PRODUCT DETAIL

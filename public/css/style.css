@@ -76,7 +76,7 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 20px 40px;
+    padding: 20px 20px;
     background-color:white;
     justify-content: flex-end;
 }

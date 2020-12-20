@@ -15,6 +15,7 @@
 h1 {
     font-family: Goldman;
     font-size: 36px;
+    font-weight: normal;
 }
 
 h2 {
@@ -37,7 +38,7 @@ h4 {
 p {
     font-family: Roboto;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 18px;
     color: #373737;
 }
 
@@ -50,10 +51,19 @@ a {
 }
 
 /* ======================
-     HEADER-GENERAL
+        MENU 
 ===================== */
 
+.fondoBlancoHeader {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    
+   
+}
 .promo {
+    display:flex;
+    justify-content: center;
     background-color: black;
     color: white;
     text-align: center;
@@ -62,29 +72,33 @@ a {
     width: 100%;
 }
 
-nav {
-    overflow: hidden;
-    display:flex;
+.menuFondoBlanco {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 40px;
+    background-color:white;
     justify-content: flex-end;
-    z-index: 1; 
 }
 
-nav ul {
+.navFondoBlanco {
+    width: 100%;    
+}
+
+.navFondoBlanco ul {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     list-style: none;
     color: #00636C;
     text-transform: uppercase;
     text-decoration: none;
     list-style: none; 
-    position: absolute;
-    padding: 26px;
-    z-index: 1;
+    padding-left: 15px;
 }
 
-nav ul li{
-    padding: 0px 5px;
-    font-size: 16px;
-   
+.navFondoBlanco ul li{
+    padding-left: 15px;  
 }
 
 /* ======================
@@ -111,6 +125,12 @@ main {
     margin: -20px 20px 20px 20px;
 }
 
+hr {
+    height: 0.5px;
+    border-style: none;
+    background-color: #373737;
+}
+
 .informacion {
     display:flex;
     padding: 14px 50px;
@@ -118,8 +138,8 @@ main {
     flex-direction: row;
     justify-content:space-between;
     font-size: 13px;
-    text-align: center;
-       
+    text-align: center; 
+    margin-bottom: 10px;
 }
 
 .informacion i {
@@ -130,16 +150,19 @@ main {
 .footerBlack {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: black;
     color: white;
     height: 100px;    
-    padding: 0 15px;
+    padding: 0 20px;
   
 }
 
 .whiteIcons li{
+    display: flex;
+    list-style: none;
     text-align: center;
-    margin: 42px 10px;
+    margin-left: 15px;
 }
 
 .whiteIcons {
@@ -151,6 +174,30 @@ main {
         INDEX.HTML
 ===================== */ 
 
+.index {
+    overflow: hidden;
+    display:flex;
+    justify-content: flex-end;
+    z-index: 1; 
+}
+
+.index ul {
+    display: flex;
+    list-style: none;
+    color: #00636C;
+    text-transform: uppercase;
+    text-decoration: none;
+    list-style: none; 
+    position: absolute;
+    padding: 26px;
+    z-index: 1;
+}
+
+.index ul li{
+    padding: 0px 5px;
+    font-size: 16px;
+   
+}
 
 .img-header {
     position: relative;
@@ -167,96 +214,109 @@ main {
     PRODUCT DETAIL
 ===================== */
 
-main .imagenes{
+.productDetail {
+    margin-top: 0px;
+    position: relative;
+
+}
+
+.imagenes {
     display: flex;
 }
 
-main .imagenesPeque{
+.imagenesPeque{
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
+}
+
+.imagenesPeque img{
+    margin-bottom: 15px;
     margin-left:15px;
 }
 
-main .imagenesPeque img{
-    margin-bottom: 15px;
-}
-
-main{
-    display: flex;
-    
-}
 .infoProducto{
     margin-left: 30px;
-}
-
-.tituloPrecio h1{
-    font-family: Goldman;
-    font-size: 36px;
-    font-weight: 400;
 }
 
 .tituloPrecio h4{
     font-family: Roboto;
     font-size: 36px;
-    font-weight: 400;
+    font-weight: normal;
 }
 
 .colores{
-    font-family: Goldman;
-    font-size: 16px;
-    font-weight: 400;
+    margin-top: 30px;
 }
 
 .colorProducto{
-    font-family: Goldman;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 2px;
     border: 2px solid black ;
-    padding: 10px 20px ;
+    padding: 10px 0px ;
     margin-top: 10px;
+    width: 186px;
+    text-align: center;
 }
 
 .descripcion h2{
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 10px;
 }
 
 .descripcion p{
-    font-family: Roboto;
-    font-size: 20px;
-    font-weight: 400;
-    color: #373737;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     width: 606px;
+}
+
+.selAgregar {
+    display: flex;
+    flex-direction: row;
 }
 
 select {
     font-family: Roboto;
     font-size: 16px;
-    margin: 60px 20px 20px 0px;
+    margin: 0px 20px 20px 0px;
     padding: 10px 20px;
-    border: 1px solid #717171;
-    border-radius: 8px;
+    border: 1.5px solid #717171;
+    border-radius: 5px;
     color: #717171;
+    height: 50px;
 }
-
 .agregarCarrito {
-    font-family: Goldman;
-    font-size: 16px;
-    padding: 10px 20px;
-    border: 1px solid #717171;
-    border-radius: 8px;
-    color: #717171;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 5px;
     background-color: #00636C;
     color: white;
+    width: 258px;
+    height: 50px;
 }
 
-.guiaTalles {
+.contenidoAgregarCarrito {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.agregarCarrito i{
+    margin-right: 10px;
+}
+
+.productosSimilares {
     display: flex;
-   margin-top: 35px;
+    flex-direction: column;
+    margin-top: 40px;
+    width: 100%;
 }
 
+.imgProdSimilar {
+    margin-top: 20px;
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
 
 /* ======================
       PRODUCT CART

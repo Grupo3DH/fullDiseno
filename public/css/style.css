@@ -401,12 +401,18 @@ section .agregar-elemento3{
       LOGIN
 ===================== */
 
-body .main-login{
-    flex-direction: column;
-    border: 1px solid #707070 ;
-    width: 100%;
+.loginPage{
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.hr-login{
-    width: 100%;
+.loginCard{
+    background-color: white;
+    width: 565px;
+    height: 720px;
+    border: 1px solid #707070;
+    text-align: center;
+    margin-top: 50px;
 }
+

@@ -58,8 +58,9 @@ a {
     display:flex;
     flex-direction: column;
     width: 100%;
-    
-   
+    position: fixed;
+    top: 0;
+
 }
 .promo {
     display:flex;
@@ -215,10 +216,8 @@ hr {
 ===================== */
 
 .productDetail {
-    margin-top: 0px;
-    position: relative;
-
-}
+    margin-top: 120px;
+    }
 
 .imagenes {
     display: flex;

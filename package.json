@@ -2,7 +2,7 @@
   "name": "grupo3-fulldiseno",
   "version": "1.0.0",
   "description": "- Ecommerce. Tienda de ropa Unisex. \r - Link prototipo presentación: https://xd.adobe.com/view/a2e61582-b8ff-4068-8fc8-8bd61b75f992-f7b5/?fullscreen\r - Link prototipo development: https://xd.adobe.com/view/a870d205-2f54-459a-ba70-204716902e6f-fd23/\r - Link XD: https://www.dropbox.com/s/poic8gos6ojncxg/fullDiseno.xd?dl=0",
-  "main": "/src/app.js",
+  "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

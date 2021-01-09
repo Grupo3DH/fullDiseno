@@ -28,7 +28,7 @@
 * ANA VASQUEZ: Senior user experience and interface designer. Con 3 bebes gatunos, gamer, 'youtuber', "bass player", fotógrafa amateur.
 * PIERINA ROLANDELLI:pieri
 * JERONIMO DIETZ: jero
-* MELINA ACOSTA: melii
+* MELINA ACOSTA: licenciada en Adiministración y futura programadora web Full Stack :) , feliz.
 
 
 # Resúmen MODA UNISEX

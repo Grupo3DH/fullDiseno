@@ -27,7 +27,7 @@
 # Listado del grupo con una breve descripción de cada uno
 * ANA VASQUEZ: Senior user experience and interface designer. Con 3 bebes gatunos, gamer, 'youtuber', "bass player", fotógrafa amateur.
 * PIERINA ROLANDELLI:pieri
-* JERONIMO DIETZ: jero
+* JERONIMO DIETZ: futuro programador web Full Stack como dice Melina :) ⚽.
 * MELINA ACOSTA: licenciada en Adiministración y futura programadora web Full Stack :) , feliz.
 
 

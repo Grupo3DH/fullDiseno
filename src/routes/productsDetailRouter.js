@@ -7,5 +7,4 @@ router.get("/productsDetail", function(req,res){
     res.render("../views/productDetail")
 })
 
-
 module.exports = router;

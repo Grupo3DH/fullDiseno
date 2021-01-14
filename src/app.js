@@ -4,12 +4,12 @@ const path = require("path");
 const methodOverride = require("method-override"); // para usar put patch y delete necesitamos esto
 const indexRouter = require("./routes/indexRouter");
 const loginRouter = require("./routes/loginRouter");
-const productsRouter = require("./routes/productsRouter");
+const productsDetailRouter = require("./routes/productsDetailRouter");
 const productCartRouter = require("./routes/productCartRouter");
 
 app.use("/", indexRouter);
 app.use("/", loginRouter);
-app.use("/", productsRouter);
+app.use("/", productsDetailRouter);
 app.use("/", productCartRouter);
 
 app.use(methodOverride("_method")); // para put y delete en la action del form le ponemos action="RUTA?_method=put o delete"

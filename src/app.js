@@ -3,11 +3,7 @@ const app = express();
 const path = require("path");
 const indexRouter = require("./routes/indexRouter");
 
-
-
 app.use("/", indexRouter);
-
-
 
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"views"));  // le indicamos que como motor de vista utilizaremos ejs

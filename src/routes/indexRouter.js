@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router(); // guardo solo la funcionalidad de router de express
 const path = require("path");
-const multer  = require('multer') // para subir avatars o fotos
+const multer  = require('multer'); // para subir avatars o fotos
+const indexController = require("../controllers/indexController");
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -15,9 +16,7 @@ var storage = multer.diskStorage({
   var upload = multer({ storage: storage })
 
 
-router.get("/", function(req,res){
-    res.render("../views/index")
-})
+router.get("/", indexController.index)
 
 
 module.exports = router;

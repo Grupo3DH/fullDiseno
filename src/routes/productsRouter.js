@@ -7,4 +7,8 @@ router.get("/productsDetail", function(req,res){
     res.render("../views/productDetail")
 })
 
+router.get("/productCart", function(req,res){
+    res.render("../views/productCart")
+})
+
 module.exports = router;

@@ -467,17 +467,52 @@ select {
 ===================== */
 
 .loginPage{
-    background-color: transparent;
     display: flex;
+    background-color: red;
     justify-content: flex-end;
+    background-color: transparent;
+    
 }
 
 .loginCard{
     background-color: white;
-    width: 565px;
-    height: 720px;
+    width: 40%;
     border: 1px solid #707070;
     text-align: center;
-    margin-top: 50px;
+    padding-top: 20px;
+    
+}
+
+.formularioIS{
+    font-family: Roboto;
+    color: black;
+    padding: 80px;
+}
+
+.formularioIS input{
+    padding: 10px 30px;
+    border-radius: 3px;
+}
+
+.formularioIS button{
+    color: white;
+    background-color: #00636C;
+    border: 1px solid black;
+    padding: 10px 30px;
+    border-radius: 3px;
+}
+
+.crearCuenta{
+    font-family: Roboto;
+    color: black;
+    padding: 100px;
+}
+
+.crearCuenta button{
+    color: white;
+    background-color: #00636C;
+    border: 1px solid black;
+    padding: 10px 30px;
+    border-radius: 3px;
 }
 

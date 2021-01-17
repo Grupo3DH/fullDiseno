@@ -1,42 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <%- include("./partials/head.ejs") %>
+<%- include("./partials/head.ejs") %>
 
-<body>
-    <div class="loginPage">
-        <div class="loginCard">
-            <div>
-                <h3>Iniciar Sesión</h3>
-            </div>
-             
-            <div class="inputUsuario">
-                <label for="text">Correo Electrónico</label>
-                <input type="text" placeholder="Ingresa tu correo electrónico"></input>
-            </div>
-
-            <br>
-
-            <div class="inputContraseña">
-                <label for="text">Contraseña</label>
-                <input type="text" placeholder="Ingresa tu contraseña"></input>
-            </div>
-            
-            <div>
-                <h3>¿Olvidaste tu contraseña?</h3>
-            </div>
-
-            <br>
-
-            <div>
-                <button>Iniciar Sesión</button>
-            </div>
-
-            <hr class="hr-login">
-            <h2>¿Todavía no tienes cuenta?</h2>
-            <button>Crear una cuenta</button>
+    <body>
+        <div class="promo">
+            <h3>Ejemplo promo 50% descuento en envíos</h3>
         </div>
-    </div>
-</body>
+        <section class="loginPage">
+            <div class="loginCard">
+                <h1>Iniciar Sesión</h1>
+                <section class="formularioIS">
+                
+                    <form action="">
+                        <label for="email">Ingrese su correo electrónico</label><br>
+                        <input type="email" id="email" name="email">
+                    </form>
+                    <form action="">
+                        <label for="password">Ingrese su contraseña</label><br>
+                        <input type="password" id="password" name="password">
+                    </form>
+                    <h3>¿Olvidaste tu contraseña?</h3>
+                    <button>Iniciar Sesión</button>
+                </section>
+
+                <section class="crearCuenta">
+                    <hr>
+                    <h2>¿Todavía no tienes cuenta?</h2>
+                    <button>Crear una cuenta</button>
+                </section>
+            </div>
+        </section>
+    </body>
 
 </html>

@@ -12,6 +12,6 @@ const upload = require("../middlewares/multerRegister"); // tengo que ponerle up
 
 // /user/login
 router.get("/login", registerValidation, userController.login) // faltan las validaciones
-
+router.post("/login", registerValidation, userController.processLogin)
 
 module.exports = router;

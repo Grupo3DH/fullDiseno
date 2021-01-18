@@ -2,15 +2,22 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const methodOverride = require("method-override"); // PARA USAR PUT Y DELETE
+const session = require("express-session");
+const cookieParser = require("cookie-parser");
+
 const indexRouter = require("./routes/indexRouter");
 const userRouter = require("./routes/userRouter");
 const productsRouter = require("./routes/productsRouter");
+
 
 
 app.use("/index", indexRouter); // RECURSO INDEX
 app.use("/user", userRouter); // RECURSO USER
 app.use("/products", productsRouter); // RECURSO PRODUCTS
 
+app.use(cookieParser());
+
+app.use(session({secret:"La banda de Luxo"})); //middleware a nivel de aplicacion
 
 app.use(methodOverride("_method")); // para put y delete en la action del form le ponemos action="RUTA?_method=put o delete"
 

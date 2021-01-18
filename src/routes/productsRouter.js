@@ -3,9 +3,10 @@ const router = express.Router(); // guarda la ejecucion del metodo router de exp
 const path = require("path");
 const productsController = require("../controllers/productsController");
 
+
 router.get("/productAll", productsController.all)
 
-router.get("/productsDetail", productsController.details)
+router.get("/productDetail", productsController.details)
 
 router.get("/productCart", productsController.cart)
 

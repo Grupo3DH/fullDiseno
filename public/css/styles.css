@@ -476,7 +476,7 @@ select {
 
 .loginCard{
     background-color: white;
-    width: 40%;
+    width: 30%;
     border-left: 1px solid #707070;
     text-align: center;
     padding-top: 25px;
@@ -486,36 +486,72 @@ select {
 .formularioIS{
     font-family: Roboto;
     color: black;
-    padding: 80px;
+    padding: 70px;
 }
 
 .formularioIS input{
-    margin: 10px 50px;
-    padding: 10px 50px;
+    margin: 10px 0px;
+    padding: 15px 50px;
     border-radius: 3px;
 }
 
-
+.label{
+    text-align: left;
+}
 
 .formularioIS button{
     color: white;
     background-color: #00636C;
-    border: 1px solid black;
     padding: 10px 30px;
-    border-radius: 3px;
+    padding: 12px 25px;
+    margin: 10px 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 2px;
+    outline: 0;
+    box-shadow: 3px 3px 20px rgb(202, 202, 202);
+    transition: all .2s;
 }
+
+.formularioIS button:hover{
+        transform: scale(1.1); 
+        cursor: pointer;
+
+}
+
+
 
 .crearCuenta{
     font-family: Roboto;
     color: black;
-    padding: 100px;
+    padding: 20px;
+}
+
+.crearCuenta h2{
+    margin: 10px;
 }
 
 .crearCuenta button{
     color: white;
     background-color: #00636C;
-    border: 1px solid black;
     padding: 10px 30px;
-    border-radius: 3px;
+    padding: 12px 25px;
+    margin: 10px 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 2px;
+    outline: 0;
+    box-shadow: 3px 3px 20px rgb(202, 202, 202);
+    transition: all .2s;
+}
+
+.crearCuenta button:hover{
+    transform: scale(1.1); 
+    cursor: pointer;
+
 }
 

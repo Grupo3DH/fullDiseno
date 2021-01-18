@@ -477,9 +477,9 @@ select {
 .loginCard{
     background-color: white;
     width: 40%;
-    border: 1px solid #707070;
+    border-left: 1px solid #707070;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 25px;
     
 }
 
@@ -490,9 +490,12 @@ select {
 }
 
 .formularioIS input{
-    padding: 10px 30px;
+    margin: 10px 50px;
+    padding: 10px 50px;
     border-radius: 3px;
 }
+
+
 
 .formularioIS button{
     color: white;

@@ -462,6 +462,18 @@ select {
     
 }
 
+.agregar-elemento1 {
+    display: flex;
+}
+
+.agregar-elemento2{
+    display: flex;
+ }
+
+.agregar-elemento3{
+    display: flex;
+ }
+
 /* ======================
       LOGIN
 ===================== */

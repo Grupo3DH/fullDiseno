@@ -1,136 +1,143 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <%- include("./partials/head.ejs") %>
+<%- include("./partials/head.ejs") %>
 
-<body>
-    <header class="fondoBlancoHeader">
-        <div class="promo">
-            <h3>Ejemplo promo 50% descuento en envíos</h3>
-        </div>
-        <div class="menuFondoBlanco">
-            <a href="#"><img class="logoDark" src="/img/img-logoDark.svg" alt=""></a>
-            <nav class="navFondoBlanco">
-                <ul>
-                    <li><a href="#"><i class="fa fa-search"></i></a></li>
-                    <li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
-                    <li><a href="#">Iniciar sesión</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <body>
+        <header class="fondoBlancoHeader">
+            <div class="promo">
+                <h3>Ejemplo promo 50% descuento en envíos</h3>
+            </div>
+            <div class="menuFondoBlanco">
+                <a href="#"><img class="logoDark" src="/img/img-logoDark.svg" alt=""></a>
+                <nav class="navFondoBlanco">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                        <li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                        <li><a href="#">Iniciar sesión</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-<main class="shopCart">
-    <div class="izqCarrito"></div>
-         <div class="productosEnCarrito">
-            <section class="tablaTitulos">
-                <h2 class="articulo">Articulo</h2>
-                <h2 class="cantidad">Cantidad</h2>
-                <h2 class="precio">Precio</h2>
-                <h2 class="borrar">Borrar</h2> 
-            </section>
-           
-            <hr>
-           
-            <section class="tablaProductos">
-                <div class="descProdCarrito articulo">
-                    <img src="/img/sueterVerde-2.png" alt="">
-                    <div class="nomColCarrito">
-                        <h3>Buzo Verde</h3>
-                        <h3>Color: verde militar</h3>
+        <main class="shopCart">
+            <div class="izqCarrito"></div>
+            <div class="productosEnCarrito">
+                <section class="tablaTitulos">
+                    <h2 class="articulo">Articulo</h2>
+                    <h2 class="cantidad">Cantidad</h2>
+                    <h2 class="precio">Precio</h2>
+                    <h2 class="borrar">Borrar</h2>
+                </section>
+
+                <hr>
+
+                <section class="tablaProductos">
+                    <div class="descProdCarrito articulo">
+                        <img src="/img/sueterVerde-2.png" alt="">
+                        <div class="nomColCarrito">
+                            <h3>Buzo Verde</h3>
+                            <h3>Color: verde militar</h3>
+                        </div>
                     </div>
-                </div>
-                <div class="selCantidad Cantidad">
-                    <div class="remover">
-                        <h2>-</h2>
+                    <div class="selCantidad Cantidad">
+                        <div class="remover">
+                            <h2>-</h2>
+                        </div>
+                        <div class="vl"></div>
+                        <div class="totalProds">
+                            <p>1</p>
+                        </div>
+                        <div class="vl"></div>
+                        <div class="sumar">
+                            <h2>+</h2>
+                        </div>
                     </div>
-                    <div class="vl"></div>
-                    <div class="totalProds">
-                        <p>1</p>
+                    <h2 class="precio">$768.00</h2>
+                    <i class="borrar fa fa-trash"></i></a>
+                </section>
+
+                <hr>
+
+
+                <section class="sugeridosAgregar">
+                    <div class="tituloAgregar">
+                        <h2>Agregá a tu carrito</h2>
+                        <hr>
                     </div>
-                    <div class="vl"></div>
-                    <div class="sumar">
-                        <h2>+</h2>
+
+                    <div class="productosAgregados">
+
+                        <article class="agregar-elemento1">
+                            <br>
+                            <img src="/img/coupleHeader-1.jpg" alt="">
+                            <div>
+                                <h2>Buzo Blanco</h2>
+                                <h2>Color: Blanco</h2>
+                            </div>
+                            <h2>$768.00</h2>
+                            <button type="text">Agregar</button>
+                        </article>
+
+                        <hr>
+
+                        <article class="agregar-elemento2">
+                            <br>
+                            <img src="/img/camisaJean-1.jpg" alt="">
+                            <div>
+                                <h2>Camisa Blanca</h2>
+                                <h2>Color: Blanco</h2>
+                            </div>
+                            <h2>$768.00</h2>
+                            <button type="text">Agregar</button>
+                        </article>
+                        <hr>
+                        <article>
+                            <article class="agregar-elemento3">
+                                <img src="/img/fullOutfit-1.jpg" alt="">
+                                <div>
+                                    <h2>Overal</h2>
+                                    <h2>Color: Jean</h2>
+                                </div>
+                                <h2>$768.00</h2>
+                                <button type="text">Agregar</button>
+                            </article>
                     </div>
-                </div>
-                <h2 class="precio">$768.00</h2>
-                <i class="borrar fa fa-trash"></i></a>
-            </section>
-         
-            <hr>
-     
-          
-            <section class="sugeridosAgregar">
-                <div class="tituloAgregar">
-                    <h2>Agregá a tu carrito</h2>
-                    <hr>
-                </div>
-                
-                <div class="productosAgregados" class="agregar-elemento1">
-                    <br>
-                    <img src="/img/coupleHeader-1.jpg" alt="">
-                    <div>
-                        <h2>Buzo Blanco</h2>
-                        <h2>Color: Blanco</h2>
-                    </div>
-                    <h2>$768.00</h2>
-                    <button type="text">Agregar</button>
-                </article>
-                <article class="agregar-elemento2">
-                    <br>
-                    <img src="/img/camisaJean-1.jpg" alt="">
-                    <div>
-                        <h2>Camisa Blanca</h2>
-                        <h2>Color: Blanco</h2>
-                    </div>
-                    <h2>$768.00</h2>
-                    <button type="text">Agregar</button>
+                </section>
+
+
+            </div>
+            <div class="derecha">
+                <article>
+                    <h2>Cupón de descuento</h2>
+                    <input type="text" placeholder="Inserte código"></input>
+                    <button type="submit">Aplicar</button>
                 </article>
                 <article>
-                    <article class="agregar-elemento3">
-                        <img src="/img/fullOutfit-1.jpg" alt="">
-                        <div>
-                            <h2>Overal</h2>
-                            <h2>Color: Jean</h2>
-                        </div>
-                        <h2>$768.00</h2>
-                        <button type="text">Agregar</button>
-                    </article>
-            </section>
-          
+                    <h2>Tipo de envío</h2>
+                    <select type="Seleccionar el tipo de envío" name="Envío" id="">
+                        <option disabled selected>Seleccionar el tipo de envío</option>
+                        <option value="T">Retirar en tienda</option>
+                        <option value="D">Envío a domicilio</option>
+                    </select>
+                </article>
+                <article>
+                    <ul>
+                        <li>Subtotal</li>
+                        <li>Descuento</li>
+                        <li>Envío</li>
+                        <li>I.V.A.</li>
+                    </ul>
+                    <br>
+                    <h2>Total</h2>
+                </article>
 
-    </div>
-    <div class="derecha">
-            <article>
-                <h2>Cupón de descuento</h2>
-                <input type="text" placeholder="Inserte código"></input>
-                <button type="submit">Aplicar</button>
-            </article>
-            <article>
-                <h2>Tipo de envío</h2>
-                <select type="Seleccionar el tipo de envío" name="Envío" id="">
-                    <option disabled selected>Seleccionar el tipo de envío</option>
-                    <option value="T">Retirar en tienda</option>
-                    <option value="D">Envío a domicilio</option>
-                </select>
-            </article>
-            <article>
-                <ul>
-                    <li>Subtotal</li>
-                    <li>Descuento</li>
-                    <li>Envío</li>
-                    <li>I.V.A.</li>
-                </ul>
-                <br>
-                <h2>Total</h2>
-            </article>
+            </div>
 
-    </div>
-    
 
-    </main>
+        </main>
 
-    <%- include("./partials/footer.ejs") %>   
-</body>
+        <%- include("./partials/footer.ejs") %>
+    </body>
 
 </html>

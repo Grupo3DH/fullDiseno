@@ -113,6 +113,30 @@ main {
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
+.productosIndex a img{
+    transition: all .2s;
+    position: relative;
+}
+.productosIndex a img:hover{
+    cursor: pointer;
+    transform: scale(1.1); 
+}
+
+.productosIndex h2{
+    opacity: 0;
+    transition: all 450 ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    color: black;
+}
+
+.productosIndex h2:hover{
+    opacity: 1;
+}
  
 
 /* ======================
@@ -196,9 +220,44 @@ hr {
 
 .index ul li{
     padding: 0px 5px;
-    font-size: 16px;
+    font-size: 20px;
    
 }
+
+.index ul li a i {
+    transition: all 2ms;
+}
+
+.index ul li a i:hover{
+    cursor: pointer;
+    transform: scale(1.1); 
+}
+
+.index ul li a{
+    transition: all 2ms;
+}
+
+.index ul li a:hover{
+    cursor: pointer;
+    transform: scale(1.1); 
+}
+
+.index ul input{
+    background-color: transparent;
+    border-radius: 3px;
+
+}
+
+.fixed{
+    overflow: hidden;
+    display:flex;
+    justify-content: flex-end;
+    z-index: 1; 
+    color: #00636C;
+    position: fixed;
+
+}
+
 
 .img-header {
     position: relative;

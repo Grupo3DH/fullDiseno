@@ -126,7 +126,7 @@ a {
 }
 
 .productosIndex article .nombre-precio {
-    padding: 15px;
+    padding: 50px;
     position: absolute;
     text-align: center;
     justify-content: center;
@@ -136,6 +136,7 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 10px;
     
 }
 .productosIndex article .nombre-precio p{
@@ -547,6 +548,7 @@ select {
 
 .agregar-elemento1 {
     display: flex;
+   
 }
 
 .agregar-elemento2{
@@ -556,6 +558,7 @@ select {
 .agregar-elemento3{
     display: flex;
  }
+
 
 /* ======================
       LOGIN

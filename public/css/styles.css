@@ -275,13 +275,25 @@ hr {
 }
 
 .fixed{
-    overflow: hidden;
     display:flex;
     justify-content: flex-end;
     z-index: 1; 
-    color: #00636C;
-    position: fixed;
+    color: white;
+    position: absolute;
+    font-size: 20px;
+    bottom: 0;
+    left: 50%;
+}
 
+.fixed h4{
+    display:flex;
+    justify-content: flex-end;
+    z-index: 1; 
+    color: white;
+    position: absolute;
+    font-size: 14px;
+    bottom: 48px;
+    left: 7%;
 }
 
 
@@ -340,6 +352,11 @@ hr {
     text-align: center;
 }
 
+.colorPorudcto:hover{
+    cursor: pointer;
+    
+}
+
 .descripcion h2{
     margin-top: 30px;
     margin-bottom: 10px;
@@ -376,6 +393,10 @@ select {
     color: white;
     width: 258px;
     height: 50px;
+}
+
+.agregarCarrito:hover{
+    cursor: pointer;
 }
 
 .contenidoAgregarCarrito {
@@ -567,13 +588,13 @@ select {
 
 .loginPage{
     display: flex;
-    background-color: red;
     justify-content: flex-end;
     background-color: transparent;
     
 }
 
 .loginCard{
+    
     background-color: white;
     width: 30%;
     border-left: 1px solid #707070;

@@ -4,29 +4,15 @@
     <%- include("./partials/head.ejs") %>
 
 <body>
-    <header class="fondoBlancoHeader">
-        <div class="promo">
-            <h3>Ejemplo promo 50% descuento en envíos</h3>
-        </div>
-        <div class="menuFondoBlanco">
-            <a href="#"><img class="logoDark" src="/img/img-logoDark.svg" alt=""></a>
-            <nav class="navFondoBlanco">
-                <ul>
-                    <li><a href="#"><i class="fa fa-search"></i></a></li>
-                    <li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
-                    <li><a href="#">Iniciar sesión</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <%- include("./partials/headerGeneral.ejs") %>
     <main class="productDetail">
         <section class="imagenes">
             <img src="/img/sueterVerde-2.JPG" alt="" class="seleccionada">
             <div class="imagenesPeque">
-                <img src="/img/sueterVerde-3.JPG" alt="">
-                <img src="/img/sueterVerde-4.JPG" alt="">
-                <img src="/img/sueterVerde-5.JPG" alt="">
-                <img src="/img/sueterVerde-6.JPG" alt="">
+                <img src="/img/sueterVerde-3.JPG" alt="buzo-verde">
+                <img src="/img/sueterVerde-4.JPG" alt="buzo-verde2">
+                <img src="/img/sueterVerde-5.JPG" alt="buzo-verde3">
+                <img src="/img/sueterVerde-6.JPG" alt="buzo-verde4">
             </div>
         </section>
         <section class="infoProducto">
@@ -36,7 +22,7 @@
             </div>
             <div class="colores">
                 <h2>Colores</h2>
-                <div class=colorProducto><h2>Verde Militar</h2></div>
+                <div class="colorProducto"><h2>Verde Militar</h2></div>
             </div>
             <div class="descripcion">
                 <h2>Descripción</h2>
@@ -46,7 +32,7 @@
             </div>
             <div class="selAgregar">
                 <select name="talle" type="Seleccionar un Talle">
-                    <option disabled selected>Seleccioná un Talle</option>
+                    <option disabled selected>Selecciona un talle</option>
                     <option value="S">Small</option>
                     <option value="M">Medium</option>
                     <option value="L">Large</option>

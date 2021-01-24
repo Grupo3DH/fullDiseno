@@ -3,14 +3,14 @@ const { validationResult } = require("express-validator");
 
 userController = {
     login: function(req,res){
-        res.render("../views/login")
+        res.render("login")
     },
     processLogin: function(req,res){
-        let error = validationResult(req);
-        if (error.isEmpty()){   
-            return res.render("login", {errors: {msg: "Error"}}) // si errores esta vacio registro a la personas
-        } else {
+        let errors = validationResult(req);
+        if (!errors.isEmpty()){   
             return res.render("login", {errors: errors.errors})
+        } else {
+            return res.render("Te logueaste con éxito")
         }
     }
 }

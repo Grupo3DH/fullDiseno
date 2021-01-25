@@ -5,9 +5,18 @@
     <div class="imagen">
         <nav class="index">
             <ul>
-                <input type="search" id="search" placeholder="Search..." />
-                <li><a href="#"><i class="fa fa-search fa-lg"></i></a></li>
-                <li><a href="http://localhost:3000/products/productCart"><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></a></li>
+                <li>
+                    <form action="" method="GET">
+                        <div class="buttom-search">
+                            <input type="search" id="search" placeholder="Buscar..." />
+                        </div>
+                        <div class="icono-search">
+                            <button type="submit"><a href="#"><i class="fa fa-search fa-lg"></i></a></button>
+                        </div>
+                    </form>  //creo que esta mal maquetado
+                </li>
+                <li><a href="http://localhost:3000/products/productCart"><i class="fa fa-shopping-cart fa-lg"
+                            aria-hidden="true"></i></a></li>
                 <li><a href="http://localhost:3000/user/login">Iniciar sesión</a></li>
             </ul>
         </nav>
@@ -15,7 +24,8 @@
             <h4>SCROLL</h4>
             <i class="fa fa-chevron-down fa-3x"></i>
         </div>
-        <a href="http://localhost:3000/index"><img class="img-header" src="/img/img-header.jpg" alt="banner ropa unisex"></a>
-                
+        <a href="http://localhost:3000/index"><img class="img-header" src="/img/img-header.jpg"
+                alt="banner ropa unisex"></a>
+
     </div>
 </header>

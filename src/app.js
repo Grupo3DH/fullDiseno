@@ -31,6 +31,10 @@ app.set("views",path.join(__dirname,"views"));  // LE INDICAMOS QUE COMO MOTOR D
 
 app.use(express.static(path.join(__dirname, '../public'))); // DISPONIBILIZAMOS LA CARPETA PUBLIC
 
+app.use(function(req,res,next){
+    res.status(404).render(__dirname, "not-found")    //ERROR 404
+})
+
 app.listen(3000, function(){
     console.log("El servidor está corriendo en el puerto 3000")
 });  // ponemos el servidor a correr en el puerto 3000

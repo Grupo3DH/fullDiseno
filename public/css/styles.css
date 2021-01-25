@@ -109,6 +109,33 @@ a {
     padding-left: 15px;  
 }
 
+form{
+    display: flex;
+}
+
+.buttom-search, input{
+    font-family: Roboto;
+    padding: 0;
+    margin: 0px 10px;
+    background-color: transparent;
+    box-shadow: #373737;
+}
+
+.buttom-search, input::placeholder{
+    color: #00636C;
+    font-size: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+.icono-search, button{
+    background-color: transparent;
+    border: transparent;
+}
+
+
+
 /* ======================
          MAIN
 ===================== */

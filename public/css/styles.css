@@ -113,13 +113,12 @@ form{
     display: flex;
 }
 
-.buttom-search, input{
+.buttom-search, input[type=text]{
     font-family: Roboto;
-    padding: 0;
-    margin: 0px 10px;
-    background-color: transparent;
-    box-shadow: #373737;
-}
+    margin-right: 5px;
+    margin-left: 5px;
+ 
+  }
 
 .buttom-search, input::placeholder{
     color: #00636C;
@@ -132,6 +131,11 @@ form{
 .icono-search, button{
     background-color: transparent;
     border: transparent;
+
+}
+
+.icono-search, button:hover{
+    cursor: pointer;
 }
 
 
@@ -616,19 +620,24 @@ select {
 .loginPage{
     display: flex;
     justify-content: flex-end;
+    align-content: flex-start;
     background-color: transparent;
-    
 }
 
+
 .loginCard{
+  
     
-    background-color: white;
+    background-color:transparent;
     width: 30%;
     border-left: 1px solid #707070;
     text-align: center;
     padding-top: 25px;
     
+    
 }
+
+
 
 .formularioIS{
     font-family: Roboto;

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include("./partials/head.ejs", {Solapa:"Full Diseño | Login"}) %>
+
+    <body>
+        <%- include("./partials/headerGeneral.ejs") %>
+        
+            <div class="register">
+                <h1>Registrate</h1>
+                <form action="" method="POST">
+                    <div class="formularioRegister">
+                        <label for="imputEmail">Email</label>
+                        <input type="email" name="email" id="imputEmail" class="inputEmail">
+                    </div>
+                    <div class="formularioRegister">
+                        <label for="controlFile">Subí tu Foto</label>
+                        <input type="file" name="foto" id="controlFile" class="inputFoto">
+                    </div>
+                    <div class="formularioRegister">
+                        <label for="inputPassword">Password</label>
+                        <input type="password" name="password" id="inputPassword" class="inputPassword">
+                    </div>
+                    <button type="submit">Confirmar</button>
+                </form>
+            </div>
+    </body>
+
+</html>

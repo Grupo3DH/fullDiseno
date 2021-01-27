@@ -1,8 +1,15 @@
+
+
+
+
 productsController = {
-    all: function(req,res){
+    create: function(req,res){
+        res.render()
+    },
+    showAll: function(req,res){
         res.render("../views/allProducts")
     },
-    details: function(req,res){
+    showDetails: function(req,res){
         res.render("../views/productDetail")
     },
     cart: function(req,res){

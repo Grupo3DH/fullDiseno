@@ -57,15 +57,16 @@ a {
     text-decoration: none;
 }
 
+
+
 /* ======================
-        MENU 
+        MENU General
 ===================== */
 
 .fondoBlancoHeader {
     display:flex;
     flex-direction: column;
     width: 100%;
-    position: fixed;
     top: 0;
 
 }
@@ -109,9 +110,11 @@ a {
     padding-left: 15px;  
 }
 
-form{
-    display: flex;
-}
+/* ======================
+        NAV BAR index
+===================== */
+
+
 
 .buttom-search, input[type=text]{
     font-family: Roboto;
@@ -613,9 +616,9 @@ select {
  }
 
 
-/* ======================
-      LOGIN
-===================== */
+/* ===============================
+    FORMULARIOS LOGIN Y REGISTER
+============================== */
 
 .loginPage{
     display: flex;
@@ -711,3 +714,43 @@ select {
 
 }
 
+/* REGISTER */
+
+.register{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-start;
+    margin: 40px 40px;
+}
+
+.formularioRegister{
+    margin: 20px 0px;
+}
+
+.formularioRegister:first-child{
+    padding-top: 40px;
+}
+
+
+button[type="submit"]{
+    color: white;
+    background-color: #00636C;
+    padding: 10px 30px;
+    padding: 12px 25px;
+    margin: 10px 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 2px;
+    outline: 0;
+    box-shadow: 3px 3px 20px rgb(202, 202, 202);
+    transition: all .2s;
+}
+
+button[type="submit"]:hover{
+        transform: scale(1.1); 
+        cursor: pointer;
+
+}

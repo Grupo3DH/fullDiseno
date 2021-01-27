@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include("./partials/head.ejs") %>
+<%- include("./partials/head.ejs", {Solapa:"Full Diseño | Home"}) %>
 
     <body>
         <%- include("./partials/headerIndex.ejs") %>
@@ -13,17 +13,15 @@
                         <p>$3.400 </p>
                     </div>
                     <a href="#"> <img src="/img/fullOutfit.jpg" alt="fullOutfit"></a>
-
-
                 </article>
 
                 <article>
                     <a href="#">
-                    <div class="nombre-precio">
-                        <h2>BUZO VERDE</h2><br>
-                        <p>$4.400 </p>
-                    </div>
-                     <img src="/img/sueterVerde.jpg" alt="sueterVerde">
+                        <div class="nombre-precio">
+                            <h2>BUZO VERDE</h2><br>
+                            <p>$4.400 </p>
+                        </div>
+                        <img src="/img/sueterVerde.jpg" alt="sueterVerde">
                     </a>
                 </article>
 
@@ -63,7 +61,6 @@
 
             <%- include("./partials/footer.ejs") %>
 
-            <script src="/jsfront.js"></script>
+                <script src="/jsfront.js"></script>
     </body>
-
 </html>

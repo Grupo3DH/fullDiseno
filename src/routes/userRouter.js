@@ -7,8 +7,8 @@ const upload = require("../middlewares/multerRegister"); // tengo que ponerle up
 
 
 // /user/register 
-// router.get("/register", userController.register);
-// router.post("/register", upload.any(), userController.create);
+router.get("/register", userController.register);
+router.post("/register", upload.any(), userController.createUser);
 
 // /user/login
 router.get("/login", userController.login) // faltan las validaciones

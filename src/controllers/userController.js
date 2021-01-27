@@ -1,5 +1,9 @@
 const { validationResult } = require("express-validator");
+const fs = require("fs");
+const path = require("path");
 
+let usuarios = fs.readFileSync(path.join(__dirname,"../database/usuarios.json","utf-8"));
+usuarios = JSON.parse(usuarios);
 
 userController = {
     login: function(req,res){
@@ -12,6 +16,13 @@ userController = {
         } else {
             return res.render("Te logueaste con éxito")
         }
+    },
+    register: function(req,res){
+        res.render("register")
+    },
+    createUser: function(req,res){
+        email: req.body.email,
+        password: req.body.password
     }
 }
     

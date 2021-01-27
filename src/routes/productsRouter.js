@@ -1,14 +1,14 @@
 const express = require("express");
 const router = express.Router(); // guarda la ejecucion del metodo router de express
-const path = require("path");
 const productsController = require("../controllers/productsController");
 
+router.get("/create", productsController.create)
 
-router.get("/productAll", productsController.all)
+router.get("/showAll", productsController.showAll)
 
-router.get("/productDetail", productsController.details)
+router.get("/showDetails", productsController.showDetails)
 
-router.get("/productCart", productsController.cart)
+router.get("/Cart", productsController.cart)
 
 
 

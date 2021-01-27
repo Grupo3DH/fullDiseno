@@ -5,10 +5,14 @@
 
     <body>
         <%- include("./partials/headerGeneral.ejs") %>
-        
+
             <div class="register">
                 <h1>Registrate</h1>
-                <form action="" method="POST">
+                 <form action="" method="POST" enctype="multipart/form-data"> <!-- si no le pongo nada en action quiere decir que esta viajando a /register y el enctype multipartes sirve para cuando tenemos que subir un archivo de tipo file y multer le dice a express que hacer con este tipo de formularios -->
+                    <div class="formularioRegister">
+                        <label for="imputName">Ingresá tu nombre</label>
+                        <input type="text" name="name" id="imputName" class="inputName">
+                    </div>
                     <div class="formularioRegister">
                         <label for="imputEmail">Email</label>
                         <input type="email" name="email" id="imputEmail" class="inputEmail">

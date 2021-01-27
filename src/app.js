@@ -38,3 +38,6 @@ app.use(function(req,res,next){
 app.listen(3000, function(){
     console.log("El servidor está corriendo en el puerto 3000")
 });  // ponemos el servidor a correr en el puerto 3000
+
+
+//Soy jero me estoy logueando en otra pc porque me voy de vacas y me llevo la notebook :) NOMEDENBOLA

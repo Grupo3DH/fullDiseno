@@ -36,8 +36,8 @@ app.set("views",path.join(__dirname,"views"));
 app.use(express.static(path.join(__dirname, '../public'))); 
 // DISPONIBILIZAMOS LA CARPETA PUBLIC
 
-app.use(function(req,res,next){
-    res.status(404).render(__dirname, "not-found")    
+app.use(function(req,res){
+   return res.status(404).render("not-found")    
 }) //ERROR 404
 
 app.listen(3000, function(){

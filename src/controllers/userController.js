@@ -16,31 +16,30 @@ userController = {
         for (i = 0; i < usuarios.length; i++) {
             if (usuarios[i].email == req.body.email) {
                 if (bcrypt.compareSync(req.body.password, usuarios[i].password))
-                  return  res.render(`Hola ${req.body.name}`)
+                    return res.render(`Hola ${req.body.name}`)
             } else {
-               return res.send("los datos ingresados no coinciden")
+                return res.send("los datos ingresados no coinciden")
             }
         }
-
-    //     let errors = validationResult(req);
-    //     if (!errors.isEmpty()) {
-    //         return res.render("login", { errors: errors.errors })
-    //     } else {
-    //         return res.render("Te logueaste con éxito")
-    //     }
-     },
+    },
     register: function (req, res) {
         res.render("register")
     },
     createUser: function (req, res) {
-        usuarios.push({
-            name: req.body.name,
-            email: req.body.email,
-            foto: req.files[0].filename,
-            password: bcrypt.hashSync(req.body.password, 12)
-        })
-        fs.writeFileSync(path.join(__dirname, "../database/usuarios.json"), JSON.stringify(usuarios));
-        res.send("Bienvenidos") // aca podriaponer res.redirect en caso de una ruta ya registrada tipo welcome. 
+        let errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.render("register", { errors: errors.mapped() })
+        } else {
+            usuarios.push({
+                name: req.body.name,
+                email: req.body.email,
+                foto: req.files[0].filename,
+                password: bcrypt.hashSync(req.body.password, 12)
+            }),
+                fs.writeFileSync(path.join(__dirname, "../database/usuarios.json"), JSON.stringify(usuarios, null, 4)),
+                res.send("Bienvenidos") // aca podriaponer res.redirect en caso de una ruta ya registrada tipo welcome. 
+        }
+
     }
 }
 

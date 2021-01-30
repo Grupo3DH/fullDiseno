@@ -8,14 +8,18 @@
 
             <div class="register">
                 <h1>Registrate</h1>
-                 <form action="" method="POST" enctype="multipart/form-data"> <!-- si no le pongo nada en action quiere decir que esta viajando a /register y el enctype multipartes sirve para cuando tenemos que subir un archivo de tipo file y multer le dice a express que hacer con este tipo de formularios -->
+                <form action="" method="POST" enctype="multipart/form-data">
+                    <!-- si no le pongo nada en action quiere decir que esta viajando a /register y el enctype multipartes sirve para cuando tenemos que subir un archivo de tipo file y multer le dice a express que hacer con este tipo de formularios -->
                     <div class="formularioRegister">
                         <label for="imputName">Ingresá tu nombre</label>
                         <input type="text" name="name" id="imputName" class="inputName">
                     </div>
                     <div class="formularioRegister">
                         <label for="imputEmail">Email</label>
-                        <input type="email" name="email" id="imputEmail" class="inputEmail">
+                        <input type="email" name="email" id="imputEmail" class="inputEmail"><br>
+                        <small style="color: red;">
+                            <%= (typeof errors !='undefined' && errors.email) ? errors.email.msg : '' %>
+                        </small>
                     </div>
                     <div class="formularioRegister">
                         <label for="controlFile">Subí tu Foto</label>
@@ -23,7 +27,10 @@
                     </div>
                     <div class="formularioRegister">
                         <label for="inputPassword">Password</label>
-                        <input type="password" name="password" id="inputPassword" class="inputPassword">
+                        <input type="password" name="password" id="inputPassword" class="inputPassword"><br>
+                        <small style="color: red;">
+                            <%= (typeof errors !='undefined' && errors.password) ? errors.password.msg : '' %>
+                        </small>
                     </div>
                     <button type="submit">Confirmar</button>
                 </form>

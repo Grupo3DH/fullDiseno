@@ -10,16 +10,7 @@
                 <h1>Iniciar Sesión</h1>
                 <section class="formularioIS">
                 <div class="label">
-                    <% if (typeof errors != "undefined"){ %>
-                        <p style="color: red;">EEROR</p>
-                        <ul>
-                            <% for(let i=0; i< errors.length;i++){ %>
-                                <li>
-                                    <%=errors[i].msg%>
-                                </li>
-                           <% } %>
-                        </ul>
-                        <% } %>
+                    
                     <form action="/user/login" method="POST">
                         <label for="email">Correo Electrónico:</label><br>
                         <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico">
@@ -36,7 +27,7 @@
                 <section class="crearCuenta">
                     <hr><br>
                     <h2>¿Todavía no tienes cuenta?</h2>
-                    <button>Crear una cuenta</button>
+                    <a href="./register"><button>Crear una cuenta</button></a>
                 </section>
             </div>
         </section>

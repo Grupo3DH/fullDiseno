@@ -8,7 +8,7 @@ const upload = require("../middlewares/multerRegister"); // tengo que ponerle up
 
 // /user/register 
 router.get("/register", userController.register);
-router.post("/register", upload.any(), userController.createUser); //aca vamos a necesitar multer esun middleware a nivel de rutas , no lo necesitamos en toda la aplicacion, es para cuando subimos un file
+router.post("/register", upload.any(), registerValidation, userController.createUser); //aca vamos a necesitar multer esun middleware a nivel de rutas , no lo necesitamos en toda la aplicacion, es para cuando subimos un file, luego de el ponemos express-validator.
 
 // /user/login
 router.get("/login", userController.login) // faltan las validaciones

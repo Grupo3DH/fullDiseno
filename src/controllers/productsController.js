@@ -4,7 +4,16 @@
 
 productsController = {
     create: function(req,res){
-        res.render()
+        res.render("../views/agregarProduct")
+    },
+    newProduct: function(req,res){
+
+    },
+    editProduct: function(req,res){
+
+    },
+    deleteProduct: function(req,res){
+
     },
     showAll: function(req,res){
         res.render("../views/allProducts")
@@ -14,7 +23,7 @@ productsController = {
     },
     cart: function(req,res){
         res.render("../views/productCart")
-    }
+    },
 }
 
 module.exports = productsController;

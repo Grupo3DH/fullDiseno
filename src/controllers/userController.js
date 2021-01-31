@@ -28,7 +28,7 @@ userController = {
     createUser: function (req, res) {
         let errors = validationResult(req);
         if (!errors.isEmpty()) {
-            return res.render("register", { errors: errors.mapped() })
+            return res.render("register", { errors: errors.mapped(), old: req.body })
         } else {
             usuarios.push({
                 name: req.body.name,

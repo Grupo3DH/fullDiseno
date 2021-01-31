@@ -53,7 +53,7 @@ a {
     font-family: Goldman;
     font-weight: normal;
     font-size: 14px;
-    color: #00636C;
+    color:black;
     text-decoration: none;
 }
 
@@ -75,10 +75,13 @@ a {
     justify-content: center;
     background-color: black;
     color: white;
+    font-size: 16px;
     text-align: center;
-    padding: 15px 0px;
+    padding: 10px 0px;
+    padding-left: 60px;
     text-transform: uppercase;
     width: 100%;
+    letter-spacing: 2px;
 }
 
 .menuFondoBlanco {
@@ -126,9 +129,9 @@ a {
   }
 
 .button-search, input::placeholder{
-    color: #00636C;
+    color:black;
     font-size: 16px;
-    padding-top: 5px;
+    
     padding-bottom: 5px;
 }
 
@@ -272,18 +275,18 @@ hr {
 .index ul {
     display: flex;
     list-style: none;
-    color: #00636C;
+    color: black;
     text-transform: uppercase;
     text-decoration: none;
     list-style: none; 
     position: absolute;
-    padding: 26px;
+    padding: 17px;
     z-index: 1;
 }
 
 .index ul li{
     padding: 0px 5px;
-    font-size: 20px;
+    font-size: 16px;
    
 }
 
@@ -338,6 +341,7 @@ hr {
     position: relative;
     width: 100%; 
     z-index: 0;
+   
 }
 
 .productosIndex a{

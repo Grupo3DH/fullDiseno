@@ -3,7 +3,7 @@ const app = express();
 const path = require("path");
 
 const methodOverride = require("method-override"); // PARA USAR PUT Y DELETE
-const session = require("express-session"); //SESSION
+const session = require("express-session"); //SESSION (middleware a nivel de aplicacion(global))
 const cookieParser = require("cookie-parser"); //COOKIES
 
 const indexRouter = require("./routes/indexRouter");

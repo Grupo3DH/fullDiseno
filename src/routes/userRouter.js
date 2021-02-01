@@ -5,6 +5,7 @@ const path = require("path");
 const userController = require("../controllers/userController");
 const registerValidation = require("../validations/registerValidations"); 
 const upload = require("../middlewares/multerRegister"); 
+const middlewareLogin = require("../middlewares/middlewareLogin");
 
 // /user/register 
 router.get("/register", userController.register);
@@ -12,6 +13,6 @@ router.post("/register", upload.any(), registerValidation, userController.create
 
 // /user/login
 router.get("/login", userController.login);
-router.post("/login", registerValidation, userController.processLogin);
+router.post("/login", middlewareLogin, userController.processLogin);
 
 module.exports = router;

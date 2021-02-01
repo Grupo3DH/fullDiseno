@@ -194,6 +194,15 @@ a {
     
 }
 
+.fa-heart{
+    position: absolute;
+    top: 15px;
+    bottom: 0;
+    left: 346px;
+    right: 0;
+    font-size: 20px;
+}
+
 
  
 

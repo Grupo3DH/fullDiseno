@@ -1,4 +1,4 @@
-* {
+*{
     margin:0;
     padding: 0;
     box-sizing: border-box;
@@ -28,7 +28,7 @@ h3 {
 
 h4 {
     font-family: Roboto;
-    font-size: 36px;
+    font-size: 12px;
 }
 
 p {
@@ -167,27 +167,6 @@ a {
 
 .icono-search, button:hover{
     cursor: pointer;
-}
-
-
-
-/* ===============================
-         MEDIA QUERIES
-============================== */
-
-
-@media (min-width: 361px) {
-
-  
-
-}
-
-@media (min-width: 769px) {
-
-}
-
-@media (min-width: 1024px) {
-
 }
 
 
@@ -830,3 +809,156 @@ button[type="submit"]:hover{
 }
 
 
+
+/* ===============================
+         MEDIA QUERIES
+============================== */
+
+
+@media (max-width: 1023px) {
+
+  .index ul input{
+       font-size: 11px;
+       padding-top: 3px;
+  }
+
+  .fixed{
+    bottom: 91px;
+    left: 54%;
+    font-size: 25px;
+  }
+
+  .fixed h4{
+      font-size: 11px;
+  }
+
+  .fa-3x{
+      font-size: 2em;
+      margin-top: 10px;
+  }
+
+}
+
+
+@media (max-width: 910px) {
+
+    h3{
+        font-size: 11px;
+    }
+
+    h2{
+        font-size: 15px;
+    }
+      
+    .index ul input{
+        font-size: 8px;
+        padding-top: 5px;
+   }
+
+   .index ul li a{
+       font-size: 12px;
+   }
+
+   .formularioIS input {
+    margin: 10px 0px;
+    padding: 11px 21px;
+    border-radius: 3px;
+}
+
+   
+}
+
+@media (max-width: 813px) {
+
+    h2{
+        font-size: 13px;
+    }
+
+    .fixed{
+        bottom: 151px;
+    }
+
+    .footerBlack{
+        height: 82px;
+
+    }
+
+    .index ul input{
+        display: none;
+    }
+
+    .h1{
+        width: 37%;
+    }
+
+    .cruz{
+        width: 37%;
+    }
+
+    .loginCard{
+        width: 37%;
+    }
+
+    .IS{
+        width: 37%;
+    }
+
+    .crearCuenta{
+        width: 37%;
+    }
+
+}
+
+@media (max-width: 812px){
+
+.productosIndex{
+    margin: 16px;
+}
+}
+
+@media (max-width: 804px){
+    .productosIndex{
+        margin: 15px;
+    }
+}
+
+@media (max-width: 802px){
+    .productosIndex{
+        margin: 5px;
+    }
+
+    .footerWhite{
+        margin: -20px 10px 10px 11px;
+}
+    }
+
+
+    @media (max-width: 782px){
+        .productosIndex{
+            margin: 0px;
+        }
+
+        .productosIndex article{
+            margin-bottom: 1px;
+        }
+
+        hr{
+            display: none;
+        }
+
+        .footerWhite {
+            margin: -11px -2px -5px -19px;
+        }
+
+    }
+
+
+    @media (max-width: 772px){
+        .productosIndex{
+            margin: -5px;
+        }
+    }
+
+    @media (max-width: 762px){
+       
+    }

@@ -10,7 +10,7 @@ const indexRouter = require("./routes/indexRouter");
 const userRouter = require("./routes/userRouter");
 const productsRouter = require("./routes/productsRouter");
 
-app.use("/index", indexRouter); // RECURSO INDEX
+app.use("/", indexRouter); // RECURSO INDEX
 app.use("/user", userRouter); // RECURSO USER
 app.use("/products", productsRouter); // RECURSO PRODUCTS
 

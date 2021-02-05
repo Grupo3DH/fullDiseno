@@ -1,37 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include("./partials/head.ejs", {Solapa:"Full Diseño | Login"}) %>
+<%- include("./partials/head.ejs", {Solapa:"Login"}) %>
 
     <body>
-        
-        <section class="loginPage">
-            <div class="loginCard">
-                <h1>Iniciar Sesión</h1>
-                <section class="formularioIS">
-                <div class="label">
-                    
-                    <form action="" method="POST">
-                        <label for="email">Correo Electrónico:</label><br>
-                        <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico">
-                    
-                        <label for="password">Constraseña:</label><br>
-                        <input type="password" id="password" name="password" placeholder="Ingrese su contraseña">
-                    </form>
+        <%- include("./partials/headerGeneral.ejs") %>
+            <div class="all">
+                <div class="cruz">
+                    <i class="fa fa-times"></i>
                 </div>
-                    <h3><a href="#">¿Olvidaste tu contraseña?</a></h3>
-                    <button>Iniciar Sesión</button>
-                </section>
+                <h1 class="h1">Iniciar Sesión</h1>
+                <div class="loginCard">
+
+                    <section class="formularioIS">
+                        <div class="label">
+
+                            <form class="formulariologin" action="" method="POST">
+                                <label for="email">Correo Electrónico:</label><br>
+                                <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico">
+
+                                <label for="password">Constraseña:</label><br>
+                                <input type="password" id="password" name="password"
+                                    placeholder="Ingrese su contraseña">
+                            </form>
+                        </div>
+                </div>
+                <div class="IS">
+                    <h2>¿Olvidaste tu contraseña?<h2>
+                    <button type="button">Iniciar Sesión</button>
+                </div>
+
+
 
                 <section class="crearCuenta">
                     <hr><br>
                     <h2>¿Todavía no tienes cuenta?</h2>
                     <a href="./register"><button>Crear una cuenta</button></a>
                 </section>
-            </div>
-        </section>
 
-        
+
+            </div>
+
     </body>
 
 </html>

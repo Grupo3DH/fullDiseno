@@ -1,18 +1,7 @@
-/* ======================
-        GENERALES
-===================== */
-
 * {
     margin:0;
     padding: 0;
     box-sizing: border-box;
-}
-
-main{
-    margin: 20px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
 }
 
 /* ======================
@@ -21,7 +10,7 @@ main{
 
 h1 {
     font-family: Goldman;
-    font-size: 36px;
+    font-size: 29px;
     font-weight: normal;
 }
 
@@ -60,7 +49,151 @@ a {
 
 
 /* ======================
-        MENU General
+       HEADERINDEX
+===================== */ 
+
+.index {
+    display:flex;
+    overflow: hidden;
+    justify-content: flex-end;
+    z-index: 1; 
+}
+
+.index ul {
+    display: flex;
+    list-style: none;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    list-style: none; 
+    position: absolute;
+    padding: 17px;
+    z-index: 1;
+}
+
+.index ul li{
+    padding: 0px 5px;
+    font-size: 10px;
+   
+}
+
+.index ul li a i {
+    transition: all 2ms;
+}
+
+.index ul li a i:hover{
+    cursor: pointer;
+    transform: scale(1.1); 
+}
+
+.index ul li a{
+    transition: all 2ms;
+}
+
+.index ul li a:hover{
+    cursor: pointer;
+    transform: scale(1.1); 
+}
+
+.index ul input{
+    background-color: transparent;
+    border-radius: 3px;
+
+}
+
+.fixed{
+    display:flex;
+    justify-content: flex-end;
+    z-index: 1; 
+    color: white;
+    position: absolute;
+    font-size: 20px;
+    bottom: 0;
+    left: 50%;
+}
+
+.fixed h4{
+    display:flex;
+    justify-content: flex-end;
+    z-index: 1; 
+    color: white;
+    position: absolute;
+    font-size: 14px;
+    bottom: 48px;
+    left: 7%;
+}
+
+
+.img-header {
+    position: relative;
+    width: 100%; 
+    z-index: 0;
+   
+}
+
+.productosIndex a{
+    margin-bottom: 20px;
+}
+
+
+/* ======================
+        NAV BAR INDEX
+===================== */
+
+.formSearch{
+    display: flex;
+}
+
+.button-search, input[type=text]{
+    font-family: Roboto;
+    margin-right: 5px;
+    margin-left: 5px;
+ 
+  }
+
+.button-search, input::placeholder{
+    color:black;
+    font-size: 16px;
+    
+    padding-bottom: 5px;
+}
+
+
+.icono-search, button{
+    background-color: transparent;
+    border: transparent;
+
+}
+
+.icono-search, button:hover{
+    cursor: pointer;
+}
+
+
+
+/* ===============================
+         MEDIA QUERIES
+============================== */
+
+
+@media (min-width: 361px) {
+
+  
+
+}
+
+@media (min-width: 769px) {
+
+}
+
+@media (min-width: 1024px) {
+
+}
+
+
+
+/* ======================
+        HEADER General
 ===================== */
 
 .fondoBlancoHeader {
@@ -68,10 +201,10 @@ a {
     flex-direction: column;
     width: 100%;
     top: 0;
-
 }
+
 .promo {
-    display:flex;
+    
     justify-content: center;
     background-color: black;
     color: white;
@@ -113,38 +246,6 @@ a {
     padding-left: 15px;  
 }
 
-/* ======================
-        NAV BAR index
-===================== */
-
-.formSearch{
-    display: flex;
-}
-
-.button-search, input[type=text]{
-    font-family: Roboto;
-    margin-right: 5px;
-    margin-left: 5px;
- 
-  }
-
-.button-search, input::placeholder{
-    color:black;
-    font-size: 16px;
-    
-    padding-bottom: 5px;
-}
-
-
-.icono-search, button{
-    background-color: transparent;
-    border: transparent;
-
-}
-
-.icono-search, button:hover{
-    cursor: pointer;
-}
 
 
 
@@ -270,92 +371,6 @@ hr {
     list-style: none;  
 }
 
-/* ======================
-        INDEX.HTML
-===================== */ 
-
-.index {
-    overflow: hidden;
-    display:flex;
-    justify-content: flex-end;
-    z-index: 1; 
-}
-
-.index ul {
-    display: flex;
-    list-style: none;
-    color: black;
-    text-transform: uppercase;
-    text-decoration: none;
-    list-style: none; 
-    position: absolute;
-    padding: 17px;
-    z-index: 1;
-}
-
-.index ul li{
-    padding: 0px 5px;
-    font-size: 16px;
-   
-}
-
-.index ul li a i {
-    transition: all 2ms;
-}
-
-.index ul li a i:hover{
-    cursor: pointer;
-    transform: scale(1.1); 
-}
-
-.index ul li a{
-    transition: all 2ms;
-}
-
-.index ul li a:hover{
-    cursor: pointer;
-    transform: scale(1.1); 
-}
-
-.index ul input{
-    background-color: transparent;
-    border-radius: 3px;
-
-}
-
-.fixed{
-    display:flex;
-    justify-content: flex-end;
-    z-index: 1; 
-    color: white;
-    position: absolute;
-    font-size: 20px;
-    bottom: 0;
-    left: 50%;
-}
-
-.fixed h4{
-    display:flex;
-    justify-content: flex-end;
-    z-index: 1; 
-    color: white;
-    position: absolute;
-    font-size: 14px;
-    bottom: 48px;
-    left: 7%;
-}
-
-
-.img-header {
-    position: relative;
-    width: 100%; 
-    z-index: 0;
-   
-}
-
-.productosIndex a{
-    margin-bottom: 20px;
-}
 
 
 /* ======================
@@ -636,22 +651,41 @@ select {
     FORMULARIOS LOGIN Y REGISTER
 ============================== */
 
-.loginPage{
+
+.cruz{
     display: flex;
     justify-content: flex-end;
-    align-content: flex-start;
-    background-color: transparent;
+    border: 1px solid black;
+    width: 30%;
+    padding: 10px; 
+}
+
+.fa-times {
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+.fa-times:hover{
+    transition: all 300ms;
+    transform: rotate(-90deg);
+}
+
+.h1{
+    width: 30%;
+    text-align: center;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 
 
 .loginCard{
-  
     
     background-color:transparent;
     width: 30%;
-    border-left: 1px solid #707070;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
     text-align: center;
-    padding-top: 25px;
+    padding-top: 10px;
     
     
 }
@@ -661,7 +695,9 @@ select {
 .formularioIS{
     font-family: Roboto;
     color: black;
-    padding: 70px;
+    padding: 20px;
+    
+    
 }
 
 .formularioIS input{
@@ -672,25 +708,41 @@ select {
 
 .label{
     text-align: left;
+    font-family: Roboto;
+    
 }
 
-.formularioIS button{
+.formulariologin label input:placeholder{
+    font-size: 10px;
+}
+
+
+.IS{
+    width: 30%;
+    text-align: center;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.IS h2{
+    margin: 10px;
+}
+
+.IS button{
+    
     color: white;
     background-color: #00636C;
     padding: 10px 30px;
-    padding: 12px 25px;
-    margin: 10px 20px;
     font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    border: 0;
     border-radius: 2px;
-    outline: 0;
+    
     box-shadow: 3px 3px 20px rgb(202, 202, 202);
     transition: all .2s;
 }
 
-.formularioIS button:hover{
+.IS button:hover{
         transform: scale(1.1); 
         cursor: pointer;
 
@@ -699,29 +751,31 @@ select {
 
 
 .crearCuenta{
+    width: 30%;
     font-family: Roboto;
     color: black;
     padding: 20px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 
 .crearCuenta h2{
     margin: 10px;
+    text-align: center;
 }
 
 .crearCuenta button{
     color: white;
     background-color: #00636C;
     padding: 10px 30px;
-    padding: 12px 25px;
-    margin: 10px 20px;
     font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    border: 0;
     border-radius: 2px;
-    outline: 0;
     box-shadow: 3px 3px 20px rgb(202, 202, 202);
     transition: all .2s;
+    
+    
 }
 
 .crearCuenta button:hover{
@@ -733,11 +787,15 @@ select {
 /* REGISTER */
 
 .register{
-    display: flex;
-    flex-direction: column;
+    display: grid;
     justify-content: flex-end;
-    align-content: flex-start;
-    margin: 40px 40px;
+    
+    
+}
+
+.register h1{
+    margin-top: 30px;
+    text-align: center;
 }
 
 .formularioRegister{
@@ -770,3 +828,5 @@ button[type="submit"]:hover{
         cursor: pointer;
 
 }
+
+

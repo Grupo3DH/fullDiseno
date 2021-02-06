@@ -630,12 +630,16 @@ select {
     FORMULARIOS LOGIN Y REGISTER
 ============================== */
 
-
+section .all{
+    display: grid;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 1px solid black;
+}
 .cruz{
     display: flex;
     justify-content: flex-end;
-    border: 1px solid black;
-    width: 30%;
+    border-bottom: 1px solid black;  
     padding: 10px; 
 }
 
@@ -650,100 +654,59 @@ select {
 }
 
 .h1{
-    width: 30%;
     text-align: center;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-}
-
-
-.loginCard{
-    
-    background-color:transparent;
-    width: 30%;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    text-align: center;
-    padding-top: 10px;
-    
+    margin: 20px;
     
 }
-
 
 
 .formularioIS{
-    font-family: Roboto;
-    color: black;
-    padding: 20px;
+    margin: 0px 30%;
+    background-color: #eaeaea;
+    border: 1px solid black;
+    font-family: Goldman;
+    text-align: center;
+       
+}
+
+
+.formularioIS input{
+    
+    padding: 10px 40px;
+    border-radius: 3px;
     
     
 }
 
-.formularioIS input{
-    margin: 10px 0px;
-    padding: 15px 50px;
-    border-radius: 3px;
+.formularioIS input::placeholder{
+    
+    color: #928f8f;
+font-size: 12px;
+text-align: center;
+    
+    
 }
 
 .label{
-    text-align: left;
-    font-family: Roboto;
+    margin: 10px 60px;
+    font-family: Goldman;
+    
     
 }
 
-.formulariologin label input:placeholder{
-    font-size: 10px;
-}
-
-
 .IS{
-    width: 30%;
     text-align: center;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
 }
 
 .IS h2{
     margin: 10px;
-}
-
-.IS button{
-    
-    color: white;
-    background-color: #00636C;
-    padding: 10px 30px;
-    font-size: 12px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border-radius: 2px;
-    
-    box-shadow: 3px 3px 20px rgb(202, 202, 202);
-    transition: all .2s;
-}
-
-.IS button:hover{
-        transform: scale(1.1); 
-        cursor: pointer;
-
-}
-
-
-
-.crearCuenta{
-    width: 30%;
-    font-family: Roboto;
-    color: black;
-    padding: 20px;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-}
-
-.crearCuenta h2{
-    margin: 10px;
+    font-family: Goldman;
     text-align: center;
 }
 
-.crearCuenta button{
+.IS button{
+    margin: 20px;
+    font-family: Goldman;
     color: white;
     background-color: #00636C;
     padding: 10px 30px;
@@ -752,59 +715,98 @@ select {
     text-transform: uppercase;
     border-radius: 2px;
     box-shadow: 3px 3px 20px rgb(202, 202, 202);
-    transition: all .2s;
-    
-    
 }
 
-.crearCuenta button:hover{
-    transform: scale(1.1); 
+.IS button:hover{
+        cursor: pointer;
+        background-color: #048591;
+
+}
+
+.crearCuenta{
+    margin: 0px 30%;
+    text-align: center;
+    background-color: #eaeaea;
+    border: 1px solid black;
+}
+.crearCuenta h2{
+    text-align: center;
+    font-family: Goldman;
+    margin: 10px;
+}    
+
+.crearCuenta a button{
+    margin: 20px;
+    font-family: Goldman;
+    color: white;
+    background-color: #00636C;
+    padding: 10px 30px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    box-shadow: 3px 3px 20px rgb(202, 202, 202);
+}
+
+.crearCuenta a button:hover{
     cursor: pointer;
+        background-color: #048591;
 
 }
 
 /* REGISTER */
 
 .register{
-    display: grid;
-    justify-content: flex-end;
-    
-    
-}
-
-.register h1{
-    margin-top: 30px;
+    margin: 0px 30%;
+    background-color: #eaeaea;
+    border: 1px solid black;
+    font-family: Goldman;
     text-align: center;
-}
-
-.formularioRegister{
-    margin: 20px 0px;
-}
-
-.formularioRegister:first-child{
-    padding-top: 40px;
+    text-align: center;
+    
+    
 }
 
 
-button[type="submit"]{
+.formularioRegister input{
+    
+    padding: 5px 40px;
+    border-radius: 3px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    
+    
+}
+.formularioRegister input::placeholder{
+color: #928f8f;
+font-size: 12px;
+text-align: center;
+
+}
+
+.formularioRegister label{
+    margin: 10px 60px;
+    font-family: Goldman;
+    
+    
+}
+
+.register form button{
+    margin: 20px;
+    font-family: Goldman;
     color: white;
     background-color: #00636C;
     padding: 10px 30px;
-    padding: 12px 25px;
-    margin: 10px 20px;
     font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    border: 0;
     border-radius: 2px;
-    outline: 0;
     box-shadow: 3px 3px 20px rgb(202, 202, 202);
-    transition: all .2s;
 }
 
-button[type="submit"]:hover{
-        transform: scale(1.1); 
-        cursor: pointer;
+.register form button:hover{
+    cursor: pointer;
+        background-color: #048591;
 
 }
 
@@ -895,7 +897,7 @@ button[type="submit"]:hover{
         width: 37%;
     }
 
-    .loginCard{
+    .formularioIS{
         width: 37%;
     }
 

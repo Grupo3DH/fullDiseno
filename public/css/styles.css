@@ -663,7 +663,9 @@ section .all{
 .formularioIS{
     margin: 0px 30%;
     background-color: #eaeaea;
-    border: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
     font-family: Goldman;
     text-align: center;
        
@@ -727,12 +729,14 @@ text-align: center;
     margin: 0px 30%;
     text-align: center;
     background-color: #eaeaea;
-    border: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
 }
 .crearCuenta h2{
     text-align: center;
     font-family: Goldman;
-    margin: 10px;
+    
 }    
 
 .crearCuenta a button{

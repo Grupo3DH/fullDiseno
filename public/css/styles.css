@@ -639,7 +639,7 @@ section .all{
 .cruz{
     display: flex;
     justify-content: flex-end;
-    border-bottom: 1px solid black;  
+      
     padding: 10px; 
 }
 

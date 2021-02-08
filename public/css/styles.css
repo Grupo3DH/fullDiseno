@@ -357,7 +357,8 @@ hr {
 ===================== */
 
 .productDetail {
-    margin-top: 120px;
+    display: flex;
+    margin-left: 20px;
     }
 
 .imagenes {
@@ -441,6 +442,7 @@ select {
 
 .agregarCarrito:hover{
     cursor: pointer;
+    background-color: #048591;
 }
 
 .contenidoAgregarCarrito {
@@ -455,15 +457,20 @@ select {
 
 .productosSimilares {
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
+    flex-wrap: wrap;
     margin-top: 40px;
     width: 100%;
+    margin-left: 20px;
+    
 }
 
 .imgProdSimilar {
-    margin-top: 20px;
-    display:flex;
+    display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
@@ -812,6 +819,11 @@ text-align: center;
     cursor: pointer;
         background-color: #048591;
 
+}
+
+
+.error{
+    width:100%;
 }
 
 

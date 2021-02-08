@@ -22,6 +22,7 @@
                         <small style="color: red;">
                             <%= (typeof errors !='undefined' && errors.email) ? errors.email.msg : '' %>
                         </small>
+                        <br>
                         <label for="controlFile">Subí tu Foto</label>
                         <br>
                         <input type="file" name="foto" id="controlFile" class="inputFoto">
@@ -32,6 +33,7 @@
                         <small style="color: red;">
                             <%= (typeof errors !='undefined' && errors.password) ? errors.password.msg : '' %>
                         </small>
+                        <br>
                         <label for="inputPassword">Confirma tu contraseña:</label>
                         <br>
                         <input type="password" name="password" id="inputPassword" placeholder="Confirma tu contraseña"><br>

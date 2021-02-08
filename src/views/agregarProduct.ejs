@@ -1,51 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("./partials/head.ejs", {Solapa:"Agregar"}) %>
+    <%- include("./partials/head.ejs", {Solapa: "Agregar"}) %>
 <body>
+<%- include("./partials/headerGeneral.ejs") %>
     <div class="agregarProducto">
-        <h1>Agregar producto</h1>
-        <form method="post" action="/products/create">
-            <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input required id="nombre" placeholder="Nombre del producto" class="form-control" type="text"
-                    name="nombre">
+        
+        <form class="agregarform" method="POST" action="/products/create">
+            <h1 class="h1">Agregar producto</h1>
+            <div class="agregarProducto">
+                <label class="label" for="nombre">Nombre:</label>
+                <br>
+                <input required id="nombre" placeholder="Nombre del producto"  type="text" name="nombre"> <!-- //si puse name en user cambia? -->
             </div>
-            <div class="form-group">
-                <label for="descripcion">Descripción</label>
-                <input required id="descripcion" placeholder="Descripcion del producto" class="form-control" type="text"
-                    name="descripcion">
+            <div class="agregarProductodesc">
+                <label class="label" for="descripcion">Descripción:</label>
+                <br>
+                <input required id="descripcion" placeholder="Descripcion del producto" type="text" name="descripcion">
             </div>
-            <div class="form-group">
-                <label for="imagen">Imágen</label>
-                <input required id="imagen" placeholder="Imagen del producto" class="form-control" type="file"
-                    name="imagen">
+            <div class="agregarProducto">
+                <label class="label"for="imagen">Imágen:</label>
+                <br>
+                <input required id="imagen" placeholder="Imagen del producto" type="file" name="imagen">
             </div>
-            <div class="form-group">
-                <label for="categoria">Categoria</label>
-                <input required id="categoria" placeholder="Categoria del producto" class="form-control" type="text"
-                    name="categoria">
+            <div class="agregarProducto">
+                <label class="label" for="categoria">Categoria:</label>
+                <br>
+                <input required id="categoria" placeholder="Categoria del producto" type="text" name="categoria">
             </div>
-            <div class="form-group">
+            <div class="agregarProducto">
+                <label class="label" for="talle">Selecciona un talle:</label>
+                <br>
                 <select name="talle" type="Seleccionar un Talle">
-                    <option disabled selected>Selecciona un talle</option>
                     <option value="S">Small</option>
                     <option value="M">Medium</option>
                     <option value="L">Large</option>
                 </select>
             </div>
-            <div class="form-group">
-                <label for="color">Color</label>
-                <input required id="color" placeholder="Color del producto" class="form-control" type="color"
-                    name="color">
+            <div class="agregarProducto">
+                <label class="label" for="color">Color:</label>
+                <br>
+                <input required id="color" placeholder="Color del producto" type="color" name="color">
             </div>
-            <div class="form-group">
-                <label for="precio">Precio</label>
-                <input required id="precio" placeholder="Precio del producto" class="form-control" type="number"
-                    name="precio">
+            <div class="agregarProducto">
+                <label class="label" for="precio">Precio:</label>
+                <br>
+                <input required id="precio" placeholder="Precio del producto" type="number" name="precio">
             </div>
-            <div class="form-group">
-                <button class="success">Guardar</button>
-                <a href="#" class="volver">Volver</a>
+            <div class="IS">
+                <button type="button">Guardar</button>
+                <button type="reset">Borrar</button>
+                <button type="edit">Editar</button>
+                
             </div>
         </form>
     </div>

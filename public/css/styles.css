@@ -820,11 +820,61 @@ text-align: center;
         background-color: #048591;
 
 }
-
+/* ===============================
+         PAGE NOT FOUND
+============================== */
 
 .error{
     width:100%;
 }
+
+/* ===============================
+         AGREGAR PRODUCTO
+============================== */
+
+
+
+.agregarProducto{
+    
+    background-color: #eaeaea;  
+    font-family: Goldman;
+    text-align: center;
+    text-align: center;
+}
+
+
+
+.agregarform{
+    border: 1px solid black;
+}
+
+.agregarProducto input{
+    padding: 5px 76px;
+    border-radius: 3px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.agregarProductodesc input{
+    padding: 27px 76px;
+    border-radius: 3px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.agregarProducto input::placeholder{
+    color: #928f8f;
+    font-size: 12px;
+    text-align: center;
+    
+    }
+
+.agregarProducto .label{
+        margin: 10px 60px;
+        font-family: Goldman;
+        
+        
+    }
 
 
 

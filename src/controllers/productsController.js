@@ -18,7 +18,13 @@ productsController = {
 
     },
     deleteProduct: function(req,res){
+            // db.Producto.destroy({
+            //     where: {
+            //         id: req.params.id
+            //     }
+            // }).then(function(){
 
+            // })
     },
     showAll: function(req,res){
         res.render("../views/allProducts")
@@ -37,6 +43,18 @@ productsController = {
     cart: function(req,res){
         res.render("../views/productCart")
     },
+    // search: function(req,res){
+    //    // db.Producto.findAll({
+    //        where: {
+     //   tittle: {[db.Sequelize.Op.like]: "%" + req.query.search + "%",}
+
+    //        }
+    //    }).then(function(listado){
+     //   if(listado.lenght != 0)  ESTO LO TENEMOS QUE HACER EN LA VISTA
+//               return res.send(listado)
+    //     })
+    //    
+    // }
 }
 
 module.exports = productsController;

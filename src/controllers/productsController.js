@@ -15,6 +15,9 @@ productsController = {
       //  })
     },
     editProduct: function(req,res){
+        res.render("../views/editarProduct")
+    },
+    updateProduct: function(req,res){
 
     },
     deleteProduct: function(req,res){
@@ -43,6 +46,9 @@ productsController = {
     cart: function(req,res){
         res.render("../views/productCart")
     },
+    search: function(req,res){
+
+    }
     // search: function(req,res){
     //    // db.Producto.findAll({
     //        where: {

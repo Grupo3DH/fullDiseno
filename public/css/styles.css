@@ -172,27 +172,32 @@ a {
         HEADER General
 ===================== */
 
-.hanger{
-    width: 5%;
-    margin-left: 30px;
+.productos{
+    display: inline-block;
     position: absolute;
+    top: 40px;
+    left: 2vw;
     z-index: 1;
+}
+
+.productos h4{
+    display: inline-block; 
+   
+}
+
+.hanger{
+    display: inline-block;
+    
+
 }
 
 .hanger:hover{
     cursor: pointer;
 }
 
-.productos{
-    width: 5%;
-    margin-left: 30px;
-    position: absolute;
-    z-index: 1;
-    margin-top: 60px;
-}
-.productos:hover{
-    cursor: pointer;
-}
+
+
+
 
 .fondoBlancoHeader {
     display:flex;
@@ -370,6 +375,12 @@ hr {
     display: flex;
     list-style: none;  
 }
+
+.iconosFooter {
+    display: flex;
+    justify-content: flex-end;
+}
+
 
 
 

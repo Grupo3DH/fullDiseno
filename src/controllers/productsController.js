@@ -21,7 +21,7 @@ productsController = {
 
     },
     deleteProduct: function(req,res){
-            // db.Producto.destroy({
+            // db.Producto.update({
             //     where: {
             //         id: req.params.id
             //     }

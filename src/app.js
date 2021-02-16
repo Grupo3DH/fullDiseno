@@ -10,6 +10,8 @@ const indexRouter = require("./routes/indexRouter");
 const userRouter = require("./routes/userRouter");
 const productsRouter = require("./routes/productsRouter");
 
+let port = process.env.PORT || 3000;
+
 app.use("/", indexRouter); // RECURSO INDEX
 app.use("/user", userRouter); // RECURSO USER
 app.use("/products", productsRouter); // RECURSO PRODUCTS
@@ -38,6 +40,6 @@ app.use(function(req,res){
    return res.status(404).render("not-found")    
 }) //ERROR 404
 
-app.listen(3000, function(){
-    console.log("El servidor está corriendo en el puerto 3000")
+app.listen(port, function(){
+    console.log(`El servidor está corriendo en el puerto ${port}`)
 });  // ponemos el servidor a correr en el puerto 3000

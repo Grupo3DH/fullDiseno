@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const bcrypt = require("bcrypt"); // hashea la password
+const bcrypt = require("bcryptjs"); // hashea la password
 const { validationResult } = require("express-validator");
 
 

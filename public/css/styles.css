@@ -308,6 +308,15 @@ a {
     
 }
 
+.nuevo{
+    position: absolute;
+    top: 17px;
+    bottom: 0;
+    left: 268px;
+    right: 0;
+    font-size: 14px;
+}
+
 
 
  
@@ -754,7 +763,7 @@ section .all{
 
 
 .formularioIS{
-    margin: 0px 30%;
+    
     background-color: #eaeaea;
     border-right: 1px solid black;
     border-left: 1px solid black;
@@ -819,7 +828,7 @@ text-align: center;
 }
 
 .crearCuenta{
-    margin: 0px 30%;
+    
     text-align: center;
     background-color: #eaeaea;
     border-left: 1px solid black;
@@ -854,7 +863,7 @@ text-align: center;
 /* REGISTER */
 
 .register{
-    margin: 0px 30%;
+    
     background-color: #eaeaea;
     border: 1px solid black;
     font-family: Goldman;
@@ -969,249 +978,192 @@ text-align: center;
 ============================== */
 
 
-@media (max-width: 1023px) {
+@media(max-width: 1200px) {
 
-  .index ul input{
-       font-size: 11px;
-       padding-top: 3px;
-  }
-
-  .fixed{
-    bottom: 91px;
-    left: 54%;
-    font-size: 25px;
-  }
-
-  .fixed h4{
-      font-size: 11px;
-  }
-
-  .fa-3x{
-      font-size: 2em;
-      margin-top: 10px;
-  }
-
-}
-
-
-@media (max-width: 910px) {
-
-    h3{
-        font-size: 11px;
-    }
-
-    h2{
-        font-size: 15px;
-    }
-      
     .index ul input{
-        font-size: 8px;
-        padding-top: 5px;
-   }
-
-   .index ul li a{
-       font-size: 12px;
-   }
-
-   .formularioIS input {
-    margin: 10px 0px;
-    padding: 11px 21px;
-    border-radius: 3px;
-}
-
-   
-}
-
-@media (max-width: 813px) {
-
-    h2{
-        font-size: 13px;
+         font-size: 11px;
+         padding-top: 3px;
     }
-
+  
     .fixed{
-        bottom: 151px;
-    }
-
-    .footerBlack{
-        height: 82px;
-
-    }
-
-    .index ul input{
         display: none;
     }
-
-    .h1{
-        width: 37%;
-    }
-
-    .cruz{
-        width: 37%;
-    }
-
-    .formularioIS{
-        width: 37%;
-    }
-
-    .IS{
-        width: 37%;
-    }
-
-    .crearCuenta{
-        width: 37%;
-    }
-
-}
-
-@media (max-width: 812px){
-
-.productosIndex{
-    margin: 16px;
-}
-}
-
-@media (max-width: 804px){
-    .productosIndex{
-        margin: 15px;
-    }
-}
-
-@media (max-width: 802px){
-    .productosIndex{
-        margin: 5px;
-    }
-
-    .footerWhite{
-        margin: -20px 10px 10px 11px;
-}
-    }
-
-
-    @media (max-width: 782px){
-        .productosIndex{
-            margin: 0px;
-        }
-
-        .productosIndex article{
-            margin-bottom: 1px;
-        }
-
-        hr{
-            display: none;
-        }
-
-        .footerWhite {
-            margin: -11px -2px -5px -19px;
-        }
-
-    }
-
-
-    @media (max-width: 772px){
-        .productosIndex{
-            margin: -5px;
-        }
-    }
-
-    @media (max-width: 762px){
-       
-    }
-
-
-    @media (max-width: 660px){
-
-        .fa-3x, .fixed h4{
-            display: none;
-        }
-       .productos{
-        margin-top: 34px;
-        font-size: 7px;
-        margin-left: 27px;
-       }
-
-       h2{
-           font-size: 11px;
-       }
-    }
-
-
-    @media (max-width: 660px){
-    
-    .img-header{
-        position:initial;
-    }
-
-    .informacion i {
-        font-size: 31px;
-        
-    }
-
-    .informacion{
-        padding: 5px 18px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    h2{
-        font-size: 10px;
-    }
-
-    .promo{
-        padding-left: 0px;
-    }
-
-    h3{
-        font-size: 10px;
-        letter-spacing: 1px;
-    }
-
-    .hanger {
-        width: 9%;
-        margin-left: 17px;
-    }
-
-    .productos{
-        margin-top: 30px;
-        font-size: 7px;
-        margin-left: 13px;
-    }
-
-    .index ul{
-        padding: 2px;
-    }
-
-    .index ul li a {
-        font-size: 7px;
-        
-    }
-
-    .fa{
-        display: initial;
-    }
-
-    .whiteIcons {
-        display: initial;
-       
-    }
-
-    .whiteIcons li {
-        display: initial;
-    }
-
-    .fa-3x{
+  
+    .fixed h4{
         display: none;
     }
-
-    .iconosFooter {
-        display: flex;
-        justify-content: flex-end;
+  }
+  
+  
+  @media(max-width: 910px) {
+    .fixed{
+        display: none;
     }
-   
-
-    h3 {
-       
-        margin-top: 0px;
-    }
+  
+      h3{
+          font-size: 11px;
+      }
+  
+      h2{
+          font-size: 15px;
+      }
+        
+      .index ul input{
+          font-size: 8px;
+          padding-top: 5px;
+     }
+  
+     .index ul li a{
+         font-size: 12px;
+     }
+  
+     .formularioIS input {
+      margin: 10px 0px;
+      padding: 11px 21px;
+      border-radius: 3px;
+  }
+  
+     
+  }
+  
+@media(max-width: 813px) {
+  
+      h2{
+          font-size: 13px;
+      }
+  
+      .fixed{
+          bottom: 151px;
+      }
+  
+      .footerBlack{
+          height: 82px;
+  
+      }
+  
+      .index ul input{
+          display: none;
+      }
+  }
+  
+  
+@media(max-width: 802px){
     
-    
+      .productosIndex{
+          margin: 5px;
+      }
+  
+      .footerWhite{
+          margin: -20px 10px 10px 11px;
+  }
+}
+  
+  
+@media(max-width: 782px){
+
+          .productosIndex{
+              margin: 0px;
+          }
+  
+          .productosIndex article{
+              margin-bottom: 1px;
+          }
+  
+          hr{
+              display: none;
+          }
+  
+          .footerWhite {
+              margin: -11px -2px -5px -19px;
+          }
+  
+      }
+
+ @media(max-width: 660px){     
+      .img-header{
+          position:initial;
+      }
+  
+      .informacion i {
+          font-size: 31px;
+          
+      }
+  
+      .informacion{
+          padding: 5px 18px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+      }
+  
+      .promo{
+          padding-left: 0px;
+      }
+  
+      h3{
+          font-size: 10px;
+          letter-spacing: 1px;
+      }
+      .productos{
+        margin-top: -6px;
+        font-size: 0px;
+        margin-left: 6px;
     }
+  
+      .index ul{
+          padding: 2px;
+      }
+      .fa{
+          display: initial;
+      }
+  
+      .whiteIcons {
+          display: initial;
+         
+      }
+  
+      .whiteIcons li {
+          display: initial;
+      }
+  
+      .iconosFooter {
+          display: flex;
+          justify-content: flex-end;
+      }
+     
+      h3 {
+         
+          margin-top: 0px;
+      }
+      
+}
+
+@media(max-width: 500px){
+    h4{
+        font-size: 9px;
+    }
+}
+
+@media(max-width: 450px){
+  
+  .informacion {
+      padding: 4px 36px;
+  }
+
+  h4{
+      font-size: 6px;
+  }
+  
+  .productos {
+   margin-top: -4px;
+   font-size: 0px;
+   margin-left: 7px;
+  
+  }
+  .display{
+      display: none;
+  }
+
+  .index ul li a {
+    font-size: 11px;
+}
+}

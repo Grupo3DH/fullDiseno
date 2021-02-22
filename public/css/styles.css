@@ -141,6 +141,10 @@ a {
     display: flex;
 }
 
+.button-search{
+    display: none;
+}
+
 .button-search, input[type=text]{
     font-family: Roboto;
     margin-right: 5px;
@@ -151,7 +155,6 @@ a {
 .button-search, input::placeholder{
     color:black;
     font-size: 16px;
-    
     padding-bottom: 5px;
 }
 
@@ -159,12 +162,14 @@ a {
 .icono-search, button{
     background-color: transparent;
     border: transparent;
-
+    
 }
 
 .icono-search, button:hover{
     cursor: pointer;
 }
+
+
 
 
 
@@ -180,20 +185,20 @@ a {
     z-index: 1;
 }
 
-.productos h4{
+.p{
     display: inline-block; 
    
 }
 
 .hanger{
     display: inline-block;
-    
-
 }
 
 .hanger:hover{
     cursor: pointer;
 }
+
+
 
 
 
@@ -350,7 +355,7 @@ hr {
     transition: all .2s;
 }
 
-.cuotas:hover, .consultas:hover, .cambios:hover, .redes:hover{
+.redes:hover{
     transform: scale(1.1);
     cursor: pointer;
 
@@ -371,6 +376,27 @@ hr {
     height: 100px;    
     padding: 0 20px;
   
+}
+
+.newsletter{
+    color: white;
+    background-color: transparent;
+    border-bottom: white;
+    font-variant: all-petite-caps;
+}
+
+.newsletterInput{
+    color: white;
+    background-color: transparent;
+    margin: 0;
+    text-align: center;
+    padding: 0;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom-color: white;
+    font-variant: all-petite-caps;
+    letter-spacing: 11px;
 }
 
 .whiteIcons li{
@@ -1041,9 +1067,7 @@ text-align: center;
   
       }
   
-      .index ul input{
-          display: none;
-      }
+      
   }
   
   
@@ -1076,8 +1100,12 @@ text-align: center;
           .footerWhite {
               margin: -11px -2px -5px -19px;
           }
+          .footerBlack img{
+              display: none;
+          }
   
       }
+
 
  @media(max-width: 660px){     
       .img-header{
@@ -1166,4 +1194,9 @@ text-align: center;
   .index ul li a {
     font-size: 11px;
 }
+
+.whiteIcons{
+    display: none;
+}
+
 }

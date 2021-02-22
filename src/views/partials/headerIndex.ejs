@@ -5,12 +5,12 @@
     <nav class="index">
         <ul>
             <li>
-                <form class="formSearch" action="/products/search">
+                <form class="formSearch" action="/products/search" method="">
                     <div class="button-search">
-                        <input type="text" id="search" placeholder="Buscar..." />
+                        <input type="text" id="search" value="Buscar..." />
                     </div>
                     <div class="icono-search">
-                        <button type="search"><a href="#"><i class="fa fa-search fa-lg"></i></a></button>
+                        <button type="submit"><a href="#"><i class="fa fa-search fa-lg icono-search"></i></a></button>
                     </div>
                 </form>
             </li>
@@ -23,7 +23,7 @@
         <div id="contenido">
         <a class="productos" href="/products/all">
             <img class="hanger" src="/img/hanger.svg" alt="menu desplegable">
-            <h4>PRODUCTOS</h4>
+            <h4 class="p">PRODUCTOS</h4>
         </a>
         
         <img class="img-header" src="/img/headermeli.png" alt="banner ropa unisex">
@@ -33,3 +33,4 @@
         </div>
     </div>
     </header>
+    

@@ -211,7 +211,7 @@ a {
     top: 0;
 }
 
-.promo {
+.promo{
     
     justify-content: center;
     background-color: black;
@@ -758,8 +758,8 @@ text-align: center;
     FORMULARIOS LOGIN Y REGISTER
 ============================== */
 
-section .all{
-    display: grid;
+div .all{
+    display: flex;
     flex-direction: column;
     justify-content: flex-end;
     border: 1px solid black;

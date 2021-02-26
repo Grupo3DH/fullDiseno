@@ -18,6 +18,10 @@ module.exports = function (sequelize, dataTypes) {
             type: dataTypes.STRING(1000),
             NotNull: true
         },
+        admin: {
+            type: dataTypes.TINYINT,
+            NotNull: true
+        },
         compra_id: {
             type: dataTypes.INTEGER,
             NotNull: true,

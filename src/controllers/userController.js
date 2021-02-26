@@ -22,7 +22,8 @@ userController = {
                 name: req.body.name,
                 email: req.body.email,
                 foto: req.files[0].filename,
-                password: bcrypt.hashSync(req.body.password, 12)
+                password: bcrypt.hashSync(req.body.password, 12),
+                admin: 0
             })
                 fs.writeFileSync(path.join(__dirname, "../database/usuarios.json"), JSON.stringify(usuarios, null, 4));
                return res.send(`Bienvenido ${req.body.name}`) // aca podriaponer res.redirect en caso de una ruta ya registrada tipo welcome. 
@@ -41,7 +42,8 @@ userController = {
                     req.session.usuarioLogueado = {
                         name: usuario[i].name,
                         email: usuarios[i].email,
-                        foto: usuarios[i].foto
+                        foto: usuarios[i].foto,
+                        admin: usuarios[i].admin
                     }
                 }
                 return res.send(`Hola ${usuarioLogueado.name}`)

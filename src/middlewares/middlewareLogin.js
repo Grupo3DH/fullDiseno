@@ -3,6 +3,34 @@ module.exports = function(req, res, next) {
         res.locals.usuarioLogueado = req.session.usuarioLogueado
     }
 
+    next()
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // else if(req.cookies.recordarme != undefined && req.session.loggedUser == undefined){//Si EXISTE la cookie pero NO el session...
     //     let users = fs.readFileSync(path.join(__dirname,"../data/users.json"), "utf8");
     //     users = JSON.parse(users);
@@ -12,5 +40,3 @@ module.exports = function(req, res, next) {
     //     req.session.loggedUser = user;
     //     res.locals.loggedUser = user;
     // }
-    next()
-}

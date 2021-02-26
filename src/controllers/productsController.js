@@ -1,66 +1,33 @@
 const fs = require("fs");
 const path = require("path");
-// const db = require("../database/models/index")
-
-// let productos = fs.readFileSync(path.join(__dirname, "../database/productos.json"), "utf-8");
-// productos = JSON.parse(productos);
+const db = require("../database/models/index")
 
 productsController = {
-    create: function(req,res){
-        res.render("../views/agregarProduct")
+    showAll: function (req, res) {
+        db.Producto.findAll().then(function (productos) {
+            return res.render("allproducts", { allproducts })
+        })
     },
-    newProduct: function(req,res){
-        //  db.Producto.create({
-        //    title: req.body.
-      //  })
+    showDetails: function (req, res) {
+        db.Producto.findByPk(req.params.id)
+            .then(function (producto) {
+                res.render("/detail/:id", { producto })
+            })
     },
-    editProduct: function(req,res){
-        res.render("../views/editarProduct")
+    search: function (req, res) {
+        db.Porducto.findAll({
+            where: {
+                nombre: { [db.Sequelize.Op.like]: "%" + req.query.search + "%" }
+            }.then(function (listado) {
+                if (listado.lenght != 0)
+                    return res.send(listado)
+            })
+        })
     },
-    updateProduct: function(req,res){
-
-    },
-    deleteProduct: function(req,res){
-            // db.Producto.update({
-            //     where: {
-            //         id: req.params.id
-            //     }
-            // }).then(function(){
-
-            // })
-    },
-    showAll: function(req,res){
-        res.render("../views/allProducts")
-        
-        // db.Sequelize.query(SELECT * FROM movies).then(function(movies){res.send(movies)}) 
-        // db.sequelize.findAll()
-    },                                       
-    showDetails: function(req,res){
-        res.render("../views/productDetail")
-
-        //db.Porducto.findByPk(req.params.id)
-    //    .then(function(pelicula){
-    //    return res. render("detail", {pelicula})
-    //     })
-    },
-    cart: function(req,res){
+     cart: function(req, res) {
         res.render("../views/productCart")
-    },
-    search: function(req,res){
+    }
 
     }
-    // search: function(req,res){
-    //    // db.Producto.findAll({
-    //        where: {
-     //   tittle: {[db.Sequelize.Op.like]: "%" + req.query.search + "%",}
-
-    //        }
-    //    }).then(function(listado){
-     //   if(listado.lenght != 0)  ESTO LO TENEMOS QUE HACER EN LA VISTA
-//               return res.send(listado)
-    //     })
-    //    
-    // }
-}
 
 module.exports = productsController;

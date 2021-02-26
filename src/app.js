@@ -9,12 +9,14 @@ const cookieParser = require("cookie-parser"); //COOKIES
 const indexRouter = require("./routes/indexRouter");
 const userRouter = require("./routes/userRouter");
 const productsRouter = require("./routes/productsRouter");
+const adminRouter = require("./routes/adminRouter")
 
 let port = process.env.PORT || 3000;
 
 app.use("/", indexRouter); // RECURSO INDEX
 app.use("/user", userRouter); // RECURSO USER
 app.use("/products", productsRouter); // RECURSO PRODUCTS
+app.use("/admin", adminRouter); 
 
 app.use(cookieParser());
 

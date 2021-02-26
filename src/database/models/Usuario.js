@@ -1,5 +1,5 @@
 module.exports = function (sequelize, dataTypes) {
-    let alias = "Producto";
+    let alias = "Usuario";
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -10,32 +10,34 @@ module.exports = function (sequelize, dataTypes) {
             type: dataTypes.STRING(100),
             NotNull: true
         },
-        descripcion: {
+        email: {
+            type: dataTypes.STRING(100),
+            NotNull: true
+        },
+        password: {
             type: dataTypes.STRING(1000),
             NotNull: true
         },
-        precioUnitario: {
+        compra_id: {
             type: dataTypes.INTEGER,
-            NotNull: true
-        },
-        talle_id: {
-            type: dataTypes.STRING(100),
+            NotNull: true,
             primaryKey: true
         },
-        status_id: {
-            type: dataTypes.STRING(100),
+        carrito_id: {
+            type: dataTypes.INTEGER,
+            NotNull: true,
             primaryKey: true
         }
 
     }
 
     let config = {
-        tableName: "productos",
+        tableName: "usuarios",
         timestamp: true, //create at update at
         underscored: true, // estan escritos con guiones bajos created_at y updated_at
         paranoid:true
     }
 
-    const Producto = sequelize.define(alias, cols, config)
-    return Producto;
+    const Usuario = sequelize.define(alias, cols, config)
+    return Usuario;
 }

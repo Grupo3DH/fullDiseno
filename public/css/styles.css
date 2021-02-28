@@ -954,6 +954,28 @@ text-align: center;
 }
 
 /* ===============================
+         admin
+============================== */
+
+
+.adminBoton{
+    display: flex;
+    justify-content: column;
+    margin: 20px;
+    font-family: Goldman;
+    color: white;
+    background-color: #00636C;
+    padding: 10px 30px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    box-shadow: 3px 3px 20px rgb(202, 202, 202);
+}
+
+
+
+/* ===============================
          AGREGAR PRODUCTO
 ============================== */
 

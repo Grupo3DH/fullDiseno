@@ -1,6 +1,20 @@
 const db = require("../database/models/index")
 
 module.exports = {
+    admin: function(req,res){
+        // req.session.usrInput = null;
+        res.render("admin");
+    },
+    logout: function(req, res){
+        if (req.params.id != undefined) {
+            req.session.usuarioLogueado = undefined;
+            res.cookie("recordarme", 0, {maxAge: 0});
+            res.redirect("/");
+          } 
+    },
+    config: function(req,res){
+        res.render("../views/adminConfig")
+    },
     create: function(req,res){
         res.render("../views/agregarProduct")
     },

@@ -2,6 +2,11 @@ const express = require("express");
 const router = express.Router(); // guardo solo la funcionalidad de router de express
 const adminController = require("../controllers/adminController");
 
+router.get("/", adminController.admin);
+router.get('/logout', adminController.logout);
+
+router.get("/config", adminController.config);
+
 router.get("/create", adminController.create); //CREATE
 router.post("/create", adminController.newProduct); // recibe los datos del formulario
 

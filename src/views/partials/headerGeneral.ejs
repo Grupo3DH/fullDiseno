@@ -18,7 +18,13 @@
                 </li>
                 <li><a href="/products/cart"><i class="fa fa-shopping-cart fa-lg"
                             aria-hidden="true"></i></a></li>
+                <% if(typeof usuarioLogueado == "undefined") { %>
                 <li><a class="inicio" href="/user/login">Iniciar sesión</a></li>
+            <% } else if(usuarioLogueado.admin == 1) { %>
+                    <li><a href="/admin" title="Configuración del sitio">ADMIN</a></li>
+                <% } else if(usuarioLogueado.admin == 0) { %>
+                    <li><a href="#" title="Configuración del sitio">HOLA <%= usuarioLogueado.name %></a></li>
+                <% } %> %>
             </ul>
         </nav>
     </div>

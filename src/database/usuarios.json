@@ -10,7 +10,35 @@
         "name": "jajajajaja",
         "email": "melii.a@hotmail.com",
         "foto": "melii.a@hotmail.com1612227967604.jpg",
-        "password": "$2b$12$SFu.ttZRCvFibsnWqY5ZBOtx6G9BDV8zJc/bdREtJDIenlXncARzq",
+        "password": "$2a$12$bTHutOZwp038DRR87XpYMenDH1VoY09nUWWnbknR2rTCJMtdyIxLi",
+        "admin": 0
+    },
+    {
+        "name": "Melina Anabel Acosta",
+        "email": "melii.aa@hotmail.com",
+        "foto": "melii.aa@hotmail.com1614445074748.JPG",
+        "password": "$2a$12$rQShNCRjRaRwew8/C0qMIueV4JZESiU.u4NV/Hri7DbM9lawwfR.6",
         "admin": 1
+    },
+    {
+        "name": "rodrigo",
+        "email": "rockoponce1422@gmail.com",
+        "foto": "rockoponce1422@gmail.com1614446062153.JPG",
+        "password": "$2a$12$FWDF8JG8sIFVzrVtLDvrh.3GtG/WLLyXQzQ68aSmmL6DPSTDTjOfG",
+        "admin": 0
+    },
+    {
+        "name": "Melina",
+        "email": "meli@dh.com",
+        "foto": "meli@dh.com1614540169224.JPG",
+        "password": "$2a$12$gQE5XPsdUu8opIAyu2DzYu8Z1f5PHOj4e6t7n1sLCMATg2l89jDle",
+        "admin": 0
+    },
+    {
+        "name": "Melina",
+        "email": "meli@dh.com",
+        "foto": "meli@dh.com1614540272438.JPG",
+        "password": "$2a$12$WsAP5WvvsDJ/nTnnZZmZHu99XOA/6NeOaBccAn6qWyxxVq/DVw53m",
+        "admin": 0
     }
 ]

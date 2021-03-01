@@ -40,5 +40,12 @@
         "foto": "meli@dh.com1614540272438.JPG",
         "password": "$2a$12$WsAP5WvvsDJ/nTnnZZmZHu99XOA/6NeOaBccAn6qWyxxVq/DVw53m",
         "admin": 0
+    },
+    {
+        "name": "Rodrigo",
+        "email": "rp@dh.com",
+        "foto": "rp@dh.com1614568857694.JPG",
+        "password": "$2a$12$OzJgoCAL.8WqYKDRtcF1qegxwGcoem2Bg0AmY8Gkxj9a/YbamAmT.",
+        "admin": 0
     }
 ]

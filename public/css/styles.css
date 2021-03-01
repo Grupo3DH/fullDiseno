@@ -857,6 +857,10 @@ text-align: center;
 
 }
 
+.IS h2{
+    display: inline-block;
+}
+
 .crearCuenta{
     
     text-align: center;

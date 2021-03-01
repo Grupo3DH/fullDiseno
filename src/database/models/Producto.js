@@ -37,5 +37,17 @@ module.exports = function (sequelize, dataTypes) {
     }
 
     const Producto = sequelize.define(alias, cols, config)
+    Producto.associate = (modelos)=>{
+        Producto.hasMany(modelos.Talle,       
+            {
+                as: "Talle",        //este es un alias de la relación 
+                foreignKey: "talle_id"   //la columna fk de la tabla products (la que apunta al id de la tabla brands)
+            }),
+        Producto.hasMany(modelos.Status,       
+            {
+                as: "Status",        //este es un alias de la relación 
+                foreignKey: "status_id"   //la columna fk de la tabla products (la que apunta al id de la tabla states)
+            })
+    }
     return Producto;
 }

@@ -24,7 +24,7 @@ userController = {
                 admin: 0
             })
                 fs.writeFileSync(path.join(__dirname, "../database/usuarios.json"), JSON.stringify(usuarios, null, 4));
-                return res.redirect("/");
+                return res.redirect("login");
                
         }
 

@@ -7,34 +7,28 @@ module.exports = function (sequelize, dataTypes) {
             autoIncrement: true,
             primaryKey: true
         },
-        stock: {
+        status: {
             type: dataTypes.STRING(100),
+            NotNull: true,
             
         },
-        carrito: {
-            type: dataTypes.STRING(100),
-            
-        },
-        comprado: {
-            type: dataTypes.STRING(100), 
-        }
 
     }
 
     let config = {
         tableName: "status",
-        timestamp: false, //create at update at
-        underscored: false, // estan escritos con guiones bajos created_at y updated_at
+        timestamp: false, 
+        underscored: false, 
         paranoid:true
     }
 
     const Status = sequelize.define(alias, cols, config)
-    Status.associate = (modelos)=>{
-        Status.hasMany(modelos.Producto,//ACA SE USA EL HAS MANY 
-                        {
-                                as: "Producto",        //este es un alias de la relación 
-                                foreignKey: "status_id"   //la columna fk de la tabla products (la que apunta al id de la tabla brands)
-                        })
+    Status.associate = (models)=>{
+        Status.hasMany(models.Product,
+        {
+          as: "Product",        
+          foreignKey: "status_id"   
+         })
     }
     return Status;
 }

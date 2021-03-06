@@ -5,7 +5,7 @@
 <%- include("./partials/headerGeneral.ejs") %>
     <div class="agregarProducto">
         
-        <form class="agregarform" method="POST" action="/products/create">
+        <form class="agregarform" method="POST" action="" enctype="multipart/form-data">
             <h1 class="h1">Agregar producto</h1>
             <div class="agregarProducto">
                 <label class="label" for="nombre">Nombre:</label>
@@ -23,11 +23,6 @@
                 <input required id="imagen" placeholder="Imagen del producto" type="file" name="imagen">
             </div>
             <div class="agregarProducto">
-                <label class="label" for="categoria">Categoria:</label>
-                <br>
-                <input required id="categoria" placeholder="Categoria del producto" type="text" name="categoria">
-            </div>
-            <div class="agregarProducto">
                 <label class="label" for="talle">Selecciona un talle:</label>
                 <br>
                 <select name="talle" type="Seleccionar un Talle">
@@ -37,17 +32,12 @@
                 </select>
             </div>
             <div class="agregarProducto">
-                <label class="label" for="color">Color:</label>
-                <br>
-                <input required id="color" placeholder="Color del producto" type="color" name="color">
-            </div>
-            <div class="agregarProducto">
                 <label class="label" for="precio">Precio:</label>
                 <br>
                 <input required id="precio" placeholder="Precio del producto" type="number" name="precio">
             </div>
             <div class="IS">
-                <button type="button">Guardar</button>
+                <button type="submit">Guardar</button>
                 
             </div>
         </form>

@@ -4,18 +4,18 @@ const db = require("../database/models/index")
 
 productsController = {
     showAll: function (req, res) {
-        db.Producto.findAll().then(function (productos) {
-            return res.render("allproducts", { allproducts })
+        db.Product.findAll().then(function (productos) {
+            return res.render("allproducts", { allproducts: productos })
         })
     },
     showDetails: function (req, res) {
-        db.Producto.findByPk(req.params.id)
+        db.Product.findByPk(req.params.id)
             .then(function (producto) {
                 res.render("/detail/:id", { producto })
             })
     },
     search: function (req, res) {
-        db.Porducto.findAll({
+        db.Porduct.findAll({
             where: {
                 nombre: { [db.Sequelize.Op.like]: "%" + req.query.search + "%" }
             }.then(function (listado) {

@@ -1,5 +1,6 @@
 const db = require("../database/models/index")
 
+
 module.exports = {
     admin: function(req,res){
         // req.session.usrInput = null;
@@ -19,28 +20,35 @@ module.exports = {
         res.render("../views/agregarProduct")
     },
     newProduct: function(req,res){
-        db.Producto.create({
-            nombre: req.body.nombre,
-            descripcion: req.body.descripcion,
-            precio: req.body.precio,
-            talle_id: req.body.talle,
-            status_id: req.body.status,
+        db.Product.create({
+            name: req.body.nombre,
+            description: req.body.descripcion,
+            price: req.body.precio,
+            size_id: req.body.talle,
+            status_id: "stock",
 
-        }).then(function(){
-            res.redirect("/allproducts")
-         })
+        }).then(function(resultado){
+            db.Image.create({
+                filename: req.files[0].filename,
+                product_id: resultado.id
+            })
+            res.redirect('/products/all')
+        }).catch(function(e){
+            console.log(e)
+        })
     },
     editProduct: function(req,res){
-        db.Porducto.findByPk(req.params.id)
-            .then(function(producto){
-            res.render("../views/detail", {producto})
+        db.Porduct.findByPk(req.params.id)
+            .then(function(product){
+            res.render("../views/detail", {product})
         })
     },
     updateProduct: function(req,res){
-        db.Producto.update({
-            nombre: req.body.nombre,
-            descripcion: req.body.descripcion,
-            precio: req.body.precio,
+        db.Product.update({
+            name: req.body.nombre,
+            description: req.body.descripcion,
+            price: req.body.precio,
+            img_id: req.files[0].filename,
             talle_id: req.body.talle,
             status_id: req.body.status,
         }, {
@@ -55,7 +63,7 @@ module.exports = {
         })
     },
     deleteProduct: function(req,res){
-        db.Producto.destroy({
+        db.Product.destroy({
             where: {
                 id: req.params.id
             }

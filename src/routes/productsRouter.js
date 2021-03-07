@@ -4,7 +4,7 @@ const productsController = require("../controllers/productsController");
 
 
 
-router.get("/showAll", productsController.showAll); //MOSTRAR TODOS
+router.get("/all", productsController.showAll); //MOSTRAR TODOS
 
 router.get("/detail/:id", productsController.showDetails); // DETALLE DE PRODUCTO
 

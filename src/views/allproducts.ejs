@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <%- include("./partials/head.ejs", {Solapa: "Productos"}) %>
 </head>
 <body>
-    <div>
-        <ul>
-            <% for(let i=0; i< allproducts.length; i++) { %> 
-                <li><%= allproducts.name %> </li>
-            <% } %> 
-        </ul>
-    </div>
+    <%- include("./partials/headerGeneral.ejs") %>
+    <article>
+        <% for(let i=0; i< products.length; i++) { %> 
+         <div class="nombre-precio">           
+            <h2 class="name"><%= products[i].name %></h2><br>
+            <p class="name"><%= products[i].price %></p> 
+        </div>
+        <% } %> 
+        <!-- <a href="/products/detail/:id"> <img src="/img/fullOutfit.jpg" alt="fullOutfit"></a>  -->
+    </article>
     
 </body>
 </html>

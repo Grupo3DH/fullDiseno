@@ -4,14 +4,14 @@ const db = require("../database/models/index")
 
 productsController = {
     showAll: function (req, res) {
-        db.Product.findAll().then(function (productos) {
-            return res.render("allproducts", { allproducts: productos })
+        db.Product.findAll().then(function (products) {
+            return res.render("allproducts", { products: products })
         })
     },
     showDetails: function (req, res) {
         db.Product.findByPk(req.params.id)
-            .then(function (producto) {
-                res.render("/detail/:id", { producto })
+            .then(function (product) {
+                res.render("/detail/:id", { product })
             })
     },
     search: function (req, res) {

@@ -30,10 +30,12 @@
             </div>
             <div class="selAgregar">
                 <select name="talle" type="Seleccionar un Talle">
-                    <option disabled selected>Selecciona un talle</option>
-                    <option value="S">Small</option>
-                    <option value="M">Medium</option>
-                    <option value="L">Large</option>
+                    <% if (typeof talle != "undefined") { %> 
+                        <% for(let i=0; i< talle.length; i++) {%> 
+                            <option value=<%=talle[i].id %>><%=talle[i].size %></option>
+                            
+                            <% } %>
+                            <% } %>
                 </select>
                 <button type="submit" class="agregarCarrito">
                          <div class="contenidoAgregarCarrito"><i class="fa fa-shopping-cart"></i><h2>Agregar al

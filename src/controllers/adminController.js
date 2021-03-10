@@ -17,11 +17,11 @@ module.exports = {
         res.render("./adminConfig")
     },
     create: function(req,res){
-        db.Size.findAll().then(function(talle){
-            return res.render("./agregarProduct", {talle})
-        }),
-        db.Color.findAll().then(function(colores){
-            return res.render("./agregarProduct", {colores})
+        // db.Size.findAll().then(function(talle){
+        //     return res.render("./agregarProduct", {talle})
+        // }),
+        db.Color.findAll().then(function(color){
+            return res.render("./agregarProduct", {color})
         })
         
     },
@@ -49,7 +49,7 @@ module.exports = {
     editProduct: function(req,res){
         db.Product.findByPk(req.params.id)
             .then(function(product){
-            res.render("-/editarProduct", {product})
+            res.render("./editarProduct", {product})
         })
     },
     updateProduct: function(req,res){

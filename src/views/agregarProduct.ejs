@@ -26,9 +26,9 @@
                 <label class="label" for="color">Selecciona un color:</label>
                 <br>
                 <select name="color" type="Seleccionar un Color">
-                    <% if (typeof colores != "undefined") { %> 
-                <% for(let i=0; i< colores.length; i++) {%> 
-                    <option value=<%=colores[i].id %>><%= colores[i].color %></option>
+                    <% if (typeof color != "undefined") { %> 
+                <% for(let i=0; i< color.length; i++) {%> 
+                    <option value=<%=color[i].id %>><%= color[i].color %></option>
                     <% } %>
                     <% } %>
                 </select>

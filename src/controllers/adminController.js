@@ -45,7 +45,7 @@ module.exports = {
     editProduct: function(req,res){
         db.Product.findByPk(req.params.id)
             .then(function(product){
-            res.render("editarProduct", {product})
+            res.render("./editarProduct", {product})
         })
     },
     updateProduct: function(req,res){

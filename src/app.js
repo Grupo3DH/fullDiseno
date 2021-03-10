@@ -40,7 +40,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use("/", indexRouter); // RECURSO INDEX
 app.use("/user", userRouter); // RECURSO USER
 app.use("/products", productsRouter); // RECURSO PRODUCTS
-app.use("/admin", adminRouter); 
+app.use("/admin", adminRouter); // mail: melii.aa@hotmail.com username: 123456789aaa
 
 app.use(function(req,res){
     return res.status(404).render("not-found")    

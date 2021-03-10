@@ -5,17 +5,17 @@
 <%- include("./partials/headerGeneral.ejs") %>
     <div class="agregarProducto">
         
-        <form class="agregarform" method="POST" action="/products/edit/:id?_method= put">
+        <form class="agregarform" method="POST" action="/products/edit/:id?_method=put" enctype="multipart/form-data">
             <h1 class="h1">Agregar producto</h1>
             <div class="agregarProducto">
                 <label class="label" for="nombre">Nombre:</label>
                 <br>
-                <input required id="nombre" placeholder="Nombre del producto"  type="text" name="nombre"> <!-- //si puse name en user cambia? -->
+                <input required id="nombre" placeholder="Nombre del producto"  type="text" name="nombre" value="<%= product.name %>"> 
             </div>
             <div class="agregarProductodesc">
                 <label class="label" for="descripcion">Descripción:</label>
                 <br>
-                <input required id="descripcion" placeholder="Descripcion del producto" type="text" name="descripcion">
+                <input required id="descripcion" placeholder="Descripcion del producto" type="text" name="descripcion" value="<%= product.description %>">
             </div>
             <div class="agregarProducto">
                 <label class="label"for="imagen">Imágen:</label>
@@ -44,11 +44,11 @@
             <div class="agregarProducto">
                 <label class="label" for="precio">Precio:</label>
                 <br>
-                <input required id="precio" placeholder="Precio del producto" type="number" name="precio">
+                <input required id="precio" placeholder="Precio del producto" type="number" name="precio" value="<%= product.price %>">
             </div>
             <div class="IS">
-                <button type="edit">Editar</button>
-                <button type="reset">Borrar</button>
+                <button type="submit">Enviar</button>
+                
                 
                 
             </div>

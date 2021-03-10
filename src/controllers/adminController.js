@@ -14,33 +14,38 @@ module.exports = {
           } 
     },
     config: function(req,res){
-        res.render("../views/adminConfig")
+        res.render("./adminConfig")
     },
     create: function(req,res){
-        res.render("../views/agregarProduct")
+        db.Size.findAll().then(function(talle){
+            return res.render("./agregarProduct", {talle})
+        })
+        
     },
     newProduct: function(req,res){
-        db.Product.create({
+         db.Product.create({
             name: req.body.nombre,
             description: req.body.descripcion,
             price: req.body.precio,
             size_id: req.body.talle,
-            status_id: "stock",
-
+            status_id: 1
         }).then(function(resultado){
             db.Image.create({
                 filename: req.files[0].filename,
                 product_id: resultado.id
             })
-            res.redirect('/products/all')
-        }).catch(function(e){
+            
+            })
+            .then(function(producto){
+                res.redirect('/products/all')
+            }).catch(function(e){
             console.log(e)
         })
     },
     editProduct: function(req,res){
-        db.Porduct.findByPk(req.params.id)
+        db.Product.findByPk(req.params.id)
             .then(function(product){
-            res.render("../views/detail", {product})
+            res.render("editarProduct", {product})
         })
     },
     updateProduct: function(req,res){
@@ -50,14 +55,14 @@ module.exports = {
             price: req.body.precio,
             img_id: req.files[0].filename,
             talle_id: req.body.talle,
-            status_id: req.body.status,
+            status_id: 1,
         }, {
             where: {
                 id: req.params.id
             }
         })
         .then(function(nuevoProducto) {
-            res.redirect("/allproducts")
+            res.redirect('/products/all')
         }).catch(function(e){
             res.send(e)
         })
@@ -69,7 +74,7 @@ module.exports = {
             }
         })
         .then(function(borrada) {
-            res.redirect("/allproducts")
+            res.redirect('/products/all')
         })
         .catch(function(e) {
             return res.send(e)

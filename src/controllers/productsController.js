@@ -4,14 +4,17 @@ const db = require("../database/models/index")
 
 productsController = {
     showAll: function (req, res) {
-        db.Product.findAll().then(function (products) {
+        db.Product.findAll(
+            
+        // include
+        ).then(function (products) {
             return res.render("allproducts", { products: products })
         })
     },
     showDetails: function (req, res) {
         db.Product.findByPk(req.params.id)
             .then(function (product) {
-                res.render("/detail/:id", { product })
+                res.render("productDetail", { product })
             })
     },
     search: function (req, res) {
@@ -25,7 +28,7 @@ productsController = {
         })
     },
      cart: function(req, res) {
-        res.render("../views/productCart")
+        res.render("productCart")
     }
 
     }

@@ -19,7 +19,7 @@ module.exports = function (sequelize, dataTypes) {
 
     let config = {
         tableName: "sale",
-        timestamp: true, //create at update at
+        timestamps: true, //create at update at
         underscored: true, // estan escritos con guiones bajos created_at y updated_at
         paranoid:true
     }

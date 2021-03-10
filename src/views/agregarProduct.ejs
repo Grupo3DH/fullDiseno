@@ -26,9 +26,13 @@
                 <label class="label" for="talle">Selecciona un talle:</label>
                 <br>
                 <select name="talle" type="Seleccionar un Talle">
-                    <option value="S">Small</option>
-                    <option value="M">Medium</option>
-                    <option value="L">Large</option>
+                    <% if (typeof talle != "undefined") { %> 
+                <% for(let i=0; i< talle.length; i++) {%> 
+                    <option value=<%=talle[i].id %>><%=talle[i].size %></option>
+                    <option value=<%=talle[i].id %>><%=talle[i].size %></option>
+                    <option value=<%=talle[i].id %>><%=talle[i].size %></option>
+                    <% } %>
+                    <% } %>
                 </select>
             </div>
             <div class="agregarProducto">

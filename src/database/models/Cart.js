@@ -29,7 +29,7 @@ module.exports = function (sequelize, dataTypes) {
 
     let config = {
         tableName: "cart",
-        timestamp: true, 
+        timestamps: true, 
         underscored: true, 
         paranoid:true
     }

@@ -19,6 +19,9 @@ module.exports = {
     create: function(req,res){
         db.Size.findAll().then(function(talle){
             return res.render("./agregarProduct", {talle})
+        }),
+        db.Color.findAll().then(function(colores){
+            return res.render("./agregarProduct", {colores})
         })
         
     },
@@ -28,6 +31,7 @@ module.exports = {
             description: req.body.descripcion,
             price: req.body.precio,
             size_id: req.body.talle,
+            color_id: req.body.color,
             status_id: 1
         }).then(function(resultado){
             db.Image.create({
@@ -45,7 +49,7 @@ module.exports = {
     editProduct: function(req,res){
         db.Product.findByPk(req.params.id)
             .then(function(product){
-            res.render("./editarProduct", {product})
+            res.render("-/editarProduct", {product})
         })
     },
     updateProduct: function(req,res){
@@ -54,7 +58,8 @@ module.exports = {
             description: req.body.descripcion,
             price: req.body.precio,
             img_id: req.files[0].filename,
-            talle_id: req.body.talle,
+            size_id: req.body.talle,
+            color_id: req.body.color,
             status_id: 1,
         }, {
             where: {

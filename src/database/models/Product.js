@@ -20,7 +20,11 @@ module.exports = function (sequelize, dataTypes) {
         },
         size_id: {
             type: dataTypes.INTEGER,
-            
+            NotNull: true
+        },
+        color_id: {
+            type: dataTypes.INTEGER,
+            NotNull: true
         },
         status_id: {
             type: dataTypes.INTEGER,
@@ -52,11 +56,11 @@ module.exports = function (sequelize, dataTypes) {
                 as: "size",        
                 foreignKey: "size_id"   
             }),
-        // Product.belongsTo(models.Cart,       
-        //         {
-        //             as: "cart",        
-        //             foreignKey: "cart_id"   
-        //  })
+        Product.belongsTo(models.Color,       
+                {
+                    as: "color",        
+                    foreignKey: "color_id"   
+         }),
         Product.belongsTo(models.Status,       
             {
                 as: "status",       

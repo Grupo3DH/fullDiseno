@@ -23,14 +23,24 @@
                 <input required id="imagen" placeholder="Imagen del producto" type="file" name="imagen">
             </div>
             <div class="agregarProducto">
+                <label class="label" for="color">Selecciona un color:</label>
+                <br>
+                <select name="color" type="Seleccionar un Color">
+                    <% if (typeof colores != "undefined") { %> 
+                <% for(let i=0; i< colores.length; i++) {%> 
+                    <option value=<%=colores[i].id %>><%= colores[i].color %></option>
+                    <% } %>
+                    <% } %>
+                </select>
+            </div>
+            <div class="agregarProducto">
                 <label class="label" for="talle">Selecciona un talle:</label>
                 <br>
                 <select name="talle" type="Seleccionar un Talle">
                     <% if (typeof talle != "undefined") { %> 
                 <% for(let i=0; i< talle.length; i++) {%> 
                     <option value=<%=talle[i].id %>><%=talle[i].size %></option>
-                    <option value=<%=talle[i].id %>><%=talle[i].size %></option>
-                    <option value=<%=talle[i].id %>><%=talle[i].size %></option>
+                    
                     <% } %>
                     <% } %>
                 </select>

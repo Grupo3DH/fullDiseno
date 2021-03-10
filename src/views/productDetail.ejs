@@ -17,18 +17,16 @@
         </section>
         <section class="infoProducto">
             <div class="tituloPrecio">
-                <h1>Buzo Verde</h1>
-                <h4>$768</h4>
+                <h1><%= product.name %></h1>
+                <h4>$<%= product.price %></h4>
             </div>
             <div class="colores">
                 <h2>Colores</h2>
-                <div class="colorProducto"><h2>Verde Militar</h2></div>
+                <div class="colorProducto"><h2><%= product.color %></h2></div>
             </div>
             <div class="descripcion">
                 <h2>Descripción</h2>
-                <p>Buzo canguro con capucha. Combina su toque con detalles deportivos cómo sus mangas largas que te
-                    permiten mover los brazos libremente sin restricciones de movilidad. Cuenta con pasa pulgar en el
-                    puño para cubrir muñecas.</p>
+                <p><%= product.description %></p>
             </div>
             <div class="selAgregar">
                 <select name="talle" type="Seleccionar un Talle">

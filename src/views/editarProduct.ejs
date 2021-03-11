@@ -1,60 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("./partials/head.ejs", {Solapa: "Agregar"}) %>
-<body>
-<%- include("./partials/headerGeneral.ejs") %>
-    <div class="agregarProducto">
-        
-        <form class="agregarform" method="POST" action="?_method=PUT" enctype="multipart/form-data">
-            <h1 class="h1">Agregar producto</h1>
+<%- include("./partials/head.ejs", {Solapa: "Agregar" }) %>
+
+    <body>
+        <%- include("./partials/headerGeneral.ejs") %>
             <div class="agregarProducto">
-                <label class="label" for="nombre">Nombre:</label>
-                <br>
-                <input required id="nombre" placeholder="Nombre del producto"  type="text" name="nombre" value="<%= product.name  %> "> 
+
+                <form class="agregarform" method="POST" action="?_method=PUT" enctype="multipart/form-data">
+                    <h1 class="h1">Agregar producto</h1>
+                    <div class="agregarProducto">
+                        <label class="label" for="nombre">Nombre:</label>
+                        <br>
+                        <input required id="nombre" placeholder="Nombre del producto" type="text" name="nombre"
+                            value="<%= product.name  %> ">
+                    </div>
+                    <div class="agregarProductodesc">
+                        <label class="label" for="descripcion">Descripción:</label>
+                        <br>
+                        <input required id="descripcion" placeholder="Descripcion del producto" type="text"
+                            name="descripcion" value="<%= product.description  %> ">
+                    </div>
+                    <div class="agregarProducto">
+                        <label class="label" for="imagen">Imágen:</label>
+                        <br>
+                        <input required id="imagen" placeholder="Imagen del producto" type="file" name="imagen">
+                    </div>
+                    <div class="agregarProducto">
+                        <label class="label" for="color">Selecciona un color:</label>
+                        <br>
+                        <select name="color" type="Seleccionar un Color">
+
+                            <% if (typeof color !="undefined" ) { %>
+                                <% for(let i=0; i< color.length; i++) {%>
+                                    <% if(product.color_id==color[i].id){ %>
+                                        <option selected value=<%=color[i].id %>><%= color[i].color %>
+                                        </option>
+                                        <% } else { %>
+                                            <option value=<%=color[i].id %>><%= color[i].color %>
+                                            </option>
+                                        <%} %>
+                                    <% } %>
+                                <% } %>
+
+                        </select>
+                    </div>
+                    <div class="agregarProducto">
+                        <label class="label" for="talle">Selecciona un talle:</label>
+                        <br>
+                        <select name="talle" type="Seleccionar un Talle">
+                            <% if (typeof talle !="undefined" ) { %>
+                                <% for(let i=0; i< talle.length; i++) {%>
+                                    <% if(product.size_id== talle[i].id){ %>
+                                        <option selected value=<%=talle[i].id %>><%=talle[i].size %>
+                                        </option>
+                                        <% } else { %>
+                                            <option value=<%=talle[i].id %>><%=talle[i].size %>
+                                            </option>
+                                       <%} %>
+                                <% } %>
+                            <% } %>
+                        </select>
+                    </div>
+                    <div class="agregarProducto">
+                        <label class="label" for="precio">Precio:</label>
+                        <br>
+                        <input required id="precio" placeholder="Precio del producto" type="number" name="precio"
+                            value=<%=product.price %>>
+                    </div>
+                    <div class="IS">
+                        <button type="submit">Guardar</button>
+
+                    </div>
+                </form>
             </div>
-            <div class="agregarProductodesc">
-                <label class="label" for="descripcion">Descripción:</label>
-                <br>
-                <input required id="descripcion" placeholder="Descripcion del producto" type="text" name="descripcion" value="<%= product.description  %> ">
-            </div>
-            <div class="agregarProducto">
-                <label class="label"for="imagen">Imágen:</label>
-                <br>
-                <input required id="imagen" placeholder="Imagen del producto" type="file" name="imagen">
-            </div>
-            <div class="agregarProducto">
-                <label class="label" for="color">Selecciona un color:</label>
-                <br>
-                <select name="color" type="Seleccionar un Color">
-                    <% if (typeof color != "undefined") { %> 
-                <% for(let i=0; i< color.length; i++) {%> 
-                    <option value=<%=color[i].id %>><%= color[i].color %></option>
-                    <% } %>
-                    <% } %>
-                </select>
-            </div>
-            <div class="agregarProducto">
-                <label class="label" for="talle">Selecciona un talle:</label>
-                <br>
-                <select name="talle" type="Seleccionar un Talle">
-                    <% if (typeof talle != "undefined") { %> 
-                <% for(let i=0; i< talle.length; i++) {%> 
-                    <option value=<%=talle[i].id %>><%=talle[i].size %></option>
-                    
-                    <% } %>
-                    <% } %>
-                </select>
-            </div>
-            <div class="agregarProducto">
-                <label class="label" for="precio">Precio:</label>
-                <br>
-                <input required id="precio" placeholder="Precio del producto" type="number" name="precio" value=<%= product.price  %>>
-            </div>
-            <div class="IS">
-                <button type="submit">Guardar</button>
-                
-            </div>
-        </form>
-    </div>
-</body>
+    </body>
+
 </html>

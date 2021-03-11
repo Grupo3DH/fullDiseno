@@ -44,7 +44,7 @@
                                     <option value=<%=talle[i].id %>><%=talle[i].size %>
                                     </option>
                                     <% } %>
-                               <% } %>
+                                        <% } %>
                         </select>
                         <button type="submit" class="agregarCarrito">
                             <div class="contenidoAgregarCarrito"><i class="fa fa-shopping-cart"></i>
@@ -55,9 +55,12 @@
                     </div>
                     <a href="#" class="guiaTalles">Guía de Talles</a>
                     <br>
-                    <a  class="agregarCarrito" href="/admin/edit/<%= product.id %>"><button style=color:white type="submit">EDITAR</button></a>
+                    
+                        <a class="agregarCarrito" href="/admin/edit/<%= product.id %>"><button style=color:white
+                                type="submit">EDITAR</button></a>
+                    
                     <form action="/admin/delete/<%= product.id %>?_method=DELETE" method="POST">
-                    <button class="agregarCarrito"  style=color:white type="submit">BORRAR</button>
+                        <button class="agregarCarrito" style=color:white type="submit">BORRAR</button>
                     </form>
                 </section>
             </main>

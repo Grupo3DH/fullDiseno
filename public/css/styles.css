@@ -1038,6 +1038,39 @@ a .adminBoton{
     }
 
 
+    /* ===============================
+        ALL products
+============================== */
+
+.allproducts{
+    margin: 20px;
+    display: inline-grid;
+    justify-content: space-between;
+    position: relative;
+
+} 
+
+.precio{
+    color: black;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    
+    
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 86px;
+    right: 0;
+
+}
+  
+
+
+
+
 
 /* ===============================
          MEDIA QUERIES

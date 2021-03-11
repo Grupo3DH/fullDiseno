@@ -7,12 +7,12 @@
         <%- include("./partials/headerGeneral.ejs") %>
             <main class="productDetail">
                 <section class="imagenes">
-                    <img src="/img/sueterVerde-2.JPG" alt="" class="seleccionada">
+                    <img src="/uploads/product/<%= product.image %>" alt="" class="seleccionada">
                     <div class="imagenesPeque">
-                        <img src="/img/sueterVerde-3.JPG" alt="buzo-verde">
+                        <!-- <img src="/img/sueterVerde-3.JPG" alt="buzo-verde">
                         <img src="/img/sueterVerde-4.JPG" alt="buzo-verde2">
                         <img src="/img/sueterVerde-5.JPG" alt="buzo-verde3">
-                        <img src="/img/sueterVerde-6.JPG" alt="buzo-verde4">
+                        <img src="/img/sueterVerde-6.JPG" alt="buzo-verde4"> -->
                     </div>
                 </section>
                 <section class="infoProducto">
@@ -41,27 +41,32 @@
                         <select name="talle" type="Seleccionar un Talle">
                             <% if (typeof talle !="undefined" ) { %>
                                 <% for(let i=0; i< talle.length; i++) {%>
-                                    <option value=<%=talle[i].id %>><%=talle[i].size %>
+                                    <option selected value=<%=talle[i].id %>><%=talle[i].size %>
                                     </option>
                                     <% } %>
                                         <% } %>
                         </select>
                         <button type="submit" class="agregarCarrito">
                             <div class="contenidoAgregarCarrito"><i class="fa fa-shopping-cart"></i>
-                                <h2>Agregar al
-                                    carrito</h2>
+                                <h2>Agregar al carrito</h2>
                             </div>
                         </button>
                     </div>
                     <a href="#" class="guiaTalles">Guía de Talles</a>
                     <br>
-                    
+
+
+                   
                         <a class="agregarCarrito" href="/admin/edit/<%= product.id %>"><button style=color:white
                                 type="submit">EDITAR</button></a>
+
+                        <form action="/admin/delete/<%= product.id %>?_method=DELETE" method="POST">
+                            <button class="agregarCarrito" style=color:white type="submit">BORRAR</button>
+                        </form>
+
                     
-                    <form action="/admin/delete/<%= product.id %>?_method=DELETE" method="POST">
-                        <button class="agregarCarrito" style=color:white type="submit">BORRAR</button>
-                    </form>
+   
+
                 </section>
             </main>
             <section class="productosSimilares">
@@ -72,7 +77,7 @@
                     <img src="/img/camisaJean-3.JPG" alt="pareja agachada con camisa blanca y jean">
                 </div>
             </section>
-
+            
 
             <%- include("./partials/footer.ejs") %>
 

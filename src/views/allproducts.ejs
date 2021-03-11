@@ -5,16 +5,20 @@
 </head>
 <body>
     <%- include("./partials/headerGeneral.ejs") %>
+    <h1 style="text-align: center;">Nuestros productos</h1>
     <article>
         <% for(let i=0; i< products.length; i++) { %> 
-         <div class="nombre-precio">           
-            <h2 class="name"><%= products[i].name %></h2><br>
-            <p class="name"><%= products[i].price %></p> 
+         <div class="allproducts"> 
+            <a href="/products/detail/<%= products[i].id %>"> 
+             <div class="precio">
+                <h2><%= products[i].name %></h2><br>
+                <p>$<%= products[i].price %></p> 
+             </div>         
+        
+        
+        <img src="/uploads/product/<%= products[i].image.length > 0 ? products[i].image[0].filename : null %>" alt="fullOutfit">
+        </a> 
         </div>
-        <a href="/products/detail/<%= products[i].id %>"> 
-        <img src="/public/img/uploads/product/<%= products[i].image %>" alt="fullOutfit"></a> 
-        
-        
         <% } %> 
     </article>
     

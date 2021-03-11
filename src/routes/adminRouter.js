@@ -14,7 +14,7 @@ router.post("/create", multerProduct.any() , adminController.newProduct); // rec
 router.get("/edit/:id", adminController.editProduct); // vista FORMULARIO DE EDICION DE UN PRODUCTO
 router.put("/edit/:id", multerProduct.any(), adminController.updateProduct); // ENVIO DEL FORMULARIO DEL PRODUCTO EDITADO
 
-router.delete("/detele/:id", adminController.deleteProduct); // BORRAR UN PRODUCTO
+router.delete("/delete/:id", adminController.deleteProduct); // BORRAR UN PRODUCTO
 
 
 module.exports = router;

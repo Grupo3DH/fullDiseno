@@ -1,62 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <%- include("./partials/head.ejs") %>
+<%- include("./partials/head.ejs") %>
 
-<body>
-    <%- include("./partials/headerGeneral.ejs") %>
-    <main class="productDetail">
-        <section class="imagenes">
-            <img src="/img/sueterVerde-2.JPG" alt="" class="seleccionada">
-            <div class="imagenesPeque">
-                <img src="/img/sueterVerde-3.JPG" alt="buzo-verde">
-                <img src="/img/sueterVerde-4.JPG" alt="buzo-verde2">
-                <img src="/img/sueterVerde-5.JPG" alt="buzo-verde3">
-                <img src="/img/sueterVerde-6.JPG" alt="buzo-verde4">
-            </div>
-        </section>
-        <section class="infoProducto">
-            <div class="tituloPrecio">
-                <h1><%= product.name %></h1>
-                <h4>$<%= product.price %></h4>
-            </div>
-            <div class="colores">
-                <h2>Colores</h2>
-                <div class="colorProducto"><h2><%= product.color %></h2></div>
-            </div>
-            <div class="descripcion">
-                <h2>Descripción</h2>
-                <p><%= product.description %></p>
-            </div>
-            <div class="selAgregar">
-                <select name="talle" type="Seleccionar un Talle">
-                    <% if (typeof talle != "undefined") { %> 
-                        <% for(let i=0; i< talle.length; i++) {%> 
-                            <option value=<%=talle[i].id %>><%=talle[i].size %></option>
-                            
-                            <% } %>
-                            <% } %>
-                </select>
-                <button type="submit" class="agregarCarrito">
-                         <div class="contenidoAgregarCarrito"><i class="fa fa-shopping-cart"></i><h2>Agregar al
-                         carrito</h2>
-                     </div>
-                </button>
-            </div>
-            <a  href="#" class="guiaTalles">Guía de Talles</a>
-        </section>
-        </main>
-    <section class="productosSimilares">
-        <h1>Productos Similares</h1>
-        <div class="imgProdSimilar">
-            <img src="/img/coupleHeader.JPG" alt="pareja con sueter blanco">
-            <img src="/img/fullOutfit-2.jpg" alt="pareja con overall">
-            <img src="/img/camisaJean-3.JPG" alt="pareja agachada con camisa blanca y jean">
-        </div>
-    </section>
+    <body>
+        <%- include("./partials/headerGeneral.ejs") %>
+            <main class="productDetail">
+                <section class="imagenes">
+                    <img src="/img/sueterVerde-2.JPG" alt="" class="seleccionada">
+                    <div class="imagenesPeque">
+                        <img src="/img/sueterVerde-3.JPG" alt="buzo-verde">
+                        <img src="/img/sueterVerde-4.JPG" alt="buzo-verde2">
+                        <img src="/img/sueterVerde-5.JPG" alt="buzo-verde3">
+                        <img src="/img/sueterVerde-6.JPG" alt="buzo-verde4">
+                    </div>
+                </section>
+                <section class="infoProducto">
+                    <div class="tituloPrecio">
+                        <h1>
+                            <%= product.name %>
+                        </h1>
+                        <h4>$<%= product.price %>
+                        </h4>
+                    </div>
+                    <div class="colores">
+                        <h2>Colores</h2>
+                        <div class="colorProducto">
+                            <h2>
+                                <%= product.color %>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="descripcion">
+                        <h2>Descripción</h2>
+                        <p>
+                            <%= product.description %>
+                        </p>
+                    </div>
+                    <div class="selAgregar">
+                        <select name="talle" type="Seleccionar un Talle">
+                            <% if (typeof talle !="undefined" ) { %>
+                                <% for(let i=0; i< talle.length; i++) {%>
+                                    <option value=<%=talle[i].id %>><%=talle[i].size %>
+                                    </option>
+                                    <% } %>
+                               <% } %>
+                        </select>
+                        <button type="submit" class="agregarCarrito">
+                            <div class="contenidoAgregarCarrito"><i class="fa fa-shopping-cart"></i>
+                                <h2>Agregar al
+                                    carrito</h2>
+                            </div>
+                        </button>
+                    </div>
+                    <a href="#" class="guiaTalles">Guía de Talles</a>
+                    <br>
+                    <a  class="agregarCarrito" href="/admin/edit/<%= product.id %>"><button style=color:white type="submit">EDITAR</button></a>
+                    <form action="/admin/delete/<%= product.id %>?_method=DELETE" method="POST">
+                    <button class="agregarCarrito"  style=color:white type="submit">BORRAR</button>
+                    </form>
+                </section>
+            </main>
+            <section class="productosSimilares">
+                <h1>Productos Similares</h1>
+                <div class="imgProdSimilar">
+                    <img src="/img/coupleHeader.JPG" alt="pareja con sueter blanco">
+                    <img src="/img/fullOutfit-2.jpg" alt="pareja con overall">
+                    <img src="/img/camisaJean-3.JPG" alt="pareja agachada con camisa blanca y jean">
+                </div>
+            </section>
 
 
-    <%- include("./partials/footer.ejs") %>   
+            <%- include("./partials/footer.ejs") %>
 
 
-</body>
+    </body>

@@ -7,12 +7,11 @@ module.exports = function (sequelize, dataTypes) {
             primaryKey: true
         },
         filename: {
-            type: dataTypes.STRING(100),
+            type: dataTypes.STRING(1000),
             NotNull: true
         },
-        product_id:{
-            type: dataTypes.INTEGER,
-            NotNull: true
+        deleted_at: {
+            type: dataTypes.DATE
         }
      
 }

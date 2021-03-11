@@ -12,10 +12,11 @@ productsController = {
         })
     },
     showDetails: function (req, res) {
-        db.Product.findByPk(req.params.id)
+         db.Product.findByPk(req.params.id)
             .then(function (product) {
-                res.render("productDetail", { product })
-            })
+                res.render("productDetail", { product })                  
+                })
+
     },
     search: function (req, res) {
         db.Porduct.findAll({

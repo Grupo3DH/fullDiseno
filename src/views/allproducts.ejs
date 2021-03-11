@@ -11,9 +11,9 @@
             <h2 class="name"><%= products[i].name %></h2><br>
             <p class="name"><%= products[i].price %></p> 
         </div>
-        <a href="/products/detail/<%= products[i].id %>"> <img src="./img/uploads/products/<%= products[i].image %>" alt="fullOutfit"></a> 
-        <a href="/products/edit/<%= products[i].id %>"><button type="submit">EDITAR</button></a>
-        <a href="/products/detele/<%= products[i].id %>"><button type="submit">BORRAR</button></a>
+        <a href="/products/detail/<%= products[i].id %>"> 
+        <img src="/public/img/uploads/product/<%= products[i].image %>" alt="fullOutfit"></a> 
+        
         
         <% } %> 
     </article>

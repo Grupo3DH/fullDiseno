@@ -960,11 +960,15 @@ text-align: center;
 /* ===============================
          admin
 ============================== */
+.admin{
+    
+    text-align: center;
+    align-items: center;
+}
 
-
-.adminBoton{
+a .adminBoton{
     display: flex;
-    justify-content: column;
+    justify-content: center;
     margin: 20px;
     font-family: Goldman;
     color: white;
@@ -975,6 +979,12 @@ text-align: center;
     text-transform: uppercase;
     border-radius: 2px;
     box-shadow: 3px 3px 20px rgb(202, 202, 202);
+}
+
+.adminBoton:hover{
+    cursor: pointer;
+        background-color: #048591;
+
 }
 
 

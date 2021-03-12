@@ -35,11 +35,17 @@ module.exports = {
             color_id: req.body.color,
             status_id: 1
         }).then(function (resultado) {
-            db.Image.create({
-                filename: req.files[0].filename,
-                product_id: resultado.id
+            let array = [];
+             for(let i=0; i< req.files.length;i ++){
+               let promesa =  db.Image.create({
+                    filename: req.files[i].filename,
+                    product_id: resultado.id
+                })
+                array.push(promesa);
+            }
+            Promise.all(array).then(function(){
+                res.redirect('/products/all')
             })
-            res.redirect('/products/all')
 
         }).catch(function (e) {
             console.log(e)
@@ -58,12 +64,7 @@ module.exports = {
         })
     },
     updateProduct: function (req, res) {
-        // db.Product.findOne({
-        //     where: {
-        //         id: req.params.id
-        //     }
-        // }).then(function (product) {
-            
+                 
             db.Product.update({
                 name: req.body.nombre,
                 description: req.body.descripcion,
@@ -76,21 +77,21 @@ module.exports = {
                     id: req.params.id,
                 }
             }).then(function (resultado) {
-                let image = resultado.filename
-                db.Image.update({
-                    filename: req.files[0].length > 0 ? req.files[0].filename : image,
-                    product_id: resultado.id
-                }, {
-                    where: {
-                        id: req.params.id
-                    }
-                
-                }).then(function () {
-                    res.redirect('/products/all')
+                let array = [];
+             for(let i=0; i< req.files.length;i ++){
+               let promesa =  db.Image.create({
+                    filename: req.files[i].filename,
+                    product_id: req.params.id
+                })
+                array.push(promesa);
+            }
+            Promise.all(array).then(function(){
+                res.redirect('/products/all')
+            })
                 }).catch(function (e) {
                     res.send(e)
                 })
-            })
+            
         
     },
                 deleteProduct: function(req, res) {

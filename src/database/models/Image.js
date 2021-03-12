@@ -10,6 +10,10 @@ module.exports = function (sequelize, dataTypes) {
             type: dataTypes.STRING(1000),
             NotNull: true
         },
+        product_id: {
+            type: dataTypes.INTEGER,
+            NotNull: true
+        },
         deleted_at: {
             type: dataTypes.DATE
         }

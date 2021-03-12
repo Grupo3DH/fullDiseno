@@ -50,7 +50,7 @@ module.exports = function (sequelize, dataTypes) {
             {
                 as: "image",
                 foreignKey: "product_id"
-            })
+            }),
         Product.belongsTo(models.Size,
             {
                 as: "size",

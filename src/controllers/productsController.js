@@ -8,15 +8,17 @@ productsController = {
             where: {deleted_at: null},
             include: ["image"]
         }).then(function (products) {
-            return res.render("allproducts", { products: products })
+            return res.render("allproducts", { products})
         })
     },
     showDetails: function (req, res) {
-         db.Product.findByPk(req.params.id)
-         
-         .then(function (product) {
-                res.render("productDetail", { product })                  
-                })
+         db.Product.findByPk(req.params.id, {
+             include: ["image"]
+         })
+        .then(function (product) {
+            
+            res.render("productDetail", { product })                  
+        })
 
     },
     search: function (req, res) {

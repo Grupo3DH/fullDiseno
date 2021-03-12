@@ -7,12 +7,12 @@
         <%- include("./partials/headerGeneral.ejs") %>
             <main class="productDetail">
                 <section class="imagenes">
-                    <img src="/uploads/product/<%= product.image %>" alt="" class="seleccionada">
+                    <img src="/uploads/product/<%= product.image[0].filename %>" alt="" class="seleccionada">
                     <div class="imagenesPeque">
-                        <!-- <img src="/img/sueterVerde-3.JPG" alt="buzo-verde">
+                        <img src="/img/sueterVerde-3.JPG" alt="buzo-verde">
                         <img src="/img/sueterVerde-4.JPG" alt="buzo-verde2">
                         <img src="/img/sueterVerde-5.JPG" alt="buzo-verde3">
-                        <img src="/img/sueterVerde-6.JPG" alt="buzo-verde4"> -->
+                        <img src="/img/sueterVerde-6.JPG" alt="buzo-verde4">
                     </div>
                 </section>
                 <section class="infoProducto">

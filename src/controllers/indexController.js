@@ -1,12 +1,14 @@
-// const db = require("../database/models/index");
+const db = require("../database/models/index");
 
 indexController = {
     index: function(req,res){
-        // db.Producto.findAll()
-        //.then(function(productos){
-//      return res.render("index", {peliculas})
-        //})
-        res.render("../views/index")  //esto deberia sacarlo
+        db.Product.findAll({
+            where: {deleted_at: null},
+            include: ["image"]
+        }).then(function (products) {
+            return res.render("index", {products})
+        })
+    
     }
 }
 

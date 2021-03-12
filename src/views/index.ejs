@@ -5,106 +5,23 @@
 
     <body>
         <%- include("./partials/headerIndex.ejs") %>
-            
+        <h1 style="text-align: center;">Novedades</h1>
             <main class="productosIndex">
+                <% for(let i=0; i< products.length; i++) { %> 
                 <article>
+                    <a href="/products/detail/<%= products[i].id %>">
                     <div class="nombre-precio">
-                        <!-- //aca va un for que muestre y en el h2 y p entro en el array en si posicion -->
-                        <h2 class="name">CAMPERA JEAN</h2><br>
-                        <p class="name">$3.400 </p>
+                        <h2 class="name"><%= products[i].name %></h2><br>
+                        <p class="name">$<%= products[i].price %></p>
                     </div>
                     <span>
                         <p class="nuevo">NUEVO</p>
                         <i class="fa fa-heart"></i>
                     </span>
-                    <a href="/products/detail/:id"> <img src="/img/fullOutfit.jpg" alt="fullOutfit"></a>
-                </article>
-
-                <article>
-                    <div class="nombre-precio">
-                        <h2 class="name">BUZO VERDE</h2><br>
-                        <p class="name">$4.400 </p>
-                    </div>
-                    <span>
-                        <p class="nuevo">NUEVO</p>
-                        <i class="fa fa-heart"></i>
-                    </span>
-                    <a href="#"><img src="/img/sueterVerde.JPG" alt="sueterVerde">
+                        <img src="/uploads/product/<%= products[i].image.length > 0 ? products[i].image[0].filename : null %>" alt="fullOutfit">
                     </a>
                 </article>
-
-                <article>
-                    <div class="nombre-precio">
-                        <h2 class="name">OVEROLL</h2><br>
-                        <p class="name">$7.400 </p>
-                    </div>
-                    <span>
-                        <p class="nuevo">NUEVO</p>
-                        <i class="fa fa-heart"></i>
-                    </span>
-                    <a href="#"> <img class="ropa" src="/img/overollStyle.jpg" alt="fullOutfit-2"></a>
-
-                </article>
-
-                <article>
-                    <div class="nombre-precio">
-                        <h2 class="name">CAMPERA NEGRA</h2><br>
-                        <p class="name">$8.400 </p>
-                    </div>
-                    <span>
-                        <p class="nuevo">NUEVO</p>
-                        <i class="fa fa-heart"></i>
-                    </span>
-                    <a href="#"> <img class="ropa" src="/img/abrigoNegro.JPG" alt="abrigoNegro"></a>
-                </article>
-
-                <article>
-                    <div class="nombre-precio">
-                        <h2 class="name">BUZO BLANCO</h2><br>
-                        <p class="name">$3.400 </p>
-                    </div>
-                    <span>
-                        <p class="nuevo">NUEVO</p>
-                        <i class="fa fa-heart"></i>
-                    </span>
-                    <a href="#"> <img class="ropa" src="/img/sueterBlanco.jpg" alt="buzoblanco"></a>
-                </article>
-
-                <article>
-                    <div class="nombre-precio">
-                        <h2 class="name">CAMISA BLANCA</h2><br>
-                        <p class="name">$3.400 </p>
-                    </div>
-                    <span>
-                        <p class="nuevo">NUEVO</p>
-                        <i class="fa fa-heart"></i>
-                    </span>
-                    <a href="#"> <img class="ropa" src="/img/camisa.jpg" alt="camisaJean"></a>
-                </article>
-
-                <article>
-                    <div class="nombre-precio">
-                        <h2 class="name">CAMISA BLANCA</h2><br>
-                        <p class="name">$3.400 </p>
-                    </div>
-                    <span>
-                        <p class="nuevo">NUEVO</p>
-                        <i class="fa fa-heart"></i>
-                    </span>
-                    <a href="#"> <img class="ropa" src="/img/camisa.jpg" alt="camisaJean"></a>
-                </article>
-
-                <article>
-                    <div class="nombre-precio">
-                        <h2 class="name">CAMISA BLANCA</h2><br>
-                        <p class="name">$3.400 </p>
-                    </div>
-                    <span>
-                        <p class="nuevo">NUEVO</p>
-                        <i class="fa fa-heart"></i>
-                    </span>
-                    <a href="#"> <img class="ropa" src="/img/camisa.jpg" alt="camisaJean"></a>
-                </article>
+                <% } %> 
             </main>
 
 

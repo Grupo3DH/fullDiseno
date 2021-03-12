@@ -434,6 +434,8 @@ hr {
 
 .imagenes {
     display: flex;
+    justify-content: flex-end;
+    margin-left: 50px;
 }
 
 .imagenesPeque{
@@ -447,7 +449,10 @@ hr {
 }
 
 .infoProducto{
-    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    height: 504px;
 }
 
 .tituloPrecio h4{
@@ -473,10 +478,7 @@ hr {
     
 }
 
-.descripcion h2{
-    margin-top: 30px;
-    margin-bottom: 10px;
-}
+
 
 .descripcion p{
     margin-bottom: 30px;
@@ -500,6 +502,7 @@ select {
 }
 .agregarCarrito {
     display: flex;
+    margin-top: 9px;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -539,10 +542,19 @@ select {
 
 .imgProdSimilar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.similares{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.editarborrar{
+    display: flex;
 }
 
 /* ======================

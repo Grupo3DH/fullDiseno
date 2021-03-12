@@ -9,6 +9,9 @@ const db = require("../database/models");
 
 
 userController = {
+    perfil: function(req,res){
+
+    },
     register: function (req, res) {
         res.render("register")
     },

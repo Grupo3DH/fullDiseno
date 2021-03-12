@@ -41,7 +41,7 @@
     <% } else if(usuarioLogueado.admin == 1) { %>
         <a class="productos" href="/admin/config">
             <img class="hanger" src="/img/hanger.svg" alt="menu desplegable">
-            <h4 class="p">PRODUCTOS</h4>
+            <h4 class="p">CONFIGURACIÓN</h4>
         <% } else if(usuarioLogueado.admin == 0) { %>
             <a class="productos" href="/products/all">
                 <img class="hanger" src="/img/hanger.svg" alt="menu desplegable">
@@ -49,11 +49,7 @@
         <% } %>
         
         </a>
-
         <img class="img-header" src="/img/headermeli.png" alt="banner ropa unisex">
-        <div class="fixed">
-            <h4>SCROLL</h4>
-            <i class="fa fa-chevron-down fa-3x"></i>
-        </div>
+        
     </div>
 </header>

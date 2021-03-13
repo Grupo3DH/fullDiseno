@@ -20,8 +20,9 @@ productsController = {
                     })
 
             })
-
         })
+
+        
 
     },
     search: function (req, res) {

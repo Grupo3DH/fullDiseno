@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include("./partials/head.ejs") %>
+<%- include("./partials/head.ejs", {Solapa:"Detalle de producto"}) %>
 
     <body>
         <%- include("./partials/headerGeneral.ejs") %>
@@ -68,7 +68,7 @@
                     <a href="#" class="guiaTalles">Guía de Talles</a>
                     <br>
 
-                    
+                   
                         <div class="editarborrar">
                             <a class="agregarCarrito" href="/admin/edit/<%= product.id %>"><button style=color:white
                                     type="submit">EDITAR</button></a>
@@ -76,7 +76,7 @@
                                 <button class="agregarCarrito" style=color:white type="submit">BORRAR</button>
                             </form>
                         </div>
-                        
+                     
                 </section>
             </main>
             <h1 class="similares">Productos Similares</h1>

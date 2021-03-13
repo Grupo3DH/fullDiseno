@@ -22,6 +22,10 @@ module.exports = function (sequelize, dataTypes) {
             type: dataTypes.TINYINT,
             NotNull: true
         },
+        avatar: {
+            type: dataTypes.STRING(1000),
+            NotNull: true
+        },
         sale_id: {
             type: dataTypes.INTEGER,
             NotNull: true,
@@ -31,6 +35,9 @@ module.exports = function (sequelize, dataTypes) {
             type: dataTypes.INTEGER,
             NotNull: true,
            
+        },
+        deleted_at: {
+            type: dataTypes.DATE
         }
 
     }
@@ -39,6 +46,7 @@ module.exports = function (sequelize, dataTypes) {
         tableName: "user",
         timestamps: true, 
         underscored: true, 
+        paranoid: true
     }
 
     const User = sequelize.define(alias, cols, config)

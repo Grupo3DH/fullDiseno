@@ -4,9 +4,6 @@ const path = require("path");
 const bcrypt = require("bcryptjs"); // hashea la password
 const { validationResult } = require("express-validator");
 
-
-
-
 userController = {
     perfil: function(req,res){
         db.User.findByPk(req.session.user.id)
@@ -64,7 +61,7 @@ userController = {
                 email: req.body.email
             }   
         }).then(function(user){
-            if(user && bcrypt.compareSync(req.body.password, user.password)){
+            if(user && bcrypt.compareSync(toString(req.body.password), user.password)){
                 req.session.user = {
                     id: user.id,
                     name: user.name,
@@ -72,6 +69,7 @@ userController = {
                     admin: user.admin,
                     avatar: user.avatar
                 }
+               
             if(req.body.recordarme != undefined){ 
                 res.cookie("recordarme", req.session.user.id, { maxAge: 900000});
             }

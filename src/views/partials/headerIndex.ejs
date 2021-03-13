@@ -22,27 +22,27 @@
             </li>
             <li><a href="/products/cart"><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></a></li>
             
-            <% if(typeof usuarioLogueado == "undefined") { %>
+            <% if(typeof user == "undefined") { %>
                 <li><a class="inicio" href="/user/login">Iniciar sesión</a></li>
-            <% } else if(usuarioLogueado.admin == 1) { %>
+            <% } else if(user.admin == 1) { %>
                     <li><a href="/admin" title="Configuración del sitio">ADMIN</a></li>
-                <% } else if(usuarioLogueado.admin == 0) { %>
-                    <li><a href="#" title="Configuración del sitio">HOLA <%= usuarioLogueado.name %></a></li>
+                <% } else if(user.admin == 0) { %>
+                    <li><a href="#" title="Configuración del sitio">HOLA <%= user.name %></a></li>
                 <% } %> 
                 
             </ul>
     </nav>
 
     <div id="contenido">
-        <% if(typeof usuarioLogueado == "undefined") { %>
+        <% if(typeof user == "undefined") { %>
             <a class="productos" href="/products/all">
                 <img class="hanger" src="/img/hanger.svg" alt="menu desplegable">
                 <h4 class="p">PRODUCTOS</h4>
-    <% } else if(usuarioLogueado.admin == 1) { %>
+    <% } else if(user.admin == 1) { %>
         <a class="productos" href="/admin/config">
             <img class="hanger" src="/img/hanger.svg" alt="menu desplegable">
             <h4 class="p">CONFIGURACIÓN</h4>
-        <% } else if(usuarioLogueado.admin == 0) { %>
+        <% } else if(user.admin == 0) { %>
             <a class="productos" href="/products/all">
                 <img class="hanger" src="/img/hanger.svg" alt="menu desplegable">
                 <h4 class="p">PRODUCTOS</h4>

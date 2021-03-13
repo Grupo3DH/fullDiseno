@@ -6,7 +6,7 @@
         <h3>vive en paz con tu esencia</h3>
     </div>
     <div class="promo ocultar">
-        <h3>prendas que te representan</h3>
+        <h3>libre de etiquetas</h3>
     </div>
     <div class="menuFondoBlanco">
         <a href="/"><img style="height: 20px;"  class="logoDark" src="/img/EPICENE.png" alt=""></a>
@@ -24,12 +24,12 @@
                 </li>
                 <li><a href="/products/cart"><i class="fa fa-shopping-cart fa-lg"
                             aria-hidden="true"></i></a></li>
-                <% if(typeof usuarioLogueado == "undefined") { %>
+                <% if(typeof user == "undefined") { %>
                 <li><a class="inicio" href="/user/login">Iniciar sesión</a></li>
-            <% } else if(usuarioLogueado.admin == 1) { %>
+            <% } else if(user.admin == 1) { %>
                     <li><a href="/admin" title="Configuración del sitio">ADMIN</a></li>
-                <% } else if(usuarioLogueado.admin == 0) { %>
-                    <li><a href="#" title="Configuración del sitio">HOLA <%= usuarioLogueado.name %></a></li>
+                <% } else if(user.admin == 0) { %>
+                    <li><a href="#" title="Configuración del sitio">HOLA <%= user.name %></a></li>
                 <% } %> %>
             </ul>
         </nav>

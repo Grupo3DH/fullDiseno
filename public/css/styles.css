@@ -600,7 +600,7 @@ select {
     display: flex;
     width: 200px;
     justify-content: flex-start;
-    padding-left: 50px;
+    
    
 }
 
@@ -1064,7 +1064,7 @@ a .adminBoton{
 
 .precio{
     color: black;
-    padding: 50px;
+    
     display: flex;
     flex-direction: column;
     text-align: center;

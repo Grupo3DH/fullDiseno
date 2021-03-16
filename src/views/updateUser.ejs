@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include("./partials/head.ejs", {Solapa:"Editar"}) %>
+
+    <body>
+        <%- include("./partials/headerGeneral.ejs") %>
+
+            <div class="register">
+                
+                <form action="?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <div class="cruz">
+                        <i class="fa fa-times"></i>
+                    </div>
+                    <h1 class="h1">Edita tus datos</h1>
+                    <!-- si no le pongo nada en action quiere decir que esta viajando a /register y el enctype multipartes sirve para cuando tenemos que subir un archivo de tipo file y multer le dice a express que hacer con este tipo de formularios -->
+                    <div class="formularioRegister">
+                        <label for="imputName">Nombre:</label>
+                        <br>
+                        <input type="text" name="name" id="imputName" placeholder="Ingresá tu nombre" value="<%= user.name %>">
+                        <br>
+                        <label for="imputEmail">Correo Electrónico:</label>
+                        <br>
+                        <input type="email" name="email" id="imputEmail" placeholder="Ingresá tu email" value="<%= user.email %>"><br>
+                        <small style="color: red;">
+                            <%= (typeof errors !='undefined' && errors.email) ? errors.email.msg : '' %>
+                        </small>
+                        <br>
+                        <label for="controlFile">Subí tu Foto</label>
+                        <br>
+                        <input selected type="file" name="avatar" id="controlFile" class="inputFoto">
+                        <br>
+                        <label for="inputPassword">Contraseña:</label>
+                        <br>
+                        <input type="password" name="password" id="inputPassword" placeholder="Ingresá tu contraseña" value="<%= user.password %>"><br>
+                        <small style="color: red;">
+                            <%= (typeof errors !='undefined' && errors.password) ? errors.password.msg : '' %>
+                        </small>
+                        <br>
+                        <label for="inputPassword">Confirma tu contraseña:</label>
+                        <br>
+                        <input type="password" name="password" id="inputPassword" placeholder="Confirma tu contraseña" value="<%= user.password %>"><br>
+                    </div>
+                    <button type="submit">Confirmar cambios</button>
+                </form>
+            </div>
+    </body>
+
+</html>

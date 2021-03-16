@@ -1,18 +1,22 @@
 const db = require("../database/models/index")
-const fs = require("fs");
-const path = require("path");
 const bcrypt = require("bcryptjs"); // hashea la password
 const { validationResult } = require("express-validator");
 
 userController = {
     perfil: function(req,res){
-        db.User.findByPk(req.session.user.id)
+        db.User.findByPk(req.params.id)
         .then(function (user){
             return res.render("perfil", {user})
-        })
+        }).catch((error)=>console.log(error))
+    },
+    edicion: function(req,res){
+        db.User.findByPk(req.params.id)
+        .then(function (user){
+            return res.render("updateUser", {user})
+        }).catch((error)=>console.log(error))
     },
     update: function(req,res){
-        db.User.findByPk(req.session.user.id)
+        db.User.findByPk(req.params.id)
         .then(function (user){
             db.User.update({
                 name: req.body.nombre,
@@ -25,8 +29,8 @@ userController = {
                     id: req.params.id,
                 }
             })
-            .then(function(){
-                return res.redirect("/perfil")
+            .then(function(user){
+                return res.redirect("/perfil", {user})
             })
         })
     },
@@ -86,6 +90,20 @@ userController = {
             res.cookie("recordarme", 0, {maxAge: 3800});
             res.redirect("/");
           } 
+    },
+    delete: function(req, res) {         
+        db.User.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+            .then(function () {
+                res.redirect('/');
+            })
+            .catch(function (e) {
+                
+                return res.send(e);
+            })
     }
 
 }

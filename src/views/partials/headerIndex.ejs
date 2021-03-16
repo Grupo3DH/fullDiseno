@@ -27,7 +27,7 @@
             <% } else if(user.admin == 1) { %>
                     <li><a href="/admin" title="Configuración del sitio">ADMIN</a></li>
                 <% } else if(user.admin == 0) { %>
-                    <li><a href="#" title="Configuración del sitio">HOLA <%= user.name %></a></li>
+                    <li><a href="/user/perfil/<%= user.id %>" title="Configuración del sitio">HOLA <%= user.name %></a></li>
                 <% } %> 
                 
             </ul>

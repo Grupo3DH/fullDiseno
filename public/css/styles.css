@@ -999,6 +999,31 @@ a .adminBoton{
 
 }
 
+/* ===============================
+         PERFIL USUARIO
+============================== */
+
+.caja1{
+    display: flex;
+   justify-content: center;
+   margin: 50px;
+}
+
+.caja2 img{
+    width: 100px;
+
+}
+
+.caja4{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+
+
+
+
 
 
 /* ===============================

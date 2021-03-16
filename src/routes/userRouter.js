@@ -9,7 +9,8 @@ const upload = require("../middlewares/multerRegister");
 
 //perfil
 router.get("/perfil/:id", userController.perfil);
-router.get("/perfil/:id", upload.single("avatar"), userController.update);
+router.get("/edit/:id", userController.edicion);
+router.put("/edit/:id", upload.single("avatar"), userController.update);
 
 // /user/register 
 router.get("/register", userController.register);
@@ -19,5 +20,7 @@ router.post("/register", upload.single("avatar"), registerValidation, userContro
 router.get("/login", userController.login);
 router.post("/login", userController.processLogin);
 router.get("/:id", userController.logout);
+
+router.delete("/delete/:id", userController.delete);
 
 module.exports = router;

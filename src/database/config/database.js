@@ -15,7 +15,7 @@ module.exports = {
   },
   "production": {
     "username": "229447",
-    "password": "1561697010Me",
+    "password": "Holamundo1234",
     "database": "fulldiseno_fulldiseno",
     "host": "mysql-fulldiseno.alwaysdata.net",
     "dialect": "mysql"

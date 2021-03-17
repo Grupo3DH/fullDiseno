@@ -75,7 +75,7 @@ userController = {
                 }
                
             if(req.body.recordarme != undefined){ 
-                res.cookie("recordarme", req.session.user.id, { maxAge: 900000});
+                res.cookie("recordarme", req.session.user.id, { maxAge: 15*24*60*60*1000});
             }
             return res.redirect('/')
         
@@ -87,7 +87,7 @@ userController = {
     logout: function(req,res){
         if (req.params.id != undefined) {
             req.session.user = undefined;
-            res.cookie("recordarme", 0, {maxAge: 3800});
+            res.cookie("recordarme", 0, {maxAge: 0});
             res.redirect("/");
           } 
     },

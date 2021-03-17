@@ -22,10 +22,10 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 // esto es para interpretar la info que viaja en los formularios vía POST
 // cuando no encuentra el req.body == undefined es por el orden de estos middlewares
-
+app.use(cookieParser());
 app.use(middlewareLogin);
 
-app.use(cookieParser());
+
 
 app.use(methodOverride("_method")); 
 // para put y delete en la action del form le ponemos action="RUTA?_method=put o delete"

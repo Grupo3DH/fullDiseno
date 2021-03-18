@@ -7,11 +7,9 @@ module.exports = {
         res.render("admin");
     },
     logout: function (req, res) {
-        if (req.params.id != undefined) {
-            req.session.user = undefined;
-            res.cookie("recordarme", 0, { maxAge: 0 });
-            res.redirect("/");
-        }
+        req.session.user = undefined;
+        res.cookie("recordarme",undefined,{maxAge:0});
+        res.redirect('/');
     },
     config: function (req, res) {
         res.render("./adminConfig")

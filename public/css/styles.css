@@ -1079,30 +1079,25 @@ a .adminBoton{
         ALL products
 ============================== */
 
-.allproducts{
-    margin: 20px;
-    display: inline-grid;
-    justify-content: space-between;
-    position: relative;
+ .allproducts{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+ }
 
-} 
+ .allproducts article{
+     margin: 20px;
+     position: relative;
+     text-align: center;
+ }
 
-.precio{
-    color: black;
-    
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    
-    
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 86px;
-    right: 0;
+ .price{
+     position: absolute;
+     
+ }
 
-}
+
+
   
 
 

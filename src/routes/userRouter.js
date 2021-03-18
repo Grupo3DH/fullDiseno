@@ -19,7 +19,7 @@ router.post("/register", upload.single("avatar"), registerValidation, userContro
 // /user/login
 router.get("/login", userController.login);
 router.post("/login", userController.processLogin);
-router.get("/:id", userController.logout);
+router.get("/logout", userController.logout);
 
 router.delete("/delete/:id", userController.delete);
 

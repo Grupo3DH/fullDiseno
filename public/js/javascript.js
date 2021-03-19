@@ -47,34 +47,13 @@ window.addEventListener("load", function () {
     slides[slideIndex - 1].className += " active";
 
   }
+  // NEWSLWTTER
+//   var newsletter = document.querySelector(".newsletterInput");
 
-//NEWSLWTTER
-  var newsletter = document.querySelector(".newsletterInput");
+//   console.log(newsletter)
+//   newsletter.addEventListener("focus", function () {
+//     if (this.value == 'NEWSLETTER') { this.value = "" };
+//     newsletter.style.letterSpacing = "inherit"
+//   }) })
 
-  console.log(newsletter)
-  newsletter.addEventListener("focus", function () {
-    if (this.value == 'NEWSLETTER') { this.value = "" };
-    newsletter.style.letterSpacing = "inherit"
-
-  })
 })
-
-
-
-
-
-
-
-
-
-
-
-  // let inputSearch = document.getElementById("search");
-
-  //     inputSearch.addEventListener("submit",funtion(){
-  //       if(inputSearch.value != ""){
-  //       var form-search = document.querySelector(".formSearch")
-  //         form-search.submit()
-  //       }
-  //       })
-  // 

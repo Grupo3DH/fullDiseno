@@ -6,15 +6,16 @@
     <body>
         <%- include("./partials/headerGeneral.ejs") %>
             <div class="all" >
-                <form class="formularioIS" action="" method="POST">
+                <form id="login" class="formularioIS" action="" method="POST">
                     <div class="cruz">
                        <i class="fa fa-times"></i>
                     </div>
                     <h1 class="h1">Iniciar Sesión</h1>
-                    <div class="errors">
+                    <div class="errores">
                         <ul>   
                        </ul>
                     </div>
+                    <br>
                     <label class="label" for="email">Correo Electrónico:</label><br>
                     <input  class="label" type="email" id="email" name="email"
                         placeholder="Ingrese su correo electrónico">
@@ -37,9 +38,9 @@
 
 
             </div>
-            <script src="/js/validaciones.js"></script>
-            <script src="js/javascript.js"></script> 
-            <script src="/js/pushbar.js"></script>
+            <script src="/js/validacionlogin.js"></script>
+            <!-- <script src="js/javascript.js"></script>  -->
+            <!-- <script src="/js/pushbar.js"></script> -->
 
     </body>
 

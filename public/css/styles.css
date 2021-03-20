@@ -55,6 +55,15 @@ a {
 
 }
 
+.errores{
+    color: red;
+    font-family: Roboto;
+    font-size: 12px;
+    text-align: center;
+    list-style: none;
+
+}
+
 /* ======================
        HEADERINDEX
 ===================== */ 

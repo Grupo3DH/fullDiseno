@@ -53,30 +53,4 @@ if(!validar_email(inputEmail.value))
  }
 
 
-
-
-
-})
-
-let login = document.querySelector("form.formularioIS");
-login.addEventListener("submit", function(e){
-    let errors = [];
-
-    let inputEmail = document.getElementById("email");
-    
-    if(inputEmail.value == ""){
-        errors.push("El campo email se encuentra vacío");
-    } 
-
-    if(errors.length > 0){
-        e.preventDefault();
-    }
-   
-    let small = document.querySelector("div.errors");
-    for (let i = 0; i  < errors.length; i++) {
-        small.innerHTML += "<li>" + errors[i] + "</li>"
-    }
-
-
-
 })

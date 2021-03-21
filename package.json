@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Grupo3DH/grupo3-fullDiseno#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.5",
     "dotenv": "^8.2.0",

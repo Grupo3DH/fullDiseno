@@ -28,7 +28,7 @@ h3 {
 
 h4 {
     font-family: Roboto;
-    font-size: 12px;
+    font-size: 11px;
 }
 
 p {
@@ -144,7 +144,13 @@ a {
     position: relative;
     width: 100%; 
     z-index: 0;
+    box-shadow: -3px 7px 16px -2px rgba(194,186,186,0.93);
    
+}
+
+.novedades{
+    text-align: center;
+    margin-top: 30px;
 }
 
 
@@ -203,7 +209,9 @@ a {
 
 .p{
     display: inline-block; 
-   
+    font-family: 'Goldman';
+    font-size: 11px;
+    font-weight: 100;
 }
 
 .hanger{
@@ -829,9 +837,7 @@ div .all{
 .formularioIS{
     
     background-color: #eaeaea;
-    border-right: 1px solid black;
-    border-left: 1px solid black;
-    border-top: 1px solid black;
+    
     font-family: Goldman;
     text-align: center;
        
@@ -901,7 +907,7 @@ text-align: center;
     background-color: #eaeaea;
     border-left: 1px solid black;
     border-right: 1px solid black;
-    border-bottom: 1px solid black;
+    
 }
 .crearCuenta h2{
     text-align: center;
@@ -933,7 +939,7 @@ text-align: center;
 .register{
     
     background-color: #eaeaea;
-    border: 1px solid black;
+   
     font-family: Goldman;
     text-align: center;
     text-align: center;
@@ -1224,10 +1230,7 @@ a .adminBoton{
   
 @media(max-width: 802px){
     
-      .productosIndex{
-          margin: 5px;
-      }
-  
+      
       .footerWhite{
           margin: -20px 10px 10px 11px;
   }
@@ -1236,9 +1239,7 @@ a .adminBoton{
   
 @media(max-width: 782px){
 
-          .productosIndex{
-              margin: 0px;
-          }
+          
   
           .productosIndex article{
               margin-bottom: 1px;

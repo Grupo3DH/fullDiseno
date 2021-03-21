@@ -5,10 +5,10 @@
 
     <body>
         <%- include("./partials/headerGeneral.ejs") %>
-            <div class="all" >
+            <div class="all modalDialog" id="openModal"  >
                 <form id="login" class="formularioIS" action="" method="POST">
                     <div class="cruz">
-                       <i class="fa fa-times"></i>
+                       <a href="#close" title="Close" class="close"><i class="fa fa-times"></i></a>
                     </div>
                     <h1 class="h1">Iniciar Sesión</h1>
                     <div class="errores">

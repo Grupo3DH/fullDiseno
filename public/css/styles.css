@@ -292,6 +292,10 @@ a {
 .productosIndex article{
     position: relative;
     margin-bottom: 20px;
+    background: rgb(173 168 168 / 70%);
+    background: -moz-linear-gradient(top, #a5d3e6 0%, #6084a2 100%);
+    -webkit-box-shadow: -2px -1px 10px 0px #616161;
+    border-radius: 10px;
 }
 
 .productosIndex article .nombre-precio {
@@ -1110,7 +1114,7 @@ a .adminBoton{
     background: rgb(173 168 168 / 70%);
     background: -moz-linear-gradient(top, #a5d3e6 0%, #6084a2 100%);
     -webkit-box-shadow: -2px -1px 10px 0px #616161;
-    /* border: 1px solid #d3d6d8; */
+    
     border-radius: 10px;
  }
 

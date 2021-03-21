@@ -9,6 +9,7 @@
     <%- include("./partials/headerGeneral.ejs") %>
         <h1 style="text-align: center;">Nuestros productos</h1>
         <div class="allproducts">
+         
             <% for(let i=0; i< products.length; i++) { %>
             <article>
                 
@@ -28,6 +29,7 @@
                 
             </article>
             <% } %>
+           
         </div>
         <%- include("./partials/footer.ejs") %>
 </body>

@@ -13,12 +13,12 @@
         <nav class="navFondoBlanco">
             <ul>
                 <li>
-                    <form class="formSearch" action="" method="GET">
+                    <form class="formSearch" action="/products/search" method="GET">
                         <div class="button-search">
-                            <input type="text" id="search" placeholder="Buscar..." />
+                            <input type="search" id="search" value=<%= (typeof search != 'undefined')? search : null %> />
                         </div>
                         <div class="icono-search">
-                            <button type="search"><a href="#"><i class="fa fa-search fa-lg"></i></a></button>
+                            <button type="submit"><a href="/products/search"><i class="fa fa-search fa-lg icono-search"></i></a></button>
                         </div>
                     </form>
                 </li>

@@ -31,11 +31,22 @@ productsController = {
     },
     search: function (req, res) {
         db.Porduct.findAll({
+            where: {deleted_at: null},
+            include: ["image"]
+        },  
+            {
             where: {
-                nombre: { [db.Sequelize.Op.like]: "%" + req.query.search + "%" }
+                [Op.or]:
+                [ {
+                    nombre: { [Op.like]: "%" + req.query.search + "%" }
+                },
+                {
+                    descripcion: { [Op.like]: "%" + req.query.search + "%" }
+                }
+
+                ]
             }.then(function (listado) {
-                if (listado.lenght != 0)
-                    return res.send(listado)
+                return res.render("allproducts", {listado})
             })
         })
     },

@@ -43,6 +43,12 @@ if(!validar_email(inputEmail.value))
     errors.push("El campo de email no es válido");
 }
 
+let imagen = document.getElementById("controlFile");
+
+if (!(/\.(jpg|png|jpeg|gif)$/i).test(imagen.value)) {
+   errors.push("El archivo a adjuntar no es una imagen válida");
+}
+
  if(errors.length > 0){
      e.preventDefault();
  }

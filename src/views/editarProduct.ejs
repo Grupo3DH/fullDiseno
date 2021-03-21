@@ -6,18 +6,23 @@
         <%- include("./partials/headerGeneral.ejs") %>
             <div class="agregarProducto">
 
-                <form class="agregarform" method="POST" action="?_method=PUT" enctype="multipart/form-data">
+                <form id="editar" class="agregarform" method="POST" action="?_method=PUT" enctype="multipart/form-data">
                     <h1 class="h1">Agregar producto</h1>
+                    <div class="errores">
+                        <ul>
+
+                        </ul>
+                    </div>
                     <div class="agregarProducto">
                         <label class="label" for="nombre">Nombre:</label>
                         <br>
-                        <input required id="nombre" placeholder="Nombre del producto" type="text" name="nombre"
+                        <input id="nombre" placeholder="Nombre del producto" type="text" name="nombre"
                             value="<%= product.name  %> ">
                     </div>
                     <div class="agregarProductodesc">
                         <label class="label" for="descripcion">Descripción:</label>
                         <br>
-                        <input required id="descripcion" placeholder="Descripcion del producto" type="text"
+                        <input id="descripcion" placeholder="Descripcion del producto" type="text"
                             name="descripcion" value="<%= product.description  %> ">
                     </div>
                     <div class="agregarProducto">
@@ -73,6 +78,7 @@
                     </div>
                 </form>
             </div>
+            <script src="/js/validacioneditar.js"></script>
     </body>
 
 </html>

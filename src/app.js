@@ -11,6 +11,7 @@ const userRouter = require("./routes/userRouter");
 const productsRouter = require("./routes/productsRouter");
 const adminRouter = require("./routes/adminRouter")
 const middlewareLogin = require("./middlewares/middlewareLogin");
+const adminMiddleware = require("./middlewares/adminMiddleware");
 
 let port = process.env.PORT || 3000;
 
@@ -24,6 +25,7 @@ app.use(express.json());
 // cuando no encuentra el req.body == undefined es por el orden de estos middlewares
 app.use(cookieParser());
 app.use(middlewareLogin);
+app.use(adminMiddleware);
 
 
 

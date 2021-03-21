@@ -10,19 +10,23 @@ productsController = {
         })
     },
     showDetails: function (req, res) {
+      db.Product.findAll({
+        where: {deleted_at: null},
+        include: ["image"]
+    }).then(function(products){   
         db.Size.findAll().then(function (talle) {
             db.Color.findAll().then(function (color) {
                 db.Product.findByPk(req.params.id, {
                     include: ["image"]
                 })
                     .then(function (product) {
-                        return res.render("productDetail", { product, talle, color })
+                        return res.render("productDetail", { product, talle, color , products})
                     })
 
             })
         })
 
-        
+      }) 
 
     },
     search: function (req, res) {

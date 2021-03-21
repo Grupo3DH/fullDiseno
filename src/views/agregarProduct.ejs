@@ -5,22 +5,27 @@
 <%- include("./partials/headerGeneral.ejs") %>
     <div class="agregarProducto">
         
-        <form class="agregarform" method="POST" action="" enctype="multipart/form-data">
+        <form id="agregar" class="agregarform" method="POST" action="" enctype="multipart/form-data">
             <h1 class="h1">Agregar producto</h1>
             <div class="agregarProducto">
+                <div class="errores">
+                    <ul>
+
+                    </ul>
+                </div>
                 <label class="label" for="nombre">Nombre:</label>
                 <br>
-                <input required id="nombre" placeholder="Nombre del producto"  type="text" name="nombre"> <!-- //si puse name en user cambia? -->
+                <input id="nombre" placeholder="Nombre del producto"  type="text" name="nombre"> <!-- //si puse name en user cambia? -->
             </div>
             <div class="agregarProductodesc">
                 <label class="label" for="descripcion">Descripción:</label>
                 <br>
-                <input required id="descripcion" placeholder="Descripcion del producto" type="text" name="descripcion">
+                <input id="descripcion" placeholder="Descripcion del producto" type="text" name="descripcion">
             </div>
             <div class="agregarProducto">
                 <label class="label"for="imagen">Imágen:</label>
                 <br>
-                <input required id="imagen" placeholder="Imagen del producto" type="file" name="imagen" multiple>
+                <input id="imagen" placeholder="Imagen del producto" type="file" name="imagen" multiple>
             </div>
             <div class="agregarProducto">
                 <label class="label" for="color">Selecciona un color:</label>
@@ -48,7 +53,7 @@
             <div class="agregarProducto">
                 <label class="label" for="precio">Precio:</label>
                 <br>
-                <input required id="precio" placeholder="Precio del producto" type="number" name="precio">
+                <input id="precio" placeholder="Precio del producto" type="number" name="precio">
             </div>
             <div class="IS">
                 <button type="submit">Guardar</button>
@@ -56,5 +61,6 @@
             </div>
         </form>
     </div>
+    <script src="/js/validacionescrear.js"></script>
 </body>
 </html>

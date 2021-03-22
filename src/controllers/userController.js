@@ -1,4 +1,4 @@
-const db = require("../database/models/index")
+const db = require("../database/models/index");
 const bcrypt = require("bcryptjs"); // hashea la password
 const { validationResult } = require("express-validator");
 
@@ -60,6 +60,8 @@ userController = {
     },
 
     processLogin: function (req, res) {
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
         db.User.findOne({
             where: {
                 email: req.body.email
@@ -80,8 +82,12 @@ userController = {
             return res.redirect('/')
         
             }
+       
         
-        }).catch((error)=>console.log(error))
+        })
+    } else {
+        return res.render("login", { errors: errors.mapped(), old: req.body })
+    }
     },
  
     logout: function(req,res){

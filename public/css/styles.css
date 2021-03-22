@@ -1163,6 +1163,14 @@ a .adminBoton{
 
 @media(max-width: 1200px) {
 
+    .productDetail{
+        display: inline-block;
+    }
+    .imagenes {
+        display: inline-flex;
+        margin-left: 0px;
+    }
+
     .index ul input{
          font-size: 11px;
          padding-top: 3px;

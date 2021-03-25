@@ -27,9 +27,14 @@
                 <% if(typeof user == "undefined") { %>
                 <li><a class="inicio" href="/user/login">Iniciar sesión</a></li>
             <% } else if(user.admin == 1) { %>
-                    <li><a href="/admin" title="Configuración del sitio">HOLA ADMIN</a></li>
+                <li><a href="/admin" title="Configuración del sitio">HOLA ADMIN</a>
+                    <br>
+                <a href="/admin/logout">CERRAR SESIÓN</a></li>
+                </li>
                 <% } else if(user.admin == 0) { %>
-                    <li><a href="#" title="Configuración del sitio">HOLA <%= user.name %></a></li>
+                    <li><a href="/user/perfil/<%= user.id %>" title="Configuración del sitio">HOLA <%= user.name %></a>
+                        <br>
+                    <a href="/user/logout">CERRAR SESIÓN</a></li>
                 <% } %> 
             </ul>
         </nav>

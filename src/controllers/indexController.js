@@ -4,8 +4,10 @@ indexController = {
     index: function(req,res){
         db.Product.findAll({
             where: {deleted_at: null},
-            include: ["image"]
+            include: ["image"], 
+            limit: 6
         }).then(function (products) {
+           
             return res.render("index", {products})
         })
     

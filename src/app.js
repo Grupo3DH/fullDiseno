@@ -11,7 +11,6 @@ const userRouter = require("./routes/userRouter");
 const productsRouter = require("./routes/productsRouter");
 const adminRouter = require("./routes/adminRouter")
 const middlewareLogin = require("./middlewares/middlewareLogin");
-const adminMiddleware = require("./middlewares/adminMiddleware");
 const apiUserRouter = require("./routes/api/users");
 const apiProductsRouter = require("./routes/api/products");
 
@@ -24,7 +23,6 @@ app.use(express.json()); // esto es para interpretar la info que viaja en los fo
 // cuando no encuentra el req.body == undefined es por el orden de estos middlewares
 app.use(cookieParser());
 app.use(middlewareLogin);
-app.use(adminMiddleware);
 app.use(methodOverride("_method")); // para put y delete en la action del form le ponemos action="RUTA?_method=put o delete"
 
 app.set("view engine","ejs");

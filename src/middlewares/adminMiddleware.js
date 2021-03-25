@@ -1,8 +1,10 @@
 function adminMiddleware(req, res, next){
-    if(typeof req.session.admin == 1){    
-        res.locals.admin = req.session.admin
+    if(typeof req.session.user != "undefined" && req.session.user.admin == 1){ 
+        next();   
+    } else {
+        res.redirect("/admin/denegado")
     }
-    next();
+   
 }
 
 module.exports = adminMiddleware;

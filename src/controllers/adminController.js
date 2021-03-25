@@ -2,6 +2,9 @@ const db = require("../database/models/index")
 
 
 module.exports = {
+    denegado: function(req,res){
+        res.render("usuariono")
+    },
     admin: function (req, res) {
         // req.session.usrInput = null;
         res.render("admin");

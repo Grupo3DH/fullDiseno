@@ -88,7 +88,7 @@ a {
 }
 
 .index ul li{
-    padding: 0px 5px;
+    padding: 0px 6px;
     font-size: 10px;
    
 }
@@ -99,7 +99,7 @@ a {
 
 .index ul li a i:hover{
     cursor: pointer;
-    transform: scale(1.1); 
+    color: rgba(20, 130, 128, 0.583);
 }
 
 .index ul li a{
@@ -113,7 +113,8 @@ a {
 
 .index ul input{
     background-color: transparent;
-    border-radius: 3px;
+    border-radius: 22px;
+    padding: 5px;
 
 }
 
@@ -165,6 +166,9 @@ a {
 
 .button-search input{
     display: none;
+    background-color: transparent;
+    border-radius: 22px;
+    padding: 5px;
 }
 
 .button-search, input[type=text]{
@@ -210,7 +214,7 @@ a {
 .p{
     display: inline-block; 
     font-family: 'Goldman';
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 100;
 }
 
@@ -242,7 +246,7 @@ a {
     color: white;
     font-size: 16px;
     text-align: center;
-    padding: 10px 0px;
+    padding: 8px 0px;
     padding-left: 60px;
     text-transform: uppercase;
     width: 100%;
@@ -279,7 +283,13 @@ a {
 }
 
 .navFondoBlanco ul li{
-    padding-left: 15px;  
+    padding-left: 15px; 
+    
+
+}
+.navFondoBlanco ul li a i:hover{
+    cursor: pointer;
+    color: rgba(20, 130, 128, 0.583);
 }
 
 
@@ -411,6 +421,8 @@ hr {
     padding: 0 20px;
   
 }
+
+
 
 .newsletter{
     color: white;
@@ -1173,7 +1185,7 @@ a .adminBoton{
 
     .index ul input{
          font-size: 11px;
-         padding-top: 3px;
+         
     }
   
     .fixed{
@@ -1201,7 +1213,7 @@ a .adminBoton{
         
       .index ul input{
           font-size: 8px;
-          padding-top: 5px;
+          
      }
   
      .index ul li a{
@@ -1242,6 +1254,10 @@ a .adminBoton{
       .footerWhite{
           margin: -20px 10px 10px 11px;
   }
+  .p {
+    font-size: 9px;
+    font-weight: 200;
+}
 }
   
   
@@ -1263,6 +1279,10 @@ a .adminBoton{
           .footerBlack img{
               display: none;
           }
+          .p {
+            font-size: 9px;
+            font-weight: 200;
+        }
   
       }
 
@@ -1295,10 +1315,12 @@ a .adminBoton{
         margin-top: -6px;
         font-size: 0px;
         margin-left: 6px;
+        width: 10%;
     }
   
       .index ul{
           padding: 2px;
+          margin-top: 10px;
       }
       .fa{
           display: initial;
@@ -1322,12 +1344,15 @@ a .adminBoton{
          
           margin-top: 0px;
       }
+      .p{
+        font-size: 8.5px;
+      }
       
 }
 
 @media(max-width: 500px){
-    h4{
-        font-size: 9px;
+    .p{
+        font-size: 6px;
     }
 }
 
@@ -1337,7 +1362,7 @@ a .adminBoton{
       padding: 4px 36px;
   }
 
-  h4{
+  .p{
       font-size: 6px;
   }
   

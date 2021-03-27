@@ -218,12 +218,18 @@ a {
     font-weight: 100;
 }
 
+.p:hover{
+    cursor: pointer;
+    color: rgba(20, 130, 128, 0.583);
+}
+
 .hanger{
     display: inline-block;
 }
 
 .hanger:hover{
     cursor: pointer;
+    color: rgba(20, 130, 128, 0.583);
 }
 
 

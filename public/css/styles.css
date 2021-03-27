@@ -117,6 +117,17 @@ a {
     padding: 5px;
 
 }
+.index ul input:focus{
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    border-color: #66CC75;
+    -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
 
 .fixed{
     display:flex;
@@ -267,7 +278,7 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 20px 20px;
+    padding: 8px 20px;
     background-color:white;
     justify-content: flex-end;
 }
@@ -863,12 +874,34 @@ div .all{
 
 
 .formularioIS input{
-    
+    position: relative;
     padding: 10px 40px;
     border-radius: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  letter-spacing: .5px;
+  border: 0;
+  border-bottom: 2px solid #f0f0f0;
+  background-color: #eaeaea;
+  padding-left: 40px;
+  
+ }
+ .formularioIS input:valid {
+    border-color: #16a064;
+ }
+ .formularioIS input:focus {
+    outline: none;
+    border-color: #10d7e6;
+ }
+
+ .icon{
+    position: absolute;
+    z-index: 1;
+    padding-top: 16px;
+    padding-left: 8px;
+ }
     
-    
-}
+
 
 .formularioIS input::placeholder{
     
@@ -880,7 +913,7 @@ text-align: center;
 }
 
 .label{
-    margin: 10px 60px;
+   
     font-family: Goldman;
     
     
@@ -923,8 +956,7 @@ text-align: center;
     
     text-align: center;
     background-color: #eaeaea;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    
     
 }
 .crearCuenta h2{
@@ -968,13 +1000,29 @@ text-align: center;
 
 .formularioRegister input{
     
-    padding: 5px 40px;
+    position: relative;
+    padding: 11px 40px;
     border-radius: 3px;
-    margin-top: 5px;
-    margin-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  letter-spacing: .5px;
+  border: 0;
+  border-bottom: 2px solid #f0f0f0;
+  background-color: #eaeaea;
+ 
     
     
 }
+
+.formularioRegister input:valid {
+    border-color: #16a064;
+ }
+ .formularioRegister input:focus {
+    outline: none;
+    border-color: #10d7e6;
+ }
+
+
 .formularioRegister input::placeholder{
 color: #928f8f;
 font-size: 12px;

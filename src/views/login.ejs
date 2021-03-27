@@ -17,16 +17,18 @@
                     </div>
                     <br>
                     <label class="label" for="email">Correo Electrónico:</label><br>
+                    <i class="fas fa-envelope icon"></i>
                     <input  class="label" type="email" id="email" name="email"
-                        placeholder="Ingrese su correo electrónico">
+                        >
                     <br>
                     <small style="color: red;">
                         <%= (typeof errors !='undefined' && errors.email) ? errors.email.msg : '' %>
                     </small>
                     <br>
                     <label class="label" for="password">Constraseña:</label><br>
+                    <i class="fas fa-lock icon"></i>
                     <input class="label" type="password" id="password" name="password"
-                        placeholder="Ingrese su contraseña">
+                        >
                     <div class="IS">
                         <input type="checkbox" name="recordarme"><h2>Recordarme</h2>
                         <br>

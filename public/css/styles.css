@@ -95,6 +95,7 @@ a {
 
 .index ul li a i {
     transition: all 2ms;
+    font-size: 22px;
 }
 
 .index ul li a i:hover{
@@ -307,6 +308,24 @@ a {
 .navFondoBlanco ul li a i:hover{
     cursor: pointer;
     color: rgba(20, 130, 128, 0.583);
+}
+
+.navFondoBlanco ul input{
+    background-color: transparent;
+    border-radius: 22px;
+    padding: 5px;
+
+}
+.navFondoBlanco ul input:focus{
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    border-color: #66CC75;
+    -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	box-shadow: 0 0 5px rgba(109,207,246,.5);
 }
 
 
@@ -1096,22 +1115,59 @@ a .adminBoton{
 /* ===============================
          PERFIL USUARIO
 ============================== */
+.profile{
+    background-image:url("../img/profile.jpg");
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+   
+    width: 100%;
+   height: 100%;
+}
 
 .caja1{
     display: flex;
    justify-content: center;
-   margin: 50px;
+   margin: 75px;
+}
+
+.caja2{
+    background-color: #dde2e64f;;
+    width: 600px;
+  /*   min-height: 500px; */
+    border-radius: 10px;
+    
+    
+    align-items: center;
+    box-shadow: 2px 10px 40px rgba(22,20,19,0.3);
+
 }
 
 .caja2 img{
-    width: 100px;
-
+    width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 50%;
+  /*  Margin top should be no more than 85px  */
+  margin-top: -60px;
+  border: 10px solid rgba(154, 154, 154, 0.45);
+  margin-left: 20px;
 }
 
 .caja4{
     display: flex;
     justify-content: flex-end;
+    font-family: Goldman;
     
+}
+
+.caja3 p{
+    font-family: Roboto;
+    color: #2f8bcc;
+    margin: 35px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  
 }
 
 
@@ -1272,6 +1328,7 @@ a .adminBoton{
   
      .index ul li a{
          font-size: 12px;
+         font-size: 20px;
      }
   
      .formularioIS input {
@@ -1432,6 +1489,7 @@ a .adminBoton{
 
   .index ul li a {
     font-size: 11px;
+    font-size: 13px;
 }
 
 .whiteIcons{

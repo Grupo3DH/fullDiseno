@@ -16,45 +16,51 @@
                         <input type="search" id="search" value="Buscar..." />
                     </div>
                     <div class="icono-search">
-                        <button type="submit"><a href="/products/search" title="buscar"><i class="fa fa-search fa-lg icono-search"></i></a></button>
+                        <button type="submit"><a href="/products/search" title="buscar"><i
+                                    class="fa fa-search fa-lg icono-search"></i></a></button>
                     </div>
                 </form>
             </li>
-            <li><a href="/products/cart" title="Carrito de compras"><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></a></li>
-            
-            <% if(typeof user == "undefined") { %>
-                <li><a class="inicio" href="/user/login" title="Iniciar sesión"><i  class="fas fa-user-circle fa-lg"></i></a></li>
-            <% } else if(user.admin == 1) { %>
+            <li><a href="/products/cart" title="Carrito de compras"><i class="fa fa-shopping-cart fa-lg"
+                        aria-hidden="true"></i></a></li>
+
+            <% if(typeof user=="undefined" ) { %>
+                <li><a class="inicio" href="/user/login" title="Iniciar sesión"><i
+                            class="fas fa-user-circle fa-lg"></i></a></li>
+                <% } else if(user.admin==1) { %>
                     <li><a href="/admin" title="Configuración del sitio">HOLA ADMIN</a>
                         <br>
-                    <a href="/admin/logout">CERRAR SESIÓN</a></li>
+                        <a href="/admin/logout">CERRAR SESIÓN</a>
                     </li>
-                <% } else if(user.admin == 0) { %>
-                    <li><a href="/user/perfil/<%= user.id %>" title="Configuración del sitio">HOLA <%= user.name %></a>
-                        <br>
-                    <a href="/user/logout" title="Cerrar Sesión">CERRAR SESIÓN</a></li>
-                <% } %> 
-                
-            </ul>
+                    
+                    <% } else if(user.admin==0) { %>
+                        <li><a href="/user/perfil/<%= user.id %>" title="Tu perfil">HOLA <%= user.name %>
+                                    </a>
+                            <br>
+                            <a href="/user/logout" title="Cerrar Sesión">CERRAR SESIÓN</a>
+                        </li>
+                        <% } %>
+
+        </ul>
     </nav>
 
     <div id="contenido">
-        <% if(typeof user == "undefined") { %>
+        <% if(typeof user=="undefined" ) { %>
             <a class="productos" href="/products/all">
                 <img class="hanger" src="/img/hanger.svg" alt="menu desplegable">
                 <h4 class="p">PRODUCTOS</h4>
-    <% } else if(user.admin == 1) { %>
-        <a class="productos" href="/admin/config">
-            <img class="hanger" src="/img/hanger.svg" alt="menu desplegable">
-            <h4 class="p">CONFIGURACIÓN</h4>
-        <% } else if(user.admin == 0) { %>
-            <a class="productos" href="/products/all">
-                <img class="hanger" src="/img/hanger.svg" alt="menu desplegable">
-                <h4 class="p">PRODUCTOS</h4>
-        <% } %>
-        
-        </a>
-        <img class="img-header" src="/img/definitiva.jpg" alt="banner ropa unisex">
-        
+                <% } else if(user.admin==1) { %>
+                    <a class="productos" href="/admin/config">
+                        <img class="hanger" src="/img/hanger.svg" alt="menu desplegable">
+                        <h4 class="p">CONFIGURACIÓN</h4>
+                        <% } else if(user.admin==0) { %>
+                            <a class="productos" href="/products/all">
+                                <img class="hanger" src="/img/hanger.svg" alt="menu desplegable">
+                                <h4 class="p">PRODUCTOS</h4>
+                                <% } %>
+
+                            </a>
+                            <img class="img-header" src="/img/definitiva.jpg" alt="banner ropa unisex">
+
     </div>
 </header>

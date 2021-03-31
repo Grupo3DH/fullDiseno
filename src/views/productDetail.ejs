@@ -31,7 +31,7 @@
                                 <% if(product.color_id==color[i].id){ %>
                                     <option selected value=<%=color[i].id %>><%= color[i].color %></option>
                                 <%} else { %>
-                                    <option style="text-decoration: underline;" value=<%=color[i].id %>><%= color[i].color %></option>
+                                    <option style="color: red;" value=<%=color[i].id %>><%= color[i].color %></option>
                                 <% } %>    
                             <% } %>
                             </select> 

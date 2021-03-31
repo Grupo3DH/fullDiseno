@@ -11,14 +11,13 @@
     <nav class="index">
         <ul>
             <li>
-                <form class="formSearch" action="/products/search" method="">
-                    <div class="button-search">
-                        <input type="search" id="search" value="Buscar..." />
-                    </div>
-                    <div class="icono-search">
-                        <button type="submit"><a href="/products/search" title="buscar"><i
-                                    class="fa fa-search fa-lg icono-search"></i></a></button>
-                    </div>
+                <form class="formSearch" action="/products/search" method="GET">
+                    <!-- <div class="button-search"> -->
+                        <input name="search" type="text" id="search" placeholder="Buscar..." />
+                    <!-- </div> -->
+                    <!-- <div class="icono-search"> -->
+                        <button type="submit"><i class="fa fa-search fa-lg icono-search"></i></button>
+                    <!-- </div> -->
                 </form>
             </li>
             <li><a href="/products/cart" title="Carrito de compras"><i class="fa fa-shopping-cart fa-lg"

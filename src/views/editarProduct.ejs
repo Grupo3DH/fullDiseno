@@ -67,6 +67,18 @@
                         </select>
                     </div>
                     <div class="agregarProducto">
+                        <label class="label" for="category">Selecciona una categoria:</label>
+                        <br>
+                        <select name="category" type="Seleccionar una Categoria">
+                            <% if (typeof category != "undefined") { %> 
+                        <% for(let i=0; i< category.length; i++) {%> 
+                            <option value=<%=category[i].id %>><%=category[i].category %></option>
+                            
+                            <% } %>
+                            <% } %>
+                        </select>
+                    </div>
+                    <div class="agregarProducto">
                         <label class="label" for="precio">Precio:</label>
                         <br>
                         <input required id="precio" placeholder="Precio del producto" type="number" name="precio"

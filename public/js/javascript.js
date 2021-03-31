@@ -1,6 +1,6 @@
 window.addEventListener("load", function () {
 
-  var search = document.querySelector(".icono-search");
+  var search = document.querySelector(".fa-search");
   var input = document.querySelector(".button-search input");
   var formSearch = document.querySelector(".formSearch")
 

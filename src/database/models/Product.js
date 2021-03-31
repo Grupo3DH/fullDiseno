@@ -30,6 +30,10 @@ module.exports = function (sequelize, dataTypes) {
             type: dataTypes.INTEGER,
 
         },
+        category_id: {
+            type: dataTypes.INTEGER,
+
+        },
         deleted_at: {
             type: dataTypes.DATE
         }
@@ -65,7 +69,12 @@ module.exports = function (sequelize, dataTypes) {
                 {
                     as: "status",
                     foreignKey: "status_id"
-                })
+                }),
+            Product.belongsTo(models.Category,
+                    {
+                        as: "category",
+                        foreignKey: "category_id"
+                    })
     }
     return Product;
 }

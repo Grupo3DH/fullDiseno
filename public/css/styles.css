@@ -176,6 +176,8 @@ a {
     display: flex;
 }
 
+
+
 .button-search input{
     display: none;
     background-color: transparent;
@@ -959,6 +961,11 @@ text-align: center;
     text-transform: uppercase;
     border-radius: 2px;
     box-shadow: 3px 3px 20px rgb(202, 202, 202);
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
 }
 
 .IS button:hover{
@@ -995,6 +1002,12 @@ text-align: center;
     text-transform: uppercase;
     border-radius: 2px;
     box-shadow: 3px 3px 20px rgb(202, 202, 202);
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+
 }
 
 .crearCuenta a button:hover{
@@ -1067,6 +1080,11 @@ text-align: center;
     text-transform: uppercase;
     border-radius: 2px;
     box-shadow: 3px 3px 20px rgb(202, 202, 202);
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
 }
 
 .register form button:hover{

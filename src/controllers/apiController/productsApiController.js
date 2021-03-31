@@ -7,7 +7,7 @@ module.exports = {
             include: ["image"]
         }).then(function (products) {
             for (let i = 0; i < products.length; i++) {
-                products[i].setDataValue("endpoint", "/api/products/" + peliculas[i].id)
+                products[i].setDataValue("endpoint", "/api/products/" + products[i].id)
             }
             let respuesta = {
                 meta: {
@@ -18,12 +18,16 @@ module.exports = {
                 data: products
 
             }
-            res.json(products)
+            res.json(respuesta)
+        }).catch(function () {
+            res.json({ status: 500 })
         })
     },
     total: function (req, res) {
         db.Product.count().then(function(numero){
             res.json(numero)
+        }).catch(function () {
+            res.json({ status: 500 })
         })
     },
 
@@ -34,20 +38,31 @@ module.exports = {
                     include: ["image"]
                 })
                     .then(function (product) {
-                        for (let i = 0; i < products.length; i++) {}
+                        if (product != undefined) {
                         let respuesta = {
                             meta: {
                                 status: 200,
-                                total: products.length,
-                                url: "/api/products/:id"
+                                url: "/api/products/" + product.id
                             },
                             data: product
                         }
-                        res.json(product, talle, color)
-                    })
+                        return res.json(respuesta)
+                    } else {
+                        return res.json({ status: 204 ,msg: "este producto no se encuentra" })
+                    }
+                })
 
             })
+        }).catch(function () {
+            res.json({ status: 500 })
         })
 
+    },
+    category: function(req,res){
+        db.Products.countByCategory().then(function(category){
+            res.json(category)
+        }).catch(function () {
+            res.json({ status: 500 })
+        })
     }
 }

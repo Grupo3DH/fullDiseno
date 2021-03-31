@@ -1,6 +1,7 @@
 const db = require("../database/models/index");
+const { Op } = require("sequelize");
 
-productsController = {
+module.exports = {
     showAll: function (req, res) {
         db.Product.findAll({
             where: { deleted_at: null },
@@ -30,24 +31,20 @@ productsController = {
 
     },
     search: function (req, res) {
-        db.Porduct.findAll({
-            where: { deleted_at: null },
-            include: ["image"]
-        },
+        db.Product.findAll(
             {
                 where: {
-                    [Op.or]:
-                        [{
                             name: { [Op.like]: "%" + req.query.search + "%" }
-                        },
-                        {
-                            description: { [Op.like]: "%" + req.query.search + "%" }
-                        }
-
-                        ]
-                }.then(function (listado) {
-                    return res.render("allproducts", { listado })
-                })
+                        
+                        // {
+                        //     description: { [Op.like]: "%" + req.query.search + "%" }
+                        // }     
+                }, 
+                include: ["image"]
+            }).then(function (products) {
+                return res.render("./allproducts", { products })
+            }).catch(function(e){
+                console.log(e)
             })
     },
     cart: function (req, res) {
@@ -56,4 +53,3 @@ productsController = {
 
 }
 
-module.exports = productsController;

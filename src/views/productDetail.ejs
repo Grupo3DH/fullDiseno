@@ -26,15 +26,16 @@
                     <div class="colores">
                         <h2>Colores disponibles</h2>
                         <% if (typeof color !="undefined" ) { %>
+                            <select class="colorProducto">
                             <% for(let i=0; i< color.length; i++) {%>
                                 <% if(product.color_id==color[i].id){ %>
-                                    <select class="colorProducto">
-                                        <option selected value=<%=color[i].id %>><%= color[i].color %>
-                                        </option>
-                                    </select>
-                                    <%} %>
-                                        <% } %>
-                                            <% } %>
+                                    <option selected value=<%=color[i].id %>><%= color[i].color %></option>
+                                <%} else { %>
+                                    <option style="text-decoration: underline;" value=<%=color[i].id %>><%= color[i].color %></option>
+                                <% } %>    
+                            <% } %>
+                            </select> 
+                        <% } %>
                     </div>
                     <div class="descripcion">
                         <h2>Descripción</h2>
@@ -45,17 +46,17 @@
                     <h2>Talles disponibles</h2>
                     <div class="editarborrar">
                         <div class="selAgregar">
-
                             <% if (typeof talle !="undefined" ) { %>
+                                <select class="colorProducto">
                                 <% for(let i=0; i< talle.length; i++) {%>
                                     <% if(product.size_id==talle[i].id){ %>
-                                        <select class="colorProducto">
-                                            <option selected value=<%=talle[i].id %>><%= talle[i].size %>
-                                            </option>
-                                        </select>
-                                        <% } %>
-                                            <%} %>
-                                                <% } %>
+                                        <option selected value=<%=talle[i].id %>><%= talle[i].size %></option>
+                                    <% } else { %>
+                                        <option value=<%=talle[i].id %>><%= talle[i].size %></option>
+                                    <% } %>    
+                                <% } %>
+                                </select>
+                            <% } %>
                         </div>
                         <button type="submit" class="agregarCarrito">
                             <div class="contenidoAgregarCarrito"><i class="fa fa-shopping-cart"></i>

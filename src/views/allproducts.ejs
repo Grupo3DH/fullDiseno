@@ -9,10 +9,10 @@
     <%- include("./partials/headerGeneral.ejs") %>
         <h1 style="text-align: center;">Nuestros productos</h1>
         <div class="allproducts">
-         
+            <% if( products.length > 0){ %>
             <% for(let i=0; i< products.length; i++) { %>
             <article>
-                
+              
                     <a href="/products/detail/<%= products[i].id %>">
                         <div class="price">
                             <h2>
@@ -29,7 +29,10 @@
                 
             </article>
             <% } %>
-           
+            <% } else { %>
+                <h2 style="padding: 30px;">No se encontraron productos para esta búsqueda</h2>
+            <% } %>
+                <br>
         </div>
         <%- include("./partials/footer.ejs") %>
 </body>

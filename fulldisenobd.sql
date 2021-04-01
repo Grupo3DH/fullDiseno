@@ -45,6 +45,30 @@ LOCK TABLES `cart` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `category`
+--
+
+DROP TABLE IF EXISTS `category`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `category` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `category` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `category`
+--
+
+LOCK TABLES `category` WRITE;
+/*!40000 ALTER TABLE `category` DISABLE KEYS */;
+INSERT INTO `category` VALUES (1,'remera'),(2,'buzo'),(3,'camisa'),(4,'overall'),(5,'campera'),(6,'pantalon'),(7,'jean'),(8,'swetter'),(9,'blazer'),(10,'bermuda'),(11,'campera');
+/*!40000 ALTER TABLE `category` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `color`
 --
 
@@ -111,11 +135,12 @@ CREATE TABLE `product` (
   `size_id` int(11) NOT NULL,
   `status_id` int(11) NOT NULL,
   `color_id` int(11) NOT NULL,
+  `category_id` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -124,7 +149,7 @@ CREATE TABLE `product` (
 
 LOCK TABLES `product` WRITE;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
-INSERT INTO `product` VALUES (1,'campera jean','campera unisex',4300,2,1,5,'2021-03-11 15:58:14','2021-03-11 18:28:03','2021-03-11 18:28:03'),(16,'swetter verde','swetter verde unisex',8700,2,1,2,'2021-03-11 16:00:46','2021-03-11 18:26:36','2021-03-11 18:26:36'),(17,'campera jean','sxdjasdnjkasdljasd',4556,2,1,4,'2021-03-11 18:08:56','2021-03-11 18:22:55','2021-03-11 18:22:55'),(18,'campera','campera   unisex, Una campera atemporal, Su suave tejido, cuello alto y corte holgado crean una prenda que combina el estilo clásico con la comodidad. ',3800,2,1,5,'2021-03-11 18:31:28','2021-03-11 21:17:20',NULL),(19,'buzo','Llena tu vida de color. Esta Campera Adicolor presenta un diseño clásico disponible en colores de inspiración retro. El logotipo del trébol deconstruido en la parte frontal aporta un toque extra de estilo. ',4300,2,1,2,'2021-03-11 20:40:56','2021-03-11 21:17:42',NULL),(20,'overall','Tu estilo es distintivo. Tus gustos son únicos. Destacate entre la multitud cada vez que te ponés este overall, Su diseño de corte holgado con un Trifolio 3D en el frente se ve genial con un jean de bota campana, un jardinero o una pollera en A. Las posibilidades son infinitas.',8400,1,1,5,'2021-03-11 20:46:32','2021-03-11 20:46:32',NULL),(21,'campera','Todos estamos conectados. Si querés vivir una vida plena te tiene que importar la salud del planeta en el que vivimos todos. Esta campera esta hecha con materiales reciclados y teñidos con tinturas naturales. ',4500,3,1,4,'2021-03-11 20:48:50','2021-03-11 21:18:00',NULL),(22,'buzo','A finales de los 90 la moda urbana dominaba. Este buzo corto evoca esta era. Usalo para crear un look retro o moderno, vos elegís. ',4500,2,1,1,'2021-03-11 21:13:55','2021-03-11 21:13:55',NULL),(23,'camisa ','¿Qué tanto puedes combinar una sola prenda? esta camisa te permite mil estilos, unisex ',1200,3,1,1,'2021-03-11 21:15:49','2021-03-12 01:03:41',NULL),(24,'campera','Este producto está hecho con Primegreen, una serie de materiales reciclados de alto desempeño',4800,2,1,5,'2021-03-12 19:30:53','2021-03-12 19:30:53',NULL),(25,'jean','Todo el confort de una prenda para estar en casa, con la flexibilidad para hacer todas tus actividades. Hace tus movimientos favoritos con este pantalón',5500,3,1,5,'2021-03-12 19:37:14','2021-03-12 19:37:14',NULL),(26,'camisa','camisa larga de jean unisex, estilo cualquiera puede llevarlo.',9800,3,1,5,'2021-03-12 19:40:29','2021-03-12 19:40:29',NULL),(27,'campera','campera rompevientos ,  con hilos reciclados  ',7800,2,1,6,'2021-03-12 19:46:33','2021-03-12 19:46:33',NULL),(28,'bermuda','Te invitamos a ver las imágenes para apreciar más detalles desde diferentes ángulos. Si ya conocés Jh Bb Short podés dejar una reseña abajo; siempre nos encanta conocer tu opinión.',4600,2,1,1,'2021-03-12 19:55:30','2021-03-12 19:55:30',NULL),(29,'blazer ','Sus detalles ajustables en la visera y el dobladillo ofrecen cobertura adicional para protegerte del frío, mientras que sus cierres alargados y agujeros perforados permiten una óptima circulación del aire ',9800,3,1,7,'2021-03-12 19:57:58','2021-03-12 21:53:13',NULL);
+INSERT INTO `product` VALUES (1,'campera jean','campera unisex',4300,2,1,5,5,'2021-03-11 15:58:14','2021-03-11 18:28:03','2021-03-11 18:28:03'),(16,'swetter verde','swetter verde unisex',8700,2,1,2,8,'2021-03-11 16:00:46','2021-03-11 18:26:36','2021-03-11 18:26:36'),(17,'campera jean','sxdjasdnjkasdljasd',4556,2,1,4,5,'2021-03-11 18:08:56','2021-03-11 18:22:55','2021-03-11 18:22:55'),(18,'campera','campera   unisex, Una campera atemporal, Su suave tejido, cuello alto y corte holgado crean una prenda que combina el estilo clásico con la comodidad. ',3800,2,1,5,5,'2021-03-11 18:31:28','2021-03-11 21:17:20',NULL),(19,'buzo','Llena tu vida de color. Esta Campera Adicolor presenta un diseño clásico disponible en colores de inspiración retro. El logotipo del trébol deconstruido en la parte frontal aporta un toque extra de estilo. ',4300,2,1,2,2,'2021-03-11 20:40:56','2021-03-11 21:17:42',NULL),(20,'overall','Tu estilo es distintivo. Tus gustos son únicos. Destacate entre la multitud cada vez que te ponés este overall, Su diseño de corte holgado con un Trifolio 3D en el frente se ve genial con un jean de bota campana, un jardinero o una pollera en A. Las posibilidades son infinitas.',8400,1,1,5,4,'2021-03-11 20:46:32','2021-03-11 20:46:32',NULL),(21,'campera','Todos estamos conectados. Si querés vivir una vida plena te tiene que importar la salud del planeta en el que vivimos todos. Esta campera esta hecha con materiales reciclados y teñidos con tinturas naturales. ',4500,3,1,4,5,'2021-03-11 20:48:50','2021-03-11 21:18:00',NULL),(22,'buzo','A finales de los 90 la moda urbana dominaba. Este buzo corto evoca esta era. Usalo para crear un look retro o moderno, vos elegís. ',4500,2,1,1,2,'2021-03-11 21:13:55','2021-03-11 21:13:55',NULL),(23,'camisa ','¿Qué tanto puedes combinar una sola prenda? esta camisa te permite mil estilos, unisex ',1200,3,1,1,3,'2021-03-11 21:15:49','2021-03-12 01:03:41',NULL),(24,'campera','Este producto está hecho con Primegreen, una serie de materiales reciclados de alto desempeño',4800,2,1,5,5,'2021-03-12 19:30:53','2021-03-12 19:30:53',NULL),(25,'jean','Todo el confort de una prenda para estar en casa, con la flexibilidad para hacer todas tus actividades. Hace tus movimientos favoritos con este pantalón',5500,3,1,5,7,'2021-03-12 19:37:14','2021-03-12 19:37:14',NULL),(26,'camisa','camisa larga de jean unisex, estilo cualquiera puede llevarlo.',9800,3,1,5,3,'2021-03-12 19:40:29','2021-03-12 19:40:29',NULL),(27,'campera','campera rompevientos ,  con hilos reciclados  ',7800,2,1,6,5,'2021-03-12 19:46:33','2021-03-12 19:46:33',NULL),(28,'bermuda','Te invitamos a ver las imágenes para apreciar más detalles desde diferentes ángulos. Si ya conocés Jh Bb Short podés dejar una reseña abajo; siempre nos encanta conocer tu opinión.',4600,2,1,1,10,'2021-03-12 19:55:30','2021-03-12 19:55:30',NULL),(29,'blazer  ','Sus detalles ajustables en la visera y el dobladillo ofrecen cobertura adicional para protegerte del frío, mientras que sus cierres alargados y agujeros perforados permiten una óptima circulación del aire  ',9800,3,1,7,9,'2021-03-12 19:57:58','2021-03-20 21:13:58',NULL);
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -221,7 +246,7 @@ CREATE TABLE `user` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`,`sale_id`,`cart_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -230,7 +255,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'usuariouno','usuario1@dh.com','$2a$12$LCbs5DR5U/V7mjrvI0xZluYFJqQfTl3qZ2XuAKu5o/DfcpNXjcL8O',0,'usuario1@dh.com1615592771322.webp',0,0,'2021-03-12 23:46:11','2021-03-12 23:46:11',NULL),(2,'dos','dos@dh.com','$2a$12$9dFcIDsO/IXBc3yKDIn32euPQcwllsJMDrUu/wK7Q7xY22sAriJY.',0,'dos@dh.com1615598053834.jpg',0,0,'2021-03-13 01:14:14','2021-03-13 01:14:14',NULL),(3,'Admin','melii.aa@hotmail.com','$2a$12$UCvOt/oldpzBqEMxPDZq2O0Y1SsSjvFuw.0GrJ6MvT8qfvJzklDSS',1,'melii.aa@hotmail.com1615598231915.webp',0,0,'2021-03-13 01:17:12','2021-03-13 01:17:12',NULL),(4,'rocko','ro@dh.com','$2a$12$4XX6D8iX/iU4aCWYFLjs8eZQ4LTc75WYX2ioBOhwu9qveEYeEHVH6',0,'ro@dh.com1615665386085.jpg',0,0,'2021-03-13 19:56:26','2021-03-13 19:56:26',NULL);
+INSERT INTO `user` VALUES (1,'usuariouno','usuario1@dh.com','$2a$12$LCbs5DR5U/V7mjrvI0xZluYFJqQfTl3qZ2XuAKu5o/DfcpNXjcL8O',0,'usuario1@dh.com1615592771322.webp',0,0,'2021-03-12 23:46:11','2021-03-12 23:46:11',NULL),(2,'dos','dos@dh.com','$2a$12$9dFcIDsO/IXBc3yKDIn32euPQcwllsJMDrUu/wK7Q7xY22sAriJY.',0,'dos@dh.com1615598053834.jpg',0,0,'2021-03-13 01:14:14','2021-03-13 01:14:14',NULL),(3,'Admin','melii.aa@hotmail.com','$2a$12$UCvOt/oldpzBqEMxPDZq2O0Y1SsSjvFuw.0GrJ6MvT8qfvJzklDSS',1,'melii.aa@hotmail.com1615598231915.webp',0,0,'2021-03-13 01:17:12','2021-03-13 01:17:12',NULL),(4,'rocko','ro@dh.com','$2a$12$4XX6D8iX/iU4aCWYFLjs8eZQ4LTc75WYX2ioBOhwu9qveEYeEHVH6',0,'ro@dh.com1615665386085.jpg',0,0,'2021-03-13 19:56:26','2021-03-13 19:56:26',NULL),(5,'usuario10','usuario10@dh.com','$2a$12$Ogl9GeuodlIjIsr/X9EWXu4uEnnUC.gTdpPowK5H9w2npZaOzQ81.',0,'usuario10@dh.com1615923400523.jpeg',0,0,'2021-03-16 19:36:40','2021-03-16 19:36:40','2021-03-16 20:14:23'),(6,'albert','albert@dh.com','$2a$12$1FnoKnCdceWmjpE2DPEo9uTYDkdDuj./.DsaT9eRveXZzKlVGvKju',0,'albert@dh.com1615934244655.webp',0,0,'2021-03-16 22:37:24','2021-03-16 22:37:24',NULL),(7,'','usuario1@dh.com','$2a$12$wNtgUmBFUE/DPtmulouWdeotIJho8KIU7aliLma8U9WbAH27cILMu',0,'usuario1@dh.com1616105195042.jpg',0,0,'2021-03-18 22:06:35','2021-03-18 22:06:35',NULL),(8,'','usuario2@dh.com','$2a$12$ZrdbTF259FUlnXYOdK.beuhXR2gbh2w1uzF.wM8VhIyg1caiN41AS',0,'usuario2@dh.com1616105325451.webp',0,0,'2021-03-18 22:08:45','2021-03-18 22:08:45',NULL),(9,'meli','meli@meli.com','$2a$12$/51NwRMMej.wnyDkpwYXGu8kX2yyIVJ6VliB.x6HHO9dulhkQ6R0a',0,'meli@meli.com1616906465885.jpeg',0,0,'2021-03-28 04:41:06','2021-03-28 04:41:06',NULL);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -243,4 +268,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-13 17:11:21
+-- Dump completed on 2021-03-31 21:24:45

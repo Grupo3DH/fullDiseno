@@ -44,6 +44,15 @@ a {
     font-size: 14px;
     color:black;
     text-decoration: none;
+    
+}
+
+button{
+    outline:none !important;
+outline-width: 0 !important;
+/* box-shadow: none;
+-moz-box-shadow: none;
+-webkit-box-shadow: none; */
 }
 
 .errors{
@@ -79,7 +88,7 @@ a {
     display: flex;
     list-style: none;
     color: black;
-    text-transform: uppercase;
+    
     text-decoration: none;
     list-style: none; 
     position: absolute;
@@ -89,19 +98,25 @@ a {
 
 .index ul li{
     padding: 0px 6px;
-    font-size: 10px;
+    font-size: 18px;
    
 }
 
 .index ul li a i {
     transition: all 2ms;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .index ul li a i:hover{
     cursor: pointer;
     color: rgba(20, 130, 128, 0.583);
 }
+
+.index ul li button i:hover{
+    cursor: pointer;
+    color: rgba(20, 130, 128, 0.583);
+}
+
 
 .index ul li a{
     transition: all 2ms;
@@ -114,7 +129,6 @@ a {
 
 .index ul input{
     background-color: transparent;
-    border-radius: 22px;
     padding: 5px;
 
 }
@@ -176,7 +190,19 @@ a {
     display: flex;
 }
 
-
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding: 60px;
+  }
 
 .button-search input{
     display: none;
@@ -918,8 +944,8 @@ div .all{
  .icon{
     position: absolute;
     z-index: 1;
-    padding-top: 16px;
-    padding-left: 8px;
+    padding-top: 11px;
+    
  }
     
 

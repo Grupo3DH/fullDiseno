@@ -5,52 +5,7 @@
 
     <body>
         <%- include("./partials/headerGeneral.ejs") %>
-            <div class="all modalDialog" id="openModal"  >
-                <form id="login" class="formularioIS" action="" method="POST">
-                    <div class="cruz">
-                       <a href="#close" title="Close" class="close"><i class="fa fa-times"></i></a>
-                    </div>
-                    <h1 class="h1">Iniciar Sesión</h1>
-                    <div class="errores">
-                        <ul>   
-                       </ul>
-                    </div>
-                    <br>
-                    <label class="label" for="email">Correo Electrónico:</label><br>
-                    <i class="fas fa-envelope icon"></i>
-                    <input  class="label" type="email" id="email" name="email"
-                        >
-                    <br>
-                    <small style="color: red;">
-                        <%= (typeof errors !='undefined' && errors.email) ? errors.email.msg : '' %>
-                    </small>
-                    <br>
-                    <label class="label" for="password">Constraseña:</label><br>
-                    <i class="fas fa-lock icon"></i>
-                    <input class="label" type="password" id="password" name="password"
-                        >
-                    <div class="IS">
-                        <input type="checkbox" name="recordarme"><h2>Recordarme</h2>
-                        <br>
-                        <small style="color: red;">
-                            <%= (typeof errors !='undefined' && errors.email) ? errors.email.msg : '' %>
-                        </small>
-                        <br>
-                        <button type="submit">Iniciar Sesión</button>
-                    </div>
-                </form>
-
-
-                <div class="crearCuenta">
-                    <h2>¿Todavía no tienes cuenta?</h2>
-                    <a href="./register"><button type="button">Crear una cuenta</button></a>
-                </div>
-
-
-            </div>
-            <script src="/js/validacionlogin.js"></script>
-            <!-- <script src="js/javascript.js"></script>  -->
-            <!-- <script src="/js/pushbar.js"></script> -->
+            
 
     </body>
 

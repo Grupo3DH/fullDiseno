@@ -13,10 +13,10 @@
             <li>
                 <form class="formSearch" action="/products/search" method="GET">
                     <!-- <div class="button-search"> -->
-                        <input name="search" type="text" id="search" placeholder="Buscar..." />
+                    <input style="border-radius: 23px" class="search" type="text" id="search" placeholder="Buscar..." />
                     <!-- </div> -->
                     <!-- <div class="icono-search"> -->
-                        <button type="submit"><i class="fa fa-search fa-lg icono-search"></i></button>
+                    <button type="submit"><i class="fa fa-search fa-lg icono-search"></i></button>
                     <!-- </div> -->
                 </form>
             </li>
@@ -24,21 +24,77 @@
                         aria-hidden="true"></i></a></li>
 
             <% if(typeof user=="undefined" ) { %>
-                <li><a class="inicio" href="/user/login" title="Iniciar sesión"><i
-                            class="fas fa-user-circle fa-lg"></i></a></li>
+                <li><button onclick="document.getElementById('id01').style.display='block'"><i class="fas fa-user-circle fa-lg"></i></button></li>
                 <% } else if(user.admin==1) { %>
                     <li><a href="/admin" title="Configuración del sitio">HOLA ADMIN</a>
                         <br>
                         <a href="/admin/logout">CERRAR SESIÓN</a>
                     </li>
-                    
+
                     <% } else if(user.admin==0) { %>
                         <li><a href="/user/perfil/<%= user.id %>" title="Tu perfil">HOLA <%= user.name %>
-                                    </a>
+                            </a>
                             <br>
                             <a href="/user/logout" title="Cerrar Sesión">CERRAR SESIÓN</a>
                         </li>
-                        <% } %>
+                    <% } %>
+
+                    <div id="id01" class="modal" >
+                        <form id="login" class="formularioIS" action="" method="POST">
+                            <div class="cruz">
+                               <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"><i class="fa fa-times"></i></span>
+                            </div>
+                            <h1 class="h1">Iniciar Sesión</h1>
+                            
+                            <div class="errores">
+                                <ul>   
+                               </ul>
+                            </div>
+                            <br>
+                            <label class="label" for="email">Correo Electrónico:</label><br>
+                            <i class="fas fa-envelope icon"></i>
+                            <input  class="label" type="email" id="email" name="email"
+                                >
+                            <br>
+                            <small style="color: red;">
+                                <%= (typeof errors !='undefined' && errors.email) ? errors.email.msg : '' %>
+                            </small>
+                            <br>
+                            <label class="label" for="password">Constraseña:</label><br>
+                            <i class="fas fa-lock icon"></i>
+                            <input class="label" type="password" id="password" name="password"
+                                >
+                            <div class="IS">
+                                <input type="checkbox" name="recordarme"><h2>Recordarme</h2>
+                                <br>
+                                <small style="color: red;">
+                                    <%= (typeof errors !='undefined' && errors.email) ? errors.email.msg : '' %>
+                                </small>
+                                <br>
+                                <button type="submit">Iniciar Sesión</button>
+                            </div>
+                        </form>
+        
+        
+                        <div class="crearCuenta">
+                            <h2>¿Todavía no tienes cuenta?</h2>
+                            <a href="./register"><button type="button">Crear una cuenta</button></a>
+                        </div>
+        
+                        <script src="/js/validacionlogin.js"></script>
+                    </div> 
+
+                    <script>
+                        // Get the modal
+                        var modal = document.getElementById('id01');
+                        
+                        // When the user clicks anywhere outside of the modal, close it
+                        window.onclick = function(event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
+                </script>
 
         </ul>
     </nav>
@@ -53,13 +109,13 @@
                         <img class="hanger" src="/img/hanger.svg" alt="menu desplegable">
                         <h4 class="p">CONFIGURACIÓN</h4>
                         <% } else if(user.admin==0) { %>
-                            <a class="productos" href="/products/all">
-                                <img class="hanger" src="/img/hanger.svg" alt="menu desplegable">
-                                <h4 class="p">PRODUCTOS</h4>
-                                <% } %>
+                <a class="productos" href="/products/all">
+                    <img class="hanger" src="/img/hanger.svg" alt="menu desplegable">
+                    <h4 class="p">PRODUCTOS</h4>
+                        <% } %>
 
-                            </a>
-                            <img class="img-header" src="/img/definitiva.jpg" alt="banner ropa unisex">
+                </a>
+                <img class="img-header" src="/img/definitiva.jpg" alt="banner ropa unisex">
 
     </div>
 </header>

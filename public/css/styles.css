@@ -67,7 +67,7 @@ outline-width: 0 !important;
 .errores{
     color: red;
     font-family: Roboto;
-    font-size: 12px;
+    font-size: 10px;
     text-align: center;
     list-style: none;
 
@@ -96,13 +96,32 @@ outline-width: 0 !important;
     z-index: 1;
 }
 
-.index ul li{
-    padding: 0px 6px;
-    font-size: 18px;
-   
+.fa-lg {
+    font-size: 1.33333em;
+    line-height: 1.75em;
+    vertical-align: -.0667em;
 }
 
+ /* ANIMACION VENTANA MODAL */
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+
 .index ul li a i {
+    padding: 0px 12px;
     transition: all 2ms;
     font-size: 18px;
 }
@@ -127,11 +146,17 @@ outline-width: 0 !important;
     transform: scale(1.1); 
 }
 
-.index ul input{
+.search{
     background-color: transparent;
     padding: 5px;
 
 }
+
+.label{
+    padding: 9px;
+    padding-left: 20px;
+}
+
 .index ul input:focus{
     outline:none !important;
     outline-width: 0 !important;
@@ -252,7 +277,7 @@ outline-width: 0 !important;
 }
 
 .p{
-    display: inline-block; 
+    
     font-family: 'Goldman';
     font-size: 10px;
     font-weight: 100;
@@ -265,6 +290,9 @@ outline-width: 0 !important;
 
 .hanger{
     display: inline-block;
+    object-fit: contain;
+    width: 74px;
+    height: 64px;
 }
 
 .hanger:hover{
@@ -321,8 +349,8 @@ outline-width: 0 !important;
     flex-direction: row;
     justify-content: flex-end;
     list-style: none;
-    color: #00636C;
-    text-transform: uppercase;
+    
+    
     text-decoration: none;
     list-style: none; 
     padding-left: 15px;
@@ -338,12 +366,7 @@ outline-width: 0 !important;
     color: rgba(20, 130, 128, 0.583);
 }
 
-.navFondoBlanco ul input{
-    background-color: transparent;
-    border-radius: 22px;
-    padding: 5px;
 
-}
 .navFondoBlanco ul input:focus{
     outline:none !important;
     outline-width: 0 !important;
@@ -994,6 +1017,29 @@ text-align: center;
     -webkit-box-shadow: none;
 }
 
+.bot{
+    margin: 20px;
+    font-family: Goldman;
+    color: white;
+    background-color: #00636C;
+    padding: 10px 30px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    box-shadow: 3px 3px 20px rgb(202, 202, 202);
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.bot:hover{
+    cursor: pointer;
+        background-color: #048591;
+}
+
 .IS button:hover{
         cursor: pointer;
         background-color: #048591;
@@ -1130,12 +1176,37 @@ text-align: center;
          admin
 ============================== */
 .admin{
-    
-    text-align: center;
-    align-items: center;
+    justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
 }
 
-a .adminBoton{
+.adminBoton{
+    font-size: 19px;
+    margin: .5em;
+    padding: .5em;
+    border-radius: 5px;
+    transition: all .5s;
+    filter: hue-rotate(0deg);
+    color: #FFF;
+    text-decoration: none;
+    width: 260px;
+}
+
+.b-green, .b-green:before {
+    background: rgba(73,155,234,1);
+    background: -moz-linear-gradient(45deg, rgba(73,155,234,1) 0%, rgba(26,188,156,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(73,155,234,1)), color-stop(100%, rgba(26,188,156,1)));
+    background: -webkit-linear-gradient(45deg, rgba(73,155,234,1) 0%, rgba(26,188,156,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(73,155,234,1) 0%, rgba(26,188,156,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(73,155,234,1) 0%, rgba(26,188,156,1) 100%);
+    background: linear-gradient(45deg, rgba(73,155,234,1) 0%, rgba(26,188,156,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#1abc9c', GradientType=1 );
+  }
+
+/* a .adminBoton{
     display: flex;
     justify-content: center;
     margin: 20px;
@@ -1148,7 +1219,7 @@ a .adminBoton{
     text-transform: uppercase;
     border-radius: 2px;
     box-shadow: 3px 3px 20px rgb(202, 202, 202);
-}
+} */
 
 .adminBoton:hover{
     cursor: pointer;
@@ -1175,7 +1246,12 @@ a .adminBoton{
    margin: 75px;
 }
 
+.cajita{
+    display: flex;
+}
+
 .caja2{
+    
     background-color: #dde2e64f;;
     width: 600px;
   /*   min-height: 500px; */
@@ -1202,16 +1278,26 @@ a .adminBoton{
     display: flex;
     justify-content: flex-end;
     font-family: Goldman;
+    margin: 20px;
     
 }
 
 .caja3 p{
     font-family: Roboto;
-    color: #2f8bcc;
+    color: #239660;
     margin: 35px;
   margin-bottom: 10px;
   margin-top: 10px;
   
+}
+
+.profile-edit-btn {
+    font-size: 12px;
+    line-height: 1.8;
+    border: 0.1rem solid #dbdbdb;
+    border-radius: 0.3rem;
+    padding: 0 2.4rem;
+    margin-left: 2rem;
 }
 
 
@@ -1236,9 +1322,7 @@ a .adminBoton{
 
 
 
-.agregarform{
-    border: 1px solid black;
-}
+
 
 .agregarProducto input{
     padding: 5px 76px;
@@ -1266,6 +1350,30 @@ a .adminBoton{
         font-family: Goldman;
         
         
+    }
+
+    .prev{
+
+    }
+
+    .previousRound{
+        border-radius: 50%;
+        background-color: #00636C;
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px 16px;
+        margin: 11px;
+    }
+
+    .nextRound{
+        border-radius: 50%;
+        background-color: #00636C;
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px 16px;
+        margin: 11px;
     }
 
 
@@ -1337,10 +1445,7 @@ a .adminBoton{
         margin-left: 0px;
     }
 
-    .index ul input{
-         font-size: 11px;
-         
-    }
+   
   
     .fixed{
         display: none;
@@ -1370,10 +1475,7 @@ a .adminBoton{
           
      }
   
-     .index ul li a{
-         font-size: 12px;
-         font-size: 20px;
-     }
+     
   
      .formularioIS input {
       margin: 10px 0px;
@@ -1531,10 +1633,7 @@ a .adminBoton{
       display: none;
   }
 
-  .index ul li a {
-    font-size: 11px;
-    font-size: 13px;
-}
+
 
 .whiteIcons{
     display: none;

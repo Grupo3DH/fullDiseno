@@ -7,6 +7,7 @@
    </h1>
    <section class="caja1">
        <div class="caja2">
+           <div class="cajita">
            <img src="/uploads/avatar/<%= user.avatar %>" alt="foto de perfil">
 
 
@@ -18,16 +19,24 @@
                <p>Password: ••••••••••
                </p>
            </div>
-
+        </div>
            <div class="caja4">
-               <a href="/user/edit/<%= user.id %> "><button><i style="font-size: 30px; color: gray;"
-                           class="far fa-edit"></i></button></a>
+                   
+            <a href="/user/edit/<%= user.id %> ">
+                <button class="btn profile-edit-btn">Edit Profile</button>
+                <button><i class="far fa-edit fa-lg"></i></button>
+            </a>
                <form action="/user/delete/<%= user.id %>?_method=DELETE" method="POST">
-                   <button><i style="font-size: 30px; color: gray;" class="fa fa-user-times"></i></button>
+                   <button class="btn profile-edit-btn">Delete Profile</button>
+                   <button><i class="fa fa-user-times fa-lg"></i></button>
                </form>
            </div>
-
-       </div>    
+           <div class="prev">
+            <a href="/admin/config" class="previousRound" style="text-align: center;">&#8249;</a>
+            <a href="#" class="nextRound">&#8250;</a>   
+        </div>
+        </div>  
+        
    </section>
 </body>
 </html>

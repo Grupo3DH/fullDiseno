@@ -1,4 +1,5 @@
 <header>
+    
     <div class="promo">
         <h3>promo 50% descuento en envíos</h3>
     </div>
@@ -8,6 +9,7 @@
     <div class="promo ocultar">
         <h3>libre de etiquetas</h3>
     </div>
+
     <nav class="index">
         <ul>
             <li>
@@ -24,23 +26,24 @@
                         aria-hidden="true"></i></a></li>
 
             <% if(typeof user=="undefined" ) { %>
-                <li><button onclick="document.getElementById('id01').style.display='block'"><i class="fas fa-user-circle fa-lg"></i></button></li>
+                <li>
+                    <button onclick="document.getElementById('id01').style.display='block'"><i class="fas fa-user-circle fa-lg"></i></button>
+                </li>
                 <% } else if(user.admin==1) { %>
-                    <li><a href="/admin" title="Configuración del sitio">HOLA ADMIN</a>
-                        <br>
-                        <a href="/admin/logout">CERRAR SESIÓN</a>
+                    <li>  
+                        <a href="/admin" title="Configuración del sitio">HOLA ADMIN</a>
+                        <a href="/admin/logout" title="Cerrar Sesión"><i class="fas fa-sign-out-alt fa-lg"></i></a> 
                     </li>
-
                     <% } else if(user.admin==0) { %>
-                        <li><a href="/user/perfil/<%= user.id %>" title="Tu perfil">HOLA <%= user.name %>
-                            </a>
-                            <br>
-                            <a href="/user/logout" title="Cerrar Sesión">CERRAR SESIÓN</a>
+                        <li><a href="/user/perfil/<%= user.id %>" title="Tu perfil">HOLA <%= user.name %></a>
+                            <a href="/user/logout" title="Cerrar Sesión"><i class="fas fa-sign-out-alt fa-lg"></i></a>
                         </li>
                     <% } %>
 
+                    <!-- FORMULARIO DE INICIAR SESION -->
+
                     <div id="id01" class="modal" >
-                        <form id="login" class="formularioIS" action="" method="POST">
+                        <form id="login" class="formularioIS animate" action="/user/login" method="POST">
                             <div class="cruz">
                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"><i class="fa fa-times"></i></span>
                             </div>
@@ -76,22 +79,84 @@
                         </form>
         
         
-                        <div class="crearCuenta">
+                        <div class="crearCuenta animate">
                             <h2>¿Todavía no tienes cuenta?</h2>
-                            <a href="./register"><button type="button">Crear una cuenta</button></a>
+                            <button class="bot" onclick="document.getElementById('id02').style.display='block', document.getElementById('id01').style.display='none'" type="button">Crear una cuenta</button>
                         </div>
         
                         <script src="/js/validacionlogin.js"></script>
                     </div> 
 
+                    <!-- FIN FORMULARIO DE INICIAR SESION -->
+
+                    <!-- FORMULARIO DE REGISTRACION -->
+                    <div id="id02" class="modal" >
+                    <form class="register animate" action="" method="POST" enctype="multipart/form-data">
+                        <div class="cruz">
+                            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal"><i class="fa fa-times"></i></span>
+                        </div>
+                        <h1 class="h1">Registrate</h1>
+                        <!-- si no le pongo nada en action quiere decir que esta viajando a /register y el enctype multipartes sirve para cuando tenemos que subir un archivo de tipo file y multer le dice a express que hacer con este tipo de formularios -->
+                        <div class="formularioRegister">
+                            <div class="errors">
+                                <ul>   
+                               </ul>
+                            </div>
+                            
+                            
+                            <br>
+                            <label for="inputName">Nombre:</label>
+                            <br>
+                            <input type="text" name="name" id="inputName" placeholder="Ingresá tu nombre">
+                            <br>
+                            <br>
+                            <label for="inputEmail">Correo Electrónico:</label>
+                            <br>
+                            <input type="email" name="email" id="inputEmail" placeholder="Ingresá tu email"><br>
+                            <small style="color: red;">
+                                <%= (typeof errors !='undefined' && errors.email) ? errors.email.msg : '' %>
+                            </small>
+                            <br>
+                            <label for="controlFile">Subí tu Foto</label>
+                            <br>
+                            <input style="border-bottom: none;" type="file" name="avatar" id="controlFile" class="inputFoto">
+                            <br>
+                            <label for="inputPassword">Contraseña:</label>
+                            <br>
+                            <input type="password" name="password" id="inputPassword" placeholder="Ingresá tu contraseña"><br>
+                            <small style="color: red;">
+                                <%= (typeof errors !='undefined' && errors.password) ? errors.password.msg : '' %>
+                            </small>
+                            <br>
+                            <label for="inputPassword">Confirma tu contraseña:</label>
+                            <br>
+                            <input type="password" name="password" id="confirmaPassword" placeholder="Confirma tu contraseña"><br>
+                        </div>
+                        <button class="bot" type="submit">Confirmar</button>
+                    </form>
+                </div>
+                <script src="/js/validaciones.js"></script>
+
+            </div>
+
+                    <!-- FIN FORMULARIO DE REGISTRACION-->
+
                     <script>
-                        // Get the modal
+                        // CAPTURO EL MODAL
                         var modal = document.getElementById('id01');
+                        var modal2 = document.getElementById('id02');
                         
                         // When the user clicks anywhere outside of the modal, close it
                         window.onclick = function(event) {
                             if (event.target == modal) {
                                 modal.style.display = "none";
+                            }
+                        }
+
+                        window.onclick = function(event) {
+                            if (event.target == modal2) {
+                                modal2.style.display = "none";
+                                
                             }
                         }
                 </script>
@@ -109,12 +174,12 @@
                         <img class="hanger" src="/img/hanger.svg" alt="menu desplegable">
                         <h4 class="p">CONFIGURACIÓN</h4>
                         <% } else if(user.admin==0) { %>
-                <a class="productos" href="/products/all">
+                    <a class="productos" href="/products/all">
                     <img class="hanger" src="/img/hanger.svg" alt="menu desplegable">
                     <h4 class="p">PRODUCTOS</h4>
-                        <% } %>
-
+                    <% } %>
                 </a>
+                
                 <img class="img-header" src="/img/definitiva.jpg" alt="banner ropa unisex">
 
     </div>

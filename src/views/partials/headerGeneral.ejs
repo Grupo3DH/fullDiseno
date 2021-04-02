@@ -16,10 +16,10 @@
                 <li>
                     <form class="formSearch" action="/products/search" method="GET">
                         <!-- <div class="button-search"> -->
-                            <input name="search" type="text" id="search" placeholder="Buscar..." />
+                        <input style="border-radius: 23px" class="search" type="text" id="search" placeholder="Buscar..." />
                         <!-- </div> -->
                         <!-- <div class="icono-search"> -->
-                            <button type="submit"><i class="fa fa-search fa-lg icono-search"></i></button>
+                        <button type="submit"><i class="fa fa-search fa-lg icono-search"></i></button>
                         <!-- </div> -->
                     </form>
                 </li>
@@ -27,20 +27,81 @@
                             aria-hidden="true"></i></a></li>
     
                 <% if(typeof user=="undefined" ) { %>
-                    <li><a class="inicio" href="/user/login" title="Iniciar sesión"><i
-                                class="fas fa-user-circle fa-lg"></i></a></li>
+                    <li>
+                        <button onclick="document.getElementById('id01').style.display='block'"><i class="fas fa-user-circle fa-lg"></i></button>
+                    </li>
                     <% } else if(user.admin==1) { %>
-                        <li><a href="/admin" title="Configuración del sitio">HOLA ADMIN</a>
-                            <br>
-                            <a href="/admin/logout">CERRAR SESIÓN</a>
+                        <li>  
+                            <a href="/admin" title="Configuración del sitio">HOLA ADMIN</a>
+                            <a href="/admin/logout" title="Cerrar Sesión"><i class="fas fa-sign-out-alt fa-lg"></i></a> 
                         </li>
                         <% } else if(user.admin==0) { %>
-                            <li><a href="/user/perfil/<%= user.id %>" title="Tu perfil">HOLA <%= user.name %>
-                                        </a>
-                                <br>
-                                <a href="/user/logout" title="Cerrar Sesión">CERRAR SESIÓN</a>
+                            <li><a href="/user/perfil/<%= user.id %>" title="Tu perfil">HOLA <%= user.name %></a>
+                                <a href="/user/logout" title="Cerrar Sesión"><i class="fas fa-sign-out-alt fa-lg"></i></a>
                             </li>
                         <% } %>
+    
+                        <!-- FORMULARIO DE INICIAR SESION -->
+    
+                        <div id="id01" class="modal" >
+                            <form id="login" class="formularioIS animate" action="/user/login" method="POST">
+                                <div class="cruz">
+                                   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"><i class="fa fa-times"></i></span>
+                                </div>
+                                <h1 class="h1">Iniciar Sesión</h1>
+                                
+                                <div class="errores">
+                                    <ul>   
+                                   </ul>
+                                </div>
+                                <br>
+                                <label class="label" for="email">Correo Electrónico:</label><br>
+                                <i class="fas fa-envelope icon"></i>
+                                <input  class="label" type="email" id="email" name="email"
+                                    >
+                                <br>
+                                <small style="color: red;">
+                                    <%= (typeof errors !='undefined' && errors.email) ? errors.email.msg : '' %>
+                                </small>
+                                <br>
+                                <label class="label" for="password">Constraseña:</label><br>
+                                <i class="fas fa-lock icon"></i>
+                                <input class="label" type="password" id="password" name="password"
+                                    >
+                                <div class="IS">
+                                    <input type="checkbox" name="recordarme"><h2>Recordarme</h2>
+                                    <br>
+                                    <small style="color: red;">
+                                        <%= (typeof errors !='undefined' && errors.email) ? errors.email.msg : '' %>
+                                    </small>
+                                    <br>
+                                    <button type="submit">Iniciar Sesión</button>
+                                </div>
+                            </form>
+            
+            
+                            <div class="crearCuenta animate">
+                                <h2>¿Todavía no tienes cuenta?</h2>
+                                <a href="./register"><button type="button">Crear una cuenta</button></a>
+                            </div>
+            
+                            <script src="/js/validacionlogin.js"></script>
+                        </div> 
+    
+                        <!-- FIN FORMULARIO DE INICIAR SESION -->
+    
+                        <script>
+                            // CAPTURO EL MODAL
+                            var modal = document.getElementById('id01');
+                            
+                            // When the user clicks anywhere outside of the modal, close it
+                            window.onclick = function(event) {
+                                if (event.target == modal) {
+                                    modal.style.display = "none";
+                                }
+                            }
+                    </script>
+    
             </ul>
         </nav>
     </div>

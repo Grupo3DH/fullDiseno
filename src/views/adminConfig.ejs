@@ -5,12 +5,19 @@
 </head>
 <body>
     <%- include("./partials/headerGeneral.ejs") %>
+    <h1 style="text-align: center; margin: 50px;">CONFIGURACIÓN</h1>
     <div class="admin">
-        <h1>CONFIGURACIÓN ADMIN</h1>
-    <a href="/admin/create"><button class="adminBoton">Crear Producto</button></a>
+    <a href="/"><button class="adminBoton b-green">Volver a la Home</button></a>
     <!-- <a href="/admin/edit/:id"><button class="adminBoton">Editar Producto</button></a>
     <a href="/admin/detele/:id"><button class="adminBoton">Borrar Producto</button></a> -->
-    <a href="/products/all"><button class="adminBoton">Ver todos los productos</button></a>
-</div>
+    <a href="/admin/create"><button class="adminBoton b-green">Crear un producto</button></a>
+    </div>
+    <br>
+    <div class="admin">
+        <a href="/admin"><button class="adminBoton b-green">Ver tu perfil</button></a>
+        <!-- <a href="/admin/edit/:id"><button class="adminBoton">Editar Producto</button></a>
+        <a href="/admin/detele/:id"><button class="adminBoton">Borrar Producto</button></a> -->
+        <a href="/products/all"><button class="adminBoton b-green">Ver todos los productos</button></a>
+        </div>
 </body>
 </html>

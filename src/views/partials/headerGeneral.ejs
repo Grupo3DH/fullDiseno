@@ -23,12 +23,16 @@
                         <!-- </div> -->
                     </form>
                 </li>
+                <li>
+                    <a href="/user/contact" title="Contacto"><i class="fas fa-envelope fa-lg"></i></a>
+                </li>
                 <li><a href="/products/cart" title="Carrito de compras"><i class="fa fa-shopping-cart fa-lg"
-                            aria-hidden="true"></i></a></li>
+                            aria-hidden="true"></i></a>
+                </li>
     
                 <% if(typeof user=="undefined" ) { %>
                     <li>
-                        <button onclick="document.getElementById('id01').style.display='block'"><i class="fas fa-user-circle fa-lg"></i></button>
+                        <button title="Iniciar Sesión" onclick="document.getElementById('id01').style.display='block'"><i class="fas fa-user-circle fa-lg"></i></button>
                     </li>
                     <% } else if(user.admin==1) { %>
                         <li>  

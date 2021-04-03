@@ -108,6 +108,10 @@ userController = {
                 
                 return res.send(e);
             })
+    },
+
+    contact: function (req, res) {
+        res.render("contacto")
     }
 
 }

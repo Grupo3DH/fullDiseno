@@ -121,7 +121,7 @@ outline-width: 0 !important;
   
 
 .index ul li a i {
-    padding: 0px 12px;
+    padding: 0px 8px;
     transition: all 2ms;
     font-size: 18px;
 }
@@ -195,7 +195,7 @@ outline-width: 0 !important;
 .img-header {
     position: relative;
     width: 100%; 
-    z-index: 0;
+    z-index: -1;
     box-shadow: -3px 7px 16px -2px rgba(194,186,186,0.93);
    
 }
@@ -205,6 +205,90 @@ outline-width: 0 !important;
     margin-top: 30px;
 }
 
+
+/* CONTACTO */
+
+
+.section {
+    position: relative;
+    width: 900px;
+    max-width: 80%;
+    border: 2px solid #333;
+    border-top: none;
+    text-align: center;
+    margin: 60px auto;
+  }
+  
+  .section h1 {
+    position: relative;
+    margin-top: -14px;
+    display: inline-block;
+    letter-spacing: 4px;
+  }
+  
+  .top-border{
+    position: absolute;
+    height: 2px;
+    width: 24%;
+    background-color: #333;
+  }
+  
+  .right {
+    right: 0;
+  }
+  
+  .left {
+    left: 0;
+  }
+  
+  @media (max-width: 685px) {
+  .top-border {	
+    width: 18%;
+      }
+  }
+  
+  .section p {
+    width: 61%;
+    margin: 20px auto 40px auto;
+    line-height: 30px;
+  }
+  
+  .section a {
+    outline: 0;
+    display: inline-block;
+    padding: 20px;
+    margin-bottom: 40px;
+    width: 440px;
+    max-width: 80%;
+    background-color: #333;
+    color: #fff;
+    font-size: 22px;
+    letter-spacing: 3px;
+    transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+  }
+  
+  .section a:hover {
+    background-color: #1D222D;
+  }
+  
+  .section a:link, .section a:visited, .section a:link:hover, .section a:visited:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  @media (max-width: 500px) {
+    .top-border {	
+      display: none;
+    }
+    .section {
+    border-top: 2px solid #333;
+    }
+    .section h1 {
+      margin: 20px 6px;
+    }
+  }
 
 
 /* ======================
@@ -271,21 +355,31 @@ outline-width: 0 !important;
 .productos{
     display: inline-block;
     position: absolute;
-    top: 40px;
     left: 2vw;
     z-index: 1;
-}
-
-.p{
-    
     font-family: 'Goldman';
-    font-size: 10px;
+    font-size: 15px;
     font-weight: 100;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fbf7f3), color-stop(100%,#8cc3b7));
+    box-shadow: inset 0px 0px 6px #fff;
+    -webkit-box-shadow: inset 0px 0px 6px #616161;
+    border: 1px solid #8cc3b7;
+    border-radius: 10px;
+   text-align: center;
+    opacity: 91%;
+    width: 114px;
+    height: 30px;
+    padding-top: 4px;
 }
 
-.p:hover{
+.bar{
+    position: absolute;
+}
+
+
+.productos:hover{
     cursor: pointer;
-    color: rgba(20, 130, 128, 0.583);
+    color: rgb(158, 148, 148);
 }
 
 .hanger{
@@ -544,9 +638,22 @@ hr {
     list-style: none;  
 }
 
-.iconosFooter {
+.iconosFooter{
     display: flex;
     justify-content: flex-end;
+    color: #999999;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+}
+
+.iconosFooter :hover {
+    color: #ffffff;
+  transition: .1s;
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
 }
 
 
@@ -1620,12 +1727,7 @@ text-align: center;
           font-size: 10px;
           letter-spacing: 1px;
       }
-      .productos{
-        margin-top: -6px;
-        font-size: 0px;
-        margin-left: 6px;
-        width: 10%;
-    }
+     
   
       .index ul{
           padding: 2px;
@@ -1675,12 +1777,7 @@ text-align: center;
       font-size: 6px;
   }
   
-  .productos {
-   margin-top: -4px;
-   font-size: 0px;
-   margin-left: 7px;
-  
-  }
+ 
   .display{
       display: none;
   }

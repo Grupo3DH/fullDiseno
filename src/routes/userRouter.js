@@ -25,4 +25,6 @@ router.get("/logout", userController.logout);
 
 router.delete("/delete/:id", userController.delete);
 
+router.get("/contact", userController.contact);
+
 module.exports = router;

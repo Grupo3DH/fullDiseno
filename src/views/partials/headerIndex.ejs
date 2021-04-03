@@ -22,12 +22,17 @@
                     <!-- </div> -->
                 </form>
             </li>
+            <li>
+                <a href="/user/contact" title="Contacto"><i class="fas fa-envelope fa-lg"></i></a>
+            </li>
             <li><a href="/products/cart" title="Carrito de compras"><i class="fa fa-shopping-cart fa-lg"
-                        aria-hidden="true"></i></a></li>
+                        aria-hidden="true"></i></a>
+            </li>
+            
 
             <% if(typeof user=="undefined" ) { %>
                 <li>
-                    <button onclick="document.getElementById('id01').style.display='block'"><i class="fas fa-user-circle fa-lg"></i></button>
+                    <button title="Iniciar Sesión" onclick="document.getElementById('id01').style.display='block'"><i class="fas fa-user-circle fa-lg"></i></button>
                 </li>
                 <% } else if(user.admin==1) { %>
                     <li>  
@@ -166,23 +171,14 @@
         </ul>
     </nav>
 
-    <div id="contenido">
+    <div class="bar" id="contenido">
         <% if(typeof user=="undefined" ) { %>
-            <a class="productos" href="/products/all">
-                <img class="hanger" src="/img/hanger2.png" alt="menu desplegable">
-                <h4 class="p">PRODUCTOS</h4>
-                <% } else if(user.admin==1) { %>
-                    <a class="productos" href="/admin/config">
-                        <img class="hanger" src="/img/hanger2.png" alt="menu desplegable">
-                        <h4 class="p">CONFIGURACIÓN</h4>
-                        <% } else if(user.admin==0) { %>
-                    <a class="productos" href="/products/all">
-                    <img class="hanger" src="/img/hanger2.png" alt="menu desplegable">
-                    <h4 class="p">PRODUCTOS</h4>
-                    <% } %>
-                </a>
-                
-                <img class="img-header" src="/img/definitiva.jpg" alt="banner ropa unisex">
-
+                <button><a class="productos" href="/products/all">Productos</a></button>
+         <% } else if(user.admin==1) { %>   
+                <button><a class="productos" href="/admin/config">Configuración</a></button>      
+         <% } else if(user.admin==0) { %>
+                <button> <a class="productos" href="/products/all">Productos</a></button>   
+        <% } %>        
     </div>
+    <img class="img-header" src="/img/definitiva.jpg" alt="banner ropa unisex">
 </header>

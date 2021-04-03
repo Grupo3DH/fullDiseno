@@ -1,18 +1,18 @@
-window.addEventListener("load", function () {
+// window.addEventListener("load", function () {
 
-  var search = document.querySelector(".fa-search");
-  var input = document.querySelector(".button-search input");
-  var formSearch = document.querySelector(".formSearch")
+  // var search = document.querySelector(".fa-search");
+  // var input = document.querySelector(".button-search input");
+  // var formSearch = document.querySelector(".formSearch")
 
-  search.addEventListener("click", function (e) {
-    e.preventDefault();
-    input.style.display = "block"
+  // search.addEventListener("click", function (e) {
+  //   e.preventDefault();
+  //   input.style.display = "block"
 
-  })
+  // })
 
-  input.addEventListener("focus", function () {
-    if (this.value == 'Buscar...') { this.value = "" }
-  })
+  // input.addEventListener("focus", function () {
+  //   if (this.value == 'Buscar...') { this.value = "" }
+  // })
 
 
   // function buscar(){
@@ -56,4 +56,4 @@ window.addEventListener("load", function () {
 //     newsletter.style.letterSpacing = "inherit"
 //   }) })
 
-})
+// })

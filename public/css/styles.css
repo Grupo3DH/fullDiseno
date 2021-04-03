@@ -291,7 +291,7 @@ outline-width: 0 !important;
 .hanger{
     display: inline-block;
     object-fit: contain;
-    width: 74px;
+    width: 75px;
     height: 64px;
 }
 
@@ -558,13 +558,13 @@ hr {
 
 .productDetail {
     display: flex;
-    margin-left: 20px;
+    margin: 30px;
     }
 
 .imagenes {
     display: flex;
-    justify-content: flex-end;
-    margin-left: 50px;
+    
+    margin-left: 40px;
 }
 
 .imagenesPeque{
@@ -586,7 +586,7 @@ hr {
 
 .tituloPrecio h4{
     font-family: Roboto;
-    font-size: 36px;
+    font-size: 26px;
     font-weight: normal;
 }
 
@@ -606,6 +606,39 @@ hr {
     cursor: pointer;
     
 }
+
+.line ul{
+    display: flex;
+}
+
+.line ul li{
+    font-family: "Roboto";
+    margin: 2px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.line ul li a{
+    color: #8a9296;
+}
+
+.line ul li a:hover{
+    color: #1f949d;
+}
+
+.line ul span{
+    margin: 5px;
+    color: #8a9296;
+}
+
+.unselectable {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+
 
 
 
@@ -935,7 +968,7 @@ div .all{
 
 .formularioIS{
     
-    background-color: #eaeaea;
+    background-color: white;
     
     font-family: Goldman;
     text-align: center;
@@ -952,16 +985,16 @@ div .all{
   letter-spacing: .5px;
   border: 0;
   border-bottom: 2px solid #f0f0f0;
-  background-color: #eaeaea;
+  background-color: white;
   padding-left: 40px;
   
  }
  .formularioIS input:valid {
-    border-color: #16a064;
+    border-color: #31e1cf;
  }
  .formularioIS input:focus {
     outline: none;
-    border-color: #10d7e6;
+    
  }
 
  .icon{
@@ -1053,7 +1086,7 @@ text-align: center;
 .crearCuenta{
     
     text-align: center;
-    background-color: #eaeaea;
+    background-color: white;
     
     
 }
@@ -1084,7 +1117,7 @@ text-align: center;
 
 .crearCuenta a button:hover{
     cursor: pointer;
-        background-color: #048591;
+    background-color: #048591;
 
 }
 
@@ -1092,7 +1125,7 @@ text-align: center;
 
 .register{
     
-    background-color: #eaeaea;
+    background-color: white;
    
     font-family: Goldman;
     text-align: center;
@@ -1112,18 +1145,18 @@ text-align: center;
   letter-spacing: .5px;
   border: 0;
   border-bottom: 2px solid #f0f0f0;
-  background-color: #eaeaea;
+  background-color: #ffffff;
  
     
     
 }
 
 .formularioRegister input:valid {
-    border-color: #16a064;
+    border-color: #31e1cf;
  }
  .formularioRegister input:focus {
     outline: none;
-    border-color: #10d7e6;
+   
  }
 
 
@@ -1386,6 +1419,25 @@ text-align: center;
    flex-wrap: wrap;
    justify-content: center;
  }
+
+ .banner {
+    color: white;
+    background: url("/img/unisex5.jpg") center top/cover no-repeat;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: pre-wrap;
+    box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.21);
+      -webkit-box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.21);
+      -moz-box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.21);
+      
+      margin-bottom: 15px;
+    
+  }
+
+ 
+
 
  .allproducts article{
     margin: 20px;

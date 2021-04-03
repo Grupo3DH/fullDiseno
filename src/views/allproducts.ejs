@@ -7,7 +7,12 @@
 
 <body>
     <%- include("./partials/headerGeneral.ejs") %>
-        <h1 style="text-align: center;">Nuestros productos</h1>
+    <div class="banner">
+        <div class="banner-text">
+          <h1>Nuestros <span>  </span>   productos</h1>
+          <h3>Unisex Fashion</h3>
+        </div>
+      </div>
         <div class="allproducts">
             <% if( products.length > 0){ %>
             <% for(let i=0; i< products.length; i++) { %>

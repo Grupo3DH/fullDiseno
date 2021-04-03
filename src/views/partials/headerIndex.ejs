@@ -40,6 +40,8 @@
                         </li>
                     <% } %>
 
+                    <script src="/js/javascript.js"></script>
+
                     <!-- FORMULARIO DE INICIAR SESION -->
 
                     <div id="id01" class="modal" >
@@ -167,15 +169,15 @@
     <div id="contenido">
         <% if(typeof user=="undefined" ) { %>
             <a class="productos" href="/products/all">
-                <img class="hanger" src="/img/hanger.svg" alt="menu desplegable">
+                <img class="hanger" src="/img/hanger2.png" alt="menu desplegable">
                 <h4 class="p">PRODUCTOS</h4>
                 <% } else if(user.admin==1) { %>
                     <a class="productos" href="/admin/config">
-                        <img class="hanger" src="/img/hanger.svg" alt="menu desplegable">
+                        <img class="hanger" src="/img/hanger2.png" alt="menu desplegable">
                         <h4 class="p">CONFIGURACIÓN</h4>
                         <% } else if(user.admin==0) { %>
                     <a class="productos" href="/products/all">
-                    <img class="hanger" src="/img/hanger.svg" alt="menu desplegable">
+                    <img class="hanger" src="/img/hanger2.png" alt="menu desplegable">
                     <h4 class="p">PRODUCTOS</h4>
                     <% } %>
                 </a>

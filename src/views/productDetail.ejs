@@ -5,6 +5,16 @@
 
     <body>
         <%- include("./partials/headerGeneral.ejs") %>
+        <div class="line">
+            <ul>
+                <li><a style="margin-left: 50px
+                ;" href="/">Home</a></li>
+                <span>></span>
+                <li><a href="/products/all">Productos</a></li>
+                <span>></span>
+                <li><%= product.name%></li>
+            </ul>
+        </div>
             <main class="productDetail">
                 <section class="imagenes">
                     <img src="/uploads/product/<%= product.image[0].filename %>" alt="" class="seleccionada">
@@ -31,7 +41,7 @@
                                 <% if(product.color_id==color[i].id){ %>
                                     <option selected value=<%=color[i].id %>><%= color[i].color %></option>
                                 <%} else { %>
-                                    <option style="text-decoration: underline;" value=<%=color[i].id %>><%= color[i].color %></option>
+                                    <option style="color: red;" class="unselectable" value=<%=color[i].id %>><%= color[i].color %></option>
                                 <% } %>    
                             <% } %>
                             </select> 

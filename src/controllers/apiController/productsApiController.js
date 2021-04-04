@@ -59,8 +59,23 @@ module.exports = {
 
     },
     category: function(req,res){
-        db.Products.countByCategory().then(function(category){
-            res.json(category)
+        db.Category.findAll({
+            include: ["products_id"]
+        }
+        ).then(function(category){
+            for (let i = 0; i < category.length; i++) {
+                category[i].setDataValue("endpoint", "/api/products/" + category[i].id)
+            }
+            let respuesta = {
+                meta: {
+                    status: 200,
+                    total: category.length,
+                    url: "/api/products/category"
+                },
+                data: category
+
+            }
+            res.json(respuesta)
         }).catch(function () {
             res.json({ status: 500 })
         })

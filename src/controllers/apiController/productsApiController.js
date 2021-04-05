@@ -32,6 +32,7 @@ module.exports = {
     },
 
     detail: function (req, res) {
+        db.Category.findAll().then(function (category) {
         db.Size.findAll().then(function (talle) {
             db.Color.findAll().then(function (color) {
                 db.Product.findByPk(req.params.id, {
@@ -42,6 +43,9 @@ module.exports = {
                         let respuesta = {
                             meta: {
                                 status: 200,
+                                color: color.length,
+                                talle: talle.length,
+                                category: category.length,
                                 url: "/api/products/" + product.id
                             },
                             data: product
@@ -51,28 +55,27 @@ module.exports = {
                         return res.json({ status: 204 ,msg: "este producto no se encuentra" })
                     }
                 })
-
             })
+
+        })
         }).catch(function () {
             res.json({ status: 500 })
         })
 
     },
-    category: function(req,res){
-        db.Category.findAll({
-            include: ["products_id"]
+    ultimo: function(req,res){
+        db.Products.findAll({
+            attributes:  ['name', "description", "price", "id"]
         }
-        ).then(function(category){
-            for (let i = 0; i < category.length; i++) {
-                category[i].setDataValue("endpoint", "/api/products/" + category[i].id)
-            }
+        ).then(function(ultimo){
+            
             let respuesta = {
                 meta: {
                     status: 200,
-                    total: category.length,
-                    url: "/api/products/category"
+                   
+                   
                 },
-                data: category
+                data: ultimo
 
             }
             res.json(respuesta)

@@ -1836,5 +1836,15 @@ text-align: center;
     display: none;
 }
 
+.productos{
+    width: 96px;
+    height: 30px;
+    font-size: 14px;
+}
+
+.index ul input {
+    font-size: 6px;
+}
+
 }
 }

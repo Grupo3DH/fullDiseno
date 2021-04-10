@@ -47,10 +47,10 @@ userController = {
                 admin: 0,
                 avatar: req.file ? req.file.filename : req.session.user.avatar 
                 }).then(function(users){
-                    res.redirect("login")
+                    res.redirect("/")
                 })
             } else {
-                return res.render("register", { errors: errors.mapped(), old: req.body })
+                return res.render("headerIndex",{ errors: errors.mapped(), old: req.body })
             }
         
     },

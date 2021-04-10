@@ -6,127 +6,166 @@
     <body>
         <%- include("./partials/headerGeneral.ejs") %>
 
-        <main class="shopCart">
-            <div class="productosEnCarrito">
-                <section class="tablaTitulos">
-                    <h2 class="articulo">Articulo</h2>
-                    <h2 class="cantidad">Cantidad</h2>
-                    <h2 class="precio">Precio</h2>
-                    <h2 class="borrar">Borrar</h2>
-                </section>
+            <main class="shopCart">
+                <div class="productosEnCarrito">
+                    <section class="tablaTitulos">
+                        <h2 class="articulo">Articulo</h2>
+                        <h2 class="cantidad">Cantidad</h2>
+                        <h2 class="precio">Precio</h2>
+                        <h2 class="borrar">Borrar</h2>
+                    </section>
 
-                <hr>
+                    <hr class="lineasCarrito">
 
-                <section class="tablaProductos">
-                    <div class="descProdCarrito articulo">
-                        <img src="/img/sueterVerde-2.png" alt="">
-                        <div class="nomColCarrito">
-                            <h3>Buzo Verde</h3>
-                            <h3>Color: verde militar</h3>
-                        </div>
-                    </div>
-                    <div class="selCantidad Cantidad">
-                        <div class="remover">
-                            <h2>-</h2>
-                        </div>
-                        <div class="vl"></div>
-                        <div class="totalProds">
-                            <p>1</p>
-                        </div>
-                        <div class="vl"></div>
-                        <div class="sumar">
-                            <h2>+</h2>
-                        </div>
-                    </div>
-                    <h2 class="precio">$768.00</h2>
-                    <i class="borrar fa fa-trash"></i></a>
-                </section>
+                    <% if(typeof localStorage=="undefined" || typeof localStorage.carrito=="undefined" || typeof
+                        localStorage.carrito=="[]" ){ %>
+                        <h2>no hay productos en tu carrito</h2>
+                        <% } else { %>
 
-                <hr>
+                            <% for(let i=0; i< array.length; i++) { %>
+
+                                <section class="tablaProductos">
+                                    <div class="descProdCarrito articulo">
+                                        <img src="/img/sueterVerde-2.png" alt="">
+                                        <div class="nomColCarrito">
+                                            <h3>
+                                                <%= array[i].nombreProducto %>
+                                            </h3>
+                                            <h3>Color: verde militar</h3>
+                                        </div>
+                                    </div>
+                                    <div>
+
+                                        <button onclick="contadormenos()">-</button>
+                                        <input type="text" style="text-align: center; width: 30px;" value="1">
+                                        <button onclick="contadormas()">+</button>
+                                    </div>
+                                    <h2 class="precio">$<%= array[i].precioProducto %>
+                                    </h2>
+                                    <i class="borrar fa fa-trash"></i></a>
+                                </section>
+                                <% } %>
+                                    <% } %>
 
 
-                <section class="sugeridosAgregar">
-                    <div class="tituloAgregar">
-                        <h2>Agregá a tu carrito</h2>
-                        <hr>
-                    </div>
+                                        <hr>
 
-                    <div class="productosAgregados">
 
-                        <article class="agregar-elemento1">
+                                        <section class="sugeridosAgregar">
+                                            <div class="tituloAgregar">
+                                                <h2>Agregá a tu carrito</h2>
+                                                <hr>
+                                            </div>
 
-                            <img src="/img/coupleHeader-1.jpg" alt="">
-                            <div>
-                                <h2>Buzo Blanco</h2>
-                                <h2>Color: Blanco</h2>
-                            </div>
-                            
-                            <h2>$768.00</h2>
-                            <button class="agregar" type="text">Agregar</button>
+                                            <div class="productosAgregados">
+
+                                                <article class="agregar-elemento1">
+
+                                                    <img src="/img/coupleHeader-1.jpg" alt="">
+                                                    <div>
+                                                        <h2>Buzo Blanco</h2>
+                                                        <h2>Color: Blanco</h2>
+                                                    </div>
+
+                                                    <h2>$768.00</h2>
+                                                    <button class="agregar" type="text">Agregar</button>
+                                                </article>
+
+                                                <hr>
+
+                                                <article class="agregar-elemento2">
+                                                    <img src="/img/camisaJean-1.jpg" alt="">
+                                                    <div>
+                                                        <h2>Camisa Blanca</h2>
+                                                        <h2>Color: Blanco</h2>
+                                                    </div>
+                                                    <h2>$768.00</h2>
+                                                    <button class="agregar" type="text">Agregar</button>
+                                                </article>
+
+                                                <hr>
+
+                                                <article>
+                                                    <article class="agregar-elemento3">
+                                                        <img src="/img/fullOutfit-1.jpg" alt="">
+                                                        <div>
+                                                            <h2>Overal</h2>
+                                                            <h2>Color: Jean</h2>
+                                                        </div>
+                                                        <h2>$768.00</h2>
+                                                        <button class="agregar" type="text">Agregar</button>
+                                                    </article>
+                                            </div>
+                                        </section>
+
+
+                </div>
+                <div class="derecha">
+                    <h2 class="h1">Cupón de descuento</h2>
+                    <article class="hola">
+                        <input type="text" placeholder="Inserte código"></input>
+                        <button class="agregar" type="submit">Aplicar</button>
+                    </article>
+                    <article>
+                        <h2 class="h1">Seleccionar tipo de envío</h2>
+                        <article class="hola">
+                            <br>
+                            <select type="Seleccionar el tipo de envío" name="Envío" id="">
+
+                                <option value="T">Retirar en tienda</option>
+                                <option value="D">Envío a domicilio</option>
+                            </select>
+                        </article>
+                        <article class="descuentos">
+                            <ul>
+                                <li>Subtotal</li>
+                                <li>Descuento</li>
+                                <li>Envío</li>
+                                <li>I.V.A.</li>
+                            </ul>
+                            <br>
+                            <h2>Total</h2>
                         </article>
 
-                        <hr>
-
-                        <article class="agregar-elemento2">
-                            <img src="/img/camisaJean-1.jpg" alt="">
-                            <div>
-                                <h2>Camisa Blanca</h2>
-                                <h2>Color: Blanco</h2>
-                            </div>
-                            <h2>$768.00</h2>
-                            <button class="agregar" type="text">Agregar</button>
-                        </article>
-
-                        <hr>
-                        
-                        <article>
-                            <article class="agregar-elemento3">
-                                <img src="/img/fullOutfit-1.jpg" alt="">
-                                <div>
-                                    <h2>Overal</h2>
-                                    <h2>Color: Jean</h2>
-                                </div>
-                                <h2>$768.00</h2>
-                                <button class="agregar" type="text">Agregar</button>
-                            </article>
-                    </div>
-                </section>
+                </div>
 
 
-            </div>
-            <div class="derecha">
-                <h2 class="h1">Cupón de descuento</h2>
-                <article class="hola">
-                    <input type="text" placeholder="Inserte código"></input>
-                    <button class="agregar" type="submit">Aplicar</button>
-                </article>
-                <article>
-                    <h2 class="h1">Seleccionar tipo de envío</h2>
-                <article class="hola">
-                    <br>
-                    <select type="Seleccionar el tipo de envío" name="Envío" id="">
-                        
-                        <option value="T">Retirar en tienda</option>
-                        <option value="D">Envío a domicilio</option>
-                    </select>
-                </article>
-                <article class="descuentos">
-                    <ul>
-                        <li>Subtotal</li>
-                        <li>Descuento</li>
-                        <li>Envío</li>
-                        <li>I.V.A.</li>
-                    </ul>
-                    <br>
-                    <h2>Total</h2>
-                </article>
+            </main>
 
-            </div>
+            <script>
+                function contadormas() {
+                    valor = document.getElementById("count");
+
+                    if (valor.value < 30) valor.value++;
+                }
+
+                function contadormenos() {
+                    valor = document.getElementById("count");
+                    if (valor.value > 01) valor.value--;
+                }
+            </script>
+            <script>
+                let array = JSON.parse(localStorage.carrito);
+
+                function deleteAll() {
+                    localStorage.clear()
+                    location.reload()
+                    alert('Carrito vaciado')
+                }
+
+                function deleteItem(id) {
+                    let carrito = JSON.parse(localStorage.carrito)
+                    carrito = carrito.filter((producto, i) => {
+                        return i !== id;
+                    });
+                    localStorage.setItem('carrito', JSON.stringify(carrito));
+                    console.log(carrito)
+                    location.reload();
+                }
+            </script>
 
 
-        </main>
-
-        <%- include("./partials/footer.ejs") %>
+            <%- include("./partials/footer.ejs") %>
     </body>
 
 </html>

@@ -15,7 +15,7 @@ router.get("/edit/:id", userController.edicion);
 router.put("/edit/:id", upload.single("avatar"), userController.update);
 
 // /user/register 
-router.get("/register", userController.register);
+router.get("/", userController.register);
 router.post("/register", upload.single("avatar"), registerValidation, userController.createUser); 
 
 // /user/login

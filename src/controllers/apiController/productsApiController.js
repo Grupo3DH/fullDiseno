@@ -82,5 +82,27 @@ module.exports = {
         }).catch(function () {
             res.json({ status: 500 })
         })
+    },
+    category: function(req,res){
+        db.Category.findAll()
+
+            .then(function (categories) {
+                if (categories.length > 0) {
+                    let apiResponse = {
+                        meta: {
+                            status: 200,
+                            url: "/api/products/category",
+                            total: categories.length
+                        },
+                        data: categories
+                    }
+                    return res.json(apiResponse)
+                } else {
+                    return res.json({ status: 204 })
+                }
+            })
+            .catch(function () {
+                res.json({ status: 500 })
+            })
     }
 }

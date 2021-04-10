@@ -6,4 +6,5 @@ router.get("/", usersApiController.list);
 router.get("/total", usersApiController.total);
 router.get("/:id", usersApiController.detail);
 
+
 module.exports = router;

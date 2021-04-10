@@ -1,5 +1,5 @@
 let login = document.getElementById("login")
-console.log(login)
+
 login.addEventListener("submit", function(e){
     let errores = [];
 

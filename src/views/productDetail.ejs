@@ -5,19 +5,19 @@
 
     <body>
         <%- include("./partials/headerGeneral.ejs") %>
-        <div class="line">
-            <ul>
-                <li><a style="margin-left: 50px
-                ;" href="/">Home</a></li>
-                <span>></span>
-                <li><a href="/products/all">Productos</a></li>
-                <span>></span>
-                <li><%= product.name%></li>
-            </ul>
-        </div>
+            <div class="line">
+                <ul>
+                    <li><a style="margin-left: 50px;" href="/">Home</a></li>
+                    <span>></span>
+                    <li><a href="/products/all">Productos</a></li>
+                    <span>></span>
+                    <li><%= product.name%></li>
+                </ul>
+            </div>
             <main class="productDetail">
                 <section class="imagenes">
-                    <img src="/uploads/product/<%= product.image[0].filename %>" alt="" class="seleccionada">
+                    <img id="imagen" src="/uploads/product/<%= product.image[0].filename %>" alt=""
+                        class="seleccionada">
                     <div class="imagenesPeque">
                         <img src="/img/sueterVerde-3.JPG" alt="buzo-verde">
                         <img src="/img/sueterVerde-4.JPG" alt="buzo-verde2">
@@ -27,81 +27,104 @@
                 </section>
                 <section class="infoProducto">
                     <div class="tituloPrecio">
-                        <h1>
-                            <%= product.name %>
-                        </h1>
-                        <h4>$<%= product.price %>
-                        </h4>
+                        <h1 id="nombre"><%= product.name %></h1>
+                        <h4 id="precio">$<%= product.price %></h4>
                     </div>
-                    <div class="colores">
-                        <h2>Colores disponibles</h2>
-                        <% if (typeof color !="undefined" ) { %>
-                            <select class="colorProducto">
-                            <% for(let i=0; i< color.length; i++) {%>
-                                <% if(product.color_id==color[i].id){ %>
-                                    <option selected value=<%=color[i].id %>><%= color[i].color %></option>
-                                <%} else { %>
-                                    <option style="color: red;" class="unselectable" value=<%=color[i].id %>><%= color[i].color %></option>
-                                <% } %>    
-                            <% } %>
-                            </select> 
-                        <% } %>
-                    </div>
-                    <div class="descripcion">
-                        <h2>Descripción</h2>
-                        <p>
-                            <%= product.description %>
-                        </p>
-                    </div>
-                    <h2>Talles disponibles</h2>
-                    <div class="editarborrar">
-                        <div class="selAgregar">
-                            <% if (typeof talle !="undefined" ) { %>
+                    <div class="colortalle">
+                        <div class="colores">
+                            <h2>Colores disponibles</h2>
+                            <% if (typeof color !="undefined" ) { %>
                                 <select class="colorProducto">
-                                <% for(let i=0; i< talle.length; i++) {%>
-                                    <% if(product.size_id==talle[i].id){ %>
-                                        <option selected value=<%=talle[i].id %>><%= talle[i].size %></option>
-                                    <% } else { %>
-                                        <option value=<%=talle[i].id %>><%= talle[i].size %></option>
-                                    <% } %>    
-                                <% } %>
+                                    <% for(let i=0; i< color.length; i++) {%>
+                                        <% if(product.color_id==color[i].id){ %>
+                                            <option selected value=<%=color[i].id %>><%= color[i].color %>
+                                            </option>
+                                            <%} else { %>
+                                                <option style="color: red;" class="unselectable" value=<%=color[i].id %>
+                                                    ><%= color[i].color %>
+                                                </option>
+                                                <% } %>
+                                                    <% } %>
                                 </select>
-                            <% } %>
+                                <% } %>
                         </div>
-                        <button type="submit" class="agregarCarrito">
-                            <div class="contenidoAgregarCarrito"><i class="fa fa-shopping-cart"></i>
-                                <a href="/products/cart">
-                                    <h2 style="color: white;">Agregar al carrito</h2>
-                                </a>
-                            </div>
-                        </button>
+                        <div class="colores">
+                            <h2>Talles disponibles</h2>
+                                <!-- <div class="editarborrar">
+                                <div class="selAgregar"> -->
+                                <% if (typeof talle !="undefined" ) { %>
+                                    <select class="colorProducto">
+                                        <% for(let i=0; i< talle.length; i++) {%>
+                                            <% if(product.size_id==talle[i].id){ %>
+                                                <option selected value=<%=talle[i].id %>><%= talle[i].size %>
+                                                </option>
+                                                <% } else { %>
+                                                    <option value=<%=talle[i].id %>><%= talle[i].size %>
+                                                    </option>
+                                                    <% } %>
+                                                        <% } %>
+                                    </select>
+                                    <% } %>
+                        </div>
+
                     </div>
+                        <div class="descripcion">
+                            <h2>Descripción</h2>
+                            <p>
+                                <%= product.description %>
+                            </p>
+                        </div>
+                        <div class="cant">
+                            <label class="count">Cantidad</label>
+                            <button onclick="contadormenos()">-</button>
+                            <input id="count" type="text" style="text-align: center; width: 30px;" value="1">
+                            <button onclick="contadormas()">+</button>
+                        </div>
+
+                        <button id="agregar" class="agregarCarrito">
+                            <i class="fa fa-shopping-cart"></i>
+                            Agregar al carrito
+                        </button>
+                    
                     <a href="#" class="guiaTalles">Guía de Talles</a>
                     <br>
-                    <% if(typeof user != "undefined" && user.admin == 1) { %>
-                     <div class="editarborrar">
+                    <% if(typeof user !="undefined" && user.admin==1) { %>
+                        <div class="editarborrar">
                             <a class="agregarCarrito" href="/admin/edit/<%= product.id %>"><button style=color:white
                                     type="submit">EDITAR</button></a>
                             <form action="/admin/delete/<%= product.id %>?_method=DELETE" method="POST">
                                 <button class="agregarCarrito" style=color:white type="submit">BORRAR</button>
                             </form>
                         </div>
-                    <% } %>
+                        <% } %>
                 </section>
             </main>
-            <h1 class="similares">Productos Similares</h1>
-            
+            <h1 class="similares" style="text-align: center;">Productos Similares</h1>
+
             <section class="productosSimilares">
 
                 <div class="imgProdSimilar">
-                    <img src="/img/coupleHeader.JPG" alt="pareja con sueter blanco">
-                    <img src="/img/fullOutfit-2.jpg" alt="pareja con overall">
-                    <img src="/img/camisaJean-3.JPG" alt="pareja agachada con camisa blanca y jean">
+                    <img class="sim" src="/img/coupleHeader.JPG" alt="pareja con sueter blanco">
+                    <img class="sim" src="/img/fullOutfit-2.jpg" alt="pareja con overall">
+                    <img class="sim" src="/img/camisaJean-3.JPG" alt="pareja agachada con camisa blanca y jean">
                 </div>
             </section>
+            <script>
+                function contadormas() {
+                    valor = document.getElementById("count");
 
+                    if (valor.value < 30) valor.value++;
+                }
 
-            <%- include("./partials/footer.ejs") %>
-
-
+                function contadormenos() {
+                    valor = document.getElementById("count");
+                    if (valor.value > 01) valor.value--;
+                }
+            </script>
+            <script src="/js/carrito.js"></script>
     </body>
+
+    <%- include("./partials/footer.ejs") %>
+
+
+        </body>

@@ -11,7 +11,9 @@
                     <span>></span>
                     <li><a href="/products/all">Productos</a></li>
                     <span>></span>
-                    <li><%= product.name%></li>
+                    <li>
+                        <%= product.name%>
+                    </li>
                 </ul>
             </div>
             <main class="productDetail">
@@ -27,8 +29,11 @@
                 </section>
                 <section class="infoProducto">
                     <div class="tituloPrecio">
-                        <h1 id="nombre"><%= product.name %></h1>
-                        <h4 id="precio">$<%= product.price %></h4>
+                        <h1 id="nombre">
+                            <%= product.name %>
+                        </h1>
+                        <h4 id="precio">$<%= product.price %>
+                        </h4>
                     </div>
                     <div class="colortalle">
                         <div class="colores">
@@ -50,53 +55,54 @@
                         </div>
                         <div class="colores">
                             <h2>Talles disponibles</h2>
-                                <!-- <div class="editarborrar">
+                            <!-- <div class="editarborrar">
                                 <div class="selAgregar"> -->
-                                <% if (typeof talle !="undefined" ) { %>
-                                    <select class="colorProducto">
-                                        <% for(let i=0; i< talle.length; i++) {%>
-                                            <% if(product.size_id==talle[i].id){ %>
-                                                <option selected value=<%=talle[i].id %>><%= talle[i].size %>
+                            <% if (typeof talle !="undefined" ) { %>
+                                <select class="colorProducto">
+                                    <% for(let i=0; i< talle.length; i++) {%>
+                                        <% if(product.size_id==talle[i].id){ %>
+                                            <option selected value=<%=talle[i].id %>><%= talle[i].size %>
+                                            </option>
+                                            <% } else { %>
+                                                <option value=<%=talle[i].id %>><%= talle[i].size %>
                                                 </option>
-                                                <% } else { %>
-                                                    <option value=<%=talle[i].id %>><%= talle[i].size %>
-                                                    </option>
+                                                <% } %>
                                                     <% } %>
-                                                        <% } %>
-                                    </select>
-                                    <% } %>
+                                </select>
+                                <% } %>
                         </div>
 
                     </div>
-                        <div class="descripcion">
-                            <h2>Descripción</h2>
-                            <p>
-                                <%= product.description %>
-                            </p>
-                        </div>
-                        <div class="cant">
-                            <label class="count">Cantidad</label>
-                            <button onclick="contadormenos()">-</button>
-                            <input id="count" type="text" style="text-align: center; width: 30px;" value="1">
-                            <button onclick="contadormas()">+</button>
-                        </div>
+                    <div class="descripcion">
+                        <h2>Descripción</h2>
+                        <p>
+                            <%= product.description %>
+                        </p>
+                    </div>
+                    <div class="cant">
+                        <label class="count">Cantidad</label>
+                        <button onclick="contadormenos()">-</button>
+                        <input id="count" type="text" style="text-align: center; width: 30px;" value="1">
+                        <button onclick="contadormas()">+</button>
+                    </div>
 
-                        <button id="agregar" class="agregarCarrito">
-                            <i class="fa fa-shopping-cart"></i>
-                            Agregar al carrito
-                        </button>
-                    
-                    <a href="#" class="guiaTalles" onclick="talles()">Guía de Talles</a>
-                    <div id="guia" style="display:none;" class="modales">
+                    <button id="agregar" class="agregarCarrito">
+                        <i class="fa fa-shopping-cart"></i>
+                        Agregar al carrito
+                    </button>
+
+                    <h2 class="popup" onclick="talles()">Guía de Talles</h2>
+                    <div id="guia" style="display: none;" class="popuptext">
                         <div class="chau">
-                            <span onclick="document.getElementById('guia').style.display='none'" class="close" title="Close Modal"><i class="fa fa-times"></i></span>
+                            <span onclick="document.getElementById('guia').style.display='none'" class="close"
+                                title="Close Modal"><i class="fa fa-times"></i></span>
                         </div>
                         <div class="guide">
-                            <img  src="/img/guiatalles.jpg" alt="guia de talles" >
+                            <img src="/img/guiatalles.jpg" alt="guia de talles">
                         </div>
-                        
+
                     </div>
-                    
+
                     <br>
                     <% if(typeof user !="undefined" && user.admin==1) { %>
                         <div class="editarborrar">
@@ -134,8 +140,9 @@
             <script src="/js/carrito.js"></script>
             <script>
                 let guia = document.getElementById("guia");
-                function talles(){
-                    guia.style.display='block';
+                function talles() {
+                    guia.style.display = "block";
+                    guia.classList.toggle("show");
                 }
             </script>
     </body>

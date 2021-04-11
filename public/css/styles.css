@@ -317,6 +317,7 @@ outline-width: 0 !important;
     position: relative;
     display: inline-block;
     cursor: pointer;
+    margin: 10px 0px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -384,12 +385,6 @@ outline-width: 0 !important;
     padding: 5px;
 }
 
-.button-search, input[type=text]{
-    font-family: Roboto;
-    margin-right: 5px;
-    margin-left: 5px;
- 
-  }
 
 .button-search, input::placeholder{
     color:black;
@@ -846,7 +841,7 @@ select {
 }
 .agregarCarrito {
     display: flex;
-    margin-top: 9px;
+    margin-top: 15px;
     flex-direction: row;
     align-items: center;
     justify-content: center; 
@@ -860,6 +855,18 @@ select {
     -webkit-box-shadow: inset 0px 0px 6px #616161;
     border: 1px solid #9ad6f8;
     border-radius: 10px;
+}
+
+.menos{
+    width: 21px;
+    height: 20px;
+    background: #383e44;
+    background: -moz-linear-gradient(top, #a5d3e6 0%, #6084a2 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3fafb), color-stop(100%,#ffffff));
+    box-shadow: inset 0px 0px 6px #fff;
+    -webkit-box-shadow: inset 0px 0px 6px #b3b3b3;
+    border: 1px solid #909090;
+    border-radius: 3px;
 }
 
 .agregarCarrito:hover{
@@ -1408,24 +1415,37 @@ text-align: center;
     margin: 20px;
     font-family: Goldman;
     color: white;
-    background-color: #00636C;
+    
     padding: 10px 30px;
     font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
     border-radius: 2px;
-    box-shadow: 3px 3px 20px rgb(202, 202, 202);
+    background: #383e44;
+    background: -moz-linear-gradient(top, #a5d3e6 0%, #6084a2 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3fafb), color-stop(100%,#8caac3));
+    box-shadow: inset 0px 0px 6px #fff;
+    -webkit-box-shadow: inset 0px 0px 6px #616161;
+    border: 1px solid #9ad6f8;
+    border-radius: 10px;
     outline:none !important;
     outline-width: 0 !important;
     box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
+    
 }
 
 .register form button:hover{
     cursor: pointer;
-        background-color: #048591;
+       
 
+}
+
+.descuentos ul li{
+    font-family: 'Goldman';
+font-size: 16px;
+margin-bottom: 2px;
 }
 /* ===============================
          PAGE NOT FOUND
@@ -1547,7 +1567,7 @@ text-align: center;
 
 .caja3 p{
     font-family: Roboto;
-    color: #239660;
+    color: #9ad6f8;
     margin: 35px;
   margin-bottom: 10px;
   margin-top: 10px;
@@ -1577,7 +1597,7 @@ text-align: center;
 
 .agregarProducto{
     
-    background-color: #eaeaea;  
+    
     font-family: Goldman;
     text-align: center;
     text-align: center;
@@ -1616,27 +1636,51 @@ text-align: center;
     }
 
     .prev{
+        text-align: center;
 
     }
 
     .previousRound{
-        border-radius: 50%;
-        background-color: #00636C;
+        
         color: white;
         text-decoration: none;
         display: inline-block;
         padding: 10px 16px;
         margin: 11px;
+        background: #383e44;
+    background: -moz-linear-gradient(top, #a5d3e6 0%, #6084a2 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3fafb), color-stop(100%,#8caac3));
+    box-shadow: inset 0px 0px 6px #fff;
+    -webkit-box-shadow: inset 0px 0px 6px #616161;
+    border: 1px solid #9ad6f8;
+    border-radius: 50%;
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
     }
 
     .nextRound{
         border-radius: 50%;
-        background-color: #00636C;
+        
         color: white;
         text-decoration: none;
         display: inline-block;
         padding: 10px 16px;
         margin: 11px;
+        background: #383e44;
+    background: -moz-linear-gradient(top, #a5d3e6 0%, #6084a2 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3fafb), color-stop(100%,#8caac3));
+    box-shadow: inset 0px 0px 6px #fff;
+    -webkit-box-shadow: inset 0px 0px 6px #616161;
+    border: 1px solid #9ad6f8;
+    
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
     }
 
 
@@ -1890,6 +1934,31 @@ text-align: center;
 
 @media(max-width: 425px){
 
+    .shopCart{
+        display: inherit;
+    }
+
+    .agregar{
+        padding: 7px 8px;
+        margin-left: 17px;
+    }
+
+    .productosEnCarrito{
+        margin-left: 0px;
+    width: 100%;
+    }
+
+    .derecha{
+        width: 100%;
+        padding-left: 35px;
+        margin-bottom: 45px;
+    }
+
+    .descuentos ul li{
+        font-family: 'Goldman';
+    font-size: 16px;
+    margin-bottom: 2px;
+    }
 
     .productDetail{
         display: inline-block;
@@ -1929,7 +1998,17 @@ text-align: center;
       display: none;
   }
 
+  .cajita{
+      display: inherit;
+  }
 
+  .caja4 {
+    display:inherit;
+    justify-content: flex-end;
+    font-family: Goldman;
+    margin: 0px;
+
+  }
 
 .whiteIcons{
     display: none;
@@ -1949,5 +2028,28 @@ text-align: center;
     font-family: Goldman;
 }
 
+.admin{
+    display: inherit;
+}
+
+.fa-shopping-cart::before {
+    font-size: 25px;
+}
+
+.navFondoBlanco ul li {
+    padding-left: 4px;
+}
+
+
+.fa-envelope{
+   display: none;
+}
+.fa-search::before{
+    font-size: 25px;
+}
+
+.fa-user-circle::before{
+    
+    font-size: 25px;
 }
 }

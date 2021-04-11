@@ -42,6 +42,7 @@ module.exports = {
                 }, 
                 include: ["image"]
             }).then(function (products) {
+                
                 return res.render("./allproducts", { products })
             }).catch(function(e){
                 console.log(e)

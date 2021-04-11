@@ -9,9 +9,9 @@
             <div class="register">
                 
                 <form action="?_method=PUT" method="POST" enctype="multipart/form-data">
-                    <div class="cruz">
+                    <!-- <div class="cruz">
                         <i class="fa fa-times"></i>
-                    </div>
+                    </div> -->
                     <h1 class="h1">Edita tus datos</h1>
                     <!-- si no le pongo nada en action quiere decir que esta viajando a /register y el enctype multipartes sirve para cuando tenemos que subir un archivo de tipo file y multer le dice a express que hacer con este tipo de formularios -->
                     <div class="formularioRegister">
@@ -28,7 +28,7 @@
                         <br>
                         <label for="controlFile">Subí tu Foto</label>
                         <br>
-                        <input selected type="file" name="avatar" id="controlFile" class="inputFoto">
+                        <input type="file" name="avatar" id="controlFile" class="inputFoto">
                         <br>
                         <label for="inputPassword">Contraseña:</label>
                         <br>
@@ -42,6 +42,8 @@
                         <input type="password" name="password" id="inputPassword" placeholder="Confirma tu contraseña" value="<%= user.password %>"><br>
                     </div>
                     <button type="submit">Confirmar cambios</button>
+                    <br>
+                    <a href="/admin/config" class="previousRound" style="text-align: center;">‹</a>
                 </form>
             </div>
     </body>

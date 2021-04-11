@@ -128,12 +128,12 @@ outline-width: 0 !important;
 
 .index ul li a i:hover{
     cursor: pointer;
-    color: rgba(20, 130, 128, 0.583);
+    color: #9ad6f8;
 }
 
 .index ul li button i:hover{
     cursor: pointer;
-    color: rgba(20, 130, 128, 0.583);
+    color: #9ad6f8;
 }
 
 
@@ -163,7 +163,7 @@ outline-width: 0 !important;
     box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
-    border-color: #66CC75;
+    border-color: #9ad6f8;
     -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
 	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
 	box-shadow: 0 0 5px rgba(109,207,246,.5);
@@ -313,6 +313,28 @@ outline-width: 0 !important;
     padding: 60px;
   }
 
+ .guide img{
+     width: 400px;
+     height: auto;
+     object-fit: contain;
+     
+ }
+
+  .modales{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding: 300px;
+
+  }
+
 .button-search input{
     display: none;
     background-color: transparent;
@@ -357,19 +379,28 @@ outline-width: 0 !important;
     position: absolute;
     left: 2vw;
     z-index: 1;
-    font-family: 'Goldman';
+    font-family: Goldman;
     font-size: 15px;
     font-weight: 100;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fbf7f3), color-stop(100%,#8cc3b7));
-    box-shadow: inset 0px 0px 6px #fff;
-    -webkit-box-shadow: inset 0px 0px 6px #616161;
-    border: 1px solid #8cc3b7;
-    border-radius: 10px;
    text-align: center;
     opacity: 91%;
     width: 114px;
     height: 30px;
     padding-top: 4px;
+    color: rgb(0, 0, 0);
+    letter-spacing: 1px;
+    background: #383e44;
+    background: -moz-linear-gradient(top, #a5d3e6 0%, #6084a2 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3fafb), color-stop(100%,#8caac3));
+    box-shadow: inset 0px 0px 6px #fff;
+    -webkit-box-shadow: inset 0px 0px 6px #919191;
+    border: 1px solid #9ad6f8;
+    border-radius: 10px;
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
 }
 
 .bar{
@@ -379,7 +410,7 @@ outline-width: 0 !important;
 
 .productos:hover{
     cursor: pointer;
-    color: rgb(158, 148, 148);
+    color: rgb(187, 187, 187);
 }
 
 .hanger{
@@ -680,6 +711,10 @@ hr {
     padding: 3px;
 }
 
+.imagenesPeque img:focus{
+    color: #9ad6f8;
+}
+
 .infoProducto{
     display: flex;
     flex-direction: column;
@@ -728,7 +763,7 @@ hr {
 }
 
 .line ul li a:hover{
-    color: #1f949d;
+    color: #9ad6f8;
 }
 
 .line ul span{
@@ -787,7 +822,6 @@ select {
 
 .agregarCarrito:hover{
     cursor: pointer;
-    background-color: #048591;
 }
 
 .colortalle{
@@ -1027,13 +1061,17 @@ text-align: center;
     
     font-family: Goldman;
     color: white;
-    background-color: #00636C;
     padding: 10px 30px;
     font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    border-radius: 2px;
-    box-shadow: 3px 3px 20px rgb(202, 202, 202);
+    background: #383e44;
+    background: -moz-linear-gradient(top, #a5d3e6 0%, #6084a2 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3fafb), color-stop(100%,#8caac3));
+    box-shadow: inset 0px 0px 6px #fff;
+    -webkit-box-shadow: inset 0px 0px 6px #616161;
+    border: 1px solid #9ad6f8;
+    border-radius: 10px;
 }
 
 .agregar:hover{
@@ -1080,6 +1118,13 @@ div .all{
     padding: 10px; 
 }
 
+.chau{
+    display: flex;
+    justify-content: flex-start;
+      
+    padding: 10px; 
+}
+
 .fa-times {
     transition: all 300ms;
     cursor: pointer;
@@ -1121,7 +1166,7 @@ div .all{
   
  }
  .formularioIS input:valid {
-    border-color: #31e1cf;
+    border-color: #9ad6f8;
  }
  .formularioIS input:focus {
     outline: none;
@@ -1166,14 +1211,19 @@ text-align: center;
 .IS button{
     margin: 20px;
     font-family: Goldman;
-    color: white;
-    background-color: #00636C;
+    color: rgb(0, 0, 0);
+    
     padding: 10px 30px;
     font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    border-radius: 2px;
-    box-shadow: 3px 3px 20px rgb(202, 202, 202);
+    background: #383e44;
+    background: -moz-linear-gradient(top, #a5d3e6 0%, #6084a2 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3fafb), color-stop(100%,#8caac3));
+    box-shadow: inset 0px 0px 6px #fff;
+    -webkit-box-shadow: inset 0px 0px 6px #616161;
+    border: 1px solid #9ad6f8;
+    border-radius: 10px;
     outline:none !important;
     outline-width: 0 !important;
     box-shadow: none;
@@ -1184,14 +1234,19 @@ text-align: center;
 .bot{
     margin: 20px;
     font-family: Goldman;
-    color: white;
-    background-color: #00636C;
+    color: rgb(0, 0, 0);
+    
     padding: 10px 30px;
     font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    border-radius: 2px;
-    box-shadow: 3px 3px 20px rgb(202, 202, 202);
+    background: #383e44;
+    background: -moz-linear-gradient(top, #a5d3e6 0%, #6084a2 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3fafb), color-stop(100%,#8caac3));
+    box-shadow: inset 0px 0px 6px #fff;
+    -webkit-box-shadow: inset 0px 0px 6px #616161;
+    border: 1px solid #9ad6f8;
+    border-radius: 10px;
     outline:none !important;
     outline-width: 0 !important;
     box-shadow: none;
@@ -1266,6 +1321,8 @@ text-align: center;
 }
 
 
+
+
 .formularioRegister input{
     
     position: relative;
@@ -1283,7 +1340,7 @@ text-align: center;
 }
 
 .formularioRegister input:valid {
-    border-color: #31e1cf;
+    border-color: #9ad6f8;
  }
  .formularioRegister input:focus {
     outline: none;
@@ -1844,6 +1901,10 @@ text-align: center;
 
 .index ul input {
     font-size: 6px;
+}
+.formularioRegister label {
+    margin: 7px 0px;
+    font-family: Goldman;
 }
 
 }

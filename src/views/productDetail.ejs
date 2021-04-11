@@ -19,7 +19,7 @@
                     <img id="imagen" src="/uploads/product/<%= product.image[0].filename %>" alt=""
                         class="seleccionada">
                     <div class="imagenesPeque">
-                        <img src="/img/sueterVerde-3.JPG" alt="buzo-verde">
+                        <img src="/img/sueterVerde-4.JPG" alt="buzo-verde">
                         <img src="/img/sueterVerde-4.JPG" alt="buzo-verde2">
                         <img src="/img/sueterVerde-5.JPG" alt="buzo-verde3">
                         <img src="/img/sueterVerde-6.JPG" alt="buzo-verde4">
@@ -86,7 +86,17 @@
                             Agregar al carrito
                         </button>
                     
-                    <a href="#" class="guiaTalles">Guía de Talles</a>
+                    <a href="#" class="guiaTalles" onclick="talles()">Guía de Talles</a>
+                    <div id="guia" style="display:none;" class="modales">
+                        <div class="chau">
+                            <span onclick="document.getElementById('guia').style.display='none'" class="close" title="Close Modal"><i class="fa fa-times"></i></span>
+                        </div>
+                        <div class="guide">
+                            <img  src="/img/guiatalles.jpg" alt="guia de talles" >
+                        </div>
+                        
+                    </div>
+                    
                     <br>
                     <% if(typeof user !="undefined" && user.admin==1) { %>
                         <div class="editarborrar">
@@ -122,6 +132,12 @@
                 }
             </script>
             <script src="/js/carrito.js"></script>
+            <script>
+                let guia = document.getElementById("guia");
+                function talles(){
+                    guia.style.display='block';
+                }
+            </script>
     </body>
 
     <%- include("./partials/footer.ejs") %>

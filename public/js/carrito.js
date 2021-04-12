@@ -22,6 +22,7 @@ agregar.addEventListener('click',function(){
         let carrito = [];
         carrito.push(producto)  
         localStorage.setItem('carrito',JSON.stringify(carrito)) 
+        console.log("hola mundo")
        
     } else {
         let carrito = JSON.parse(localStorage.carrito)
@@ -38,5 +39,5 @@ agregar.addEventListener('click',function(){
         
         
     }    
-        alert(nombreProducto+' agregado al carrito')
+        alert("Estas agregando" + nombreProducto + "al carrito")
 })

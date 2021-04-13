@@ -64,24 +64,25 @@ module.exports = {
 
     },
     ultimo: function(req,res){
-        db.Products.findAll({
-            attributes:  ['name', "description", "price", "id"]
-        }
-        ).then(function(ultimo){
-            
-            let respuesta = {
+        db.Product.findAll({ order:[["created_at","DESC"]], limit:1 })
+        .then(function (products) {
+           products[0].setDataValue("endpoint", "/api/products/ultimo/" + products.length)
+
+
+            let apiResponse= {
                 meta: {
                     status: 200,
-                   
-                   
+                    url: "/api/products/ultimo",
+                    total: products.length, 
                 },
-                data: ultimo
-
+                data: products
             }
-            res.json(respuesta)
-        }).catch(function () {
-            res.json({ status: 500 })
-        })
+            res.json(apiResponse)
+    })
+    .catch(function (error) {
+        res.json({ status: 500 })
+        console.log(error)
+    })
     },
     category: function(req,res){
         db.Category.findAll()
@@ -104,5 +105,39 @@ module.exports = {
             .catch(function () {
                 res.json({ status: 500 })
             })
-    }
+    },
+    count: function(req,res){
+        db.Category.findAll({ include: "product"})
+
+            .then(function (totalCategories) {
+                console.log(totalCategories)
+                if (totalCategories.length > 0) {
+                    let arrayOfCategories = []
+                    for(let i = 0; i < totalCategories.length; i++){
+                        arrayOfCategories.push({
+                            nombre:totalCategories[i].dataValues.category,
+                            total:totalCategories[i].dataValues.product.length
+                        })
+                    }
+                    let apiResponse = {
+                        meta: {
+                            status: 200,
+                            url: "/api/category",
+                            total: totalCategories.length
+                        },
+                        data:arrayOfCategories
+
+                    }
+                    return res.json(apiResponse)
+                } else {
+                    return res.json({ status: 204 })
+                }
+            })
+            .catch(function () {
+                res.json({ status: 500 })
+            })
+        }
 }
+
+
+

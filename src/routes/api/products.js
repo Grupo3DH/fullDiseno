@@ -6,7 +6,9 @@ router.get("/", productsApiController.list);
 router.get("/total", productsApiController.total);
 router.get("/ultimo", productsApiController.ultimo);
 router.get("/category", productsApiController.category);
+router.get("/categories", productsApiController.count);
 router.get("/:id", productsApiController.detail);
+
 
 
 module.exports = router; 

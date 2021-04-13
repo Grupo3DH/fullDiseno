@@ -3,7 +3,8 @@ agregar.addEventListener('click',function(){
 
     let urlArray =  window.location.href.split("/");
     let pepe = urlArray[urlArray.length - 1];
-    let imagenProducto = document.getElementById("imagen");
+    let imagenProducto = document.getElementById("imagen").getAttribute("src");
+    // console.log(imagenProducto.getAttribute("src"))
     let nombreProducto = document.getElementById('nombre').innerText;
     let precioProducto = document.getElementById('precio').innerText;
     let cantProducto = document.getElementById('count').value;
@@ -22,7 +23,7 @@ agregar.addEventListener('click',function(){
         let carrito = [];
         carrito.push(producto)  
         localStorage.setItem('carrito',JSON.stringify(carrito)) 
-        console.log("hola mundo")
+        
        
     } else {
         let carrito = JSON.parse(localStorage.carrito)

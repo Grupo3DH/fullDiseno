@@ -12,10 +12,10 @@ window.addEventListener("load",(e)=>{
            let contenido =  `
             <section class="tablaProductos">
             <div class="descProdCarrito articulo">
-            <img src="${producto.imagenProducto}" alt="">
+            <img style="width: 120px;" src="${producto.imagenProducto}" alt="">
             <div class="nomColCarrito">
             <h3> ${producto.nombreProducto} </h3>
-            <h3>Color: verde militar</h3>
+            <h3>Color:${producto.colorProducto}</h3>
             </div>
             </div>
             <div>
@@ -23,8 +23,7 @@ window.addEventListener("load",(e)=>{
            <input type="text" style="text-align: center; width: 30px;" value="1">
            <button onclick="contadormas()">+</button>
            </div>
-           <h2 class="precio">$<%= array[i].precioProducto %>
-           </h2>
+           <h2 class="precio">${producto.precioProducto}</h2>
            <i class="borrar fa fa-trash"></i></a>
            </section> `
 
@@ -33,13 +32,6 @@ window.addEventListener("load",(e)=>{
         
 
     }
-
-
-    
-   
-
-
-
 
 });
 

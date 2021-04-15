@@ -39,7 +39,7 @@
                         <div class="colores">
                             <h2>Colores disponibles</h2>
                             <% if (typeof color !="undefined" ) { %>
-                                <select class="colorProducto">
+                                <select id="colorSelect" class="colorProducto">
                                     <% for(let i=0; i< color.length; i++) {%>
                                         <% if(product.color_id==color[i].id){ %>
                                             <option selected value=<%=color[i].id %>><%= color[i].color %>
@@ -58,7 +58,7 @@
                             <!-- <div class="editarborrar">
                                 <div class="selAgregar"> -->
                             <% if (typeof talle !="undefined" ) { %>
-                                <select class="colorProducto">
+                                <select id="talleSelect" class="colorProducto">
                                     <% for(let i=0; i< talle.length; i++) {%>
                                         <% if(product.size_id==talle[i].id){ %>
                                             <option selected value=<%=talle[i].id %>><%= talle[i].size %>

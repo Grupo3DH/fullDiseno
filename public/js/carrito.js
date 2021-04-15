@@ -6,6 +6,10 @@ agregar.addEventListener('click',function(){
     let imagenProducto = document.getElementById("imagen").getAttribute("src");
     // console.log(imagenProducto.getAttribute("src"))
     let nombreProducto = document.getElementById('nombre').innerText;
+    let colorProducto = document.getElementById('colorSelect').options[document.getElementById('colorSelect').selectedIndex].text;
+    ;
+    console.log("este es mi color", colorProducto);
+    let talleProducto = document.getElementById('nombre').value;
     let precioProducto = document.getElementById('precio').innerText;
     let cantProducto = document.getElementById('count').value;
 
@@ -13,6 +17,8 @@ agregar.addEventListener('click',function(){
         idProducto: pepe,
         imagenProducto,
         nombreProducto,
+        colorProducto,
+        talleProducto,
         precioProducto,
         cantProducto
     }
@@ -40,5 +46,5 @@ agregar.addEventListener('click',function(){
         
         
     }    
-        alert("Estas agregando" + nombreProducto + "al carrito")
+        alert("Estas agregando" + " " + nombreProducto + " " + "al carrito")
 })

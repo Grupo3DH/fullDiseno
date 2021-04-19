@@ -8,7 +8,7 @@ agregar.addEventListener('click',function(){
     let nombreProducto = document.getElementById('nombre').innerText;
     let colorProducto = document.getElementById('colorSelect').options[document.getElementById('colorSelect').selectedIndex].text;
     ;
-    console.log("este es mi color", colorProducto);
+    
     let talleProducto = document.getElementById('nombre').value;
     let precioProducto = document.getElementById('precio').innerText;
     let cantProducto = document.getElementById('count').value;

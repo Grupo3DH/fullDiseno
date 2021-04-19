@@ -20,11 +20,11 @@ window.addEventListener("load",(e)=>{
             </div>
             <div>
            <button onclick="contadormenos()">-</button>
-           <input type="text" style="text-align: center; width: 30px;" value="1">
+           <input type="text" style="text-align: center; width: 30px;" value="${producto.cantProducto}">
            <button onclick="contadormas()">+</button>
            </div>
            <h2 class="precio">${producto.precioProducto}</h2>
-           <i class="borrar fa fa-trash"></i></a>
+           <i  onclick="deleteItem(${i})" class="borrar fa fa-trash"></i></a>
            </section> `
 
     div.innerHTML += contenido;
@@ -36,31 +36,13 @@ window.addEventListener("load",(e)=>{
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function deleteAll() {
 localStorage.clear()
     location.reload()
     alert('Carrito vaciado')
 }
+
+
 function deleteItem(id) {
 let carrito = JSON.parse(localStorage.carrito)
 carrito = carrito.filter((producto, i) => {

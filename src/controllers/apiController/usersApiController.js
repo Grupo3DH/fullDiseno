@@ -44,5 +44,26 @@ module.exports = {
                 return res.json({ status: 204, msg: "este usuario no se encuentra" })
             }
         })
+    },
+    ultimo: function(req,res){
+        db.User.findAll({ order:[["created_at","DESC"]], limit:1 })
+        .then(function (us) {
+           us[0].setDataValue("endpoint", "/api/users/ultimo/" + us.length)
+
+
+            let apiResponse= {
+                meta: {
+                    status: 200,
+                    url: "/api/users/ultimo",
+                    total: us.length, 
+                },
+                data: us
+            }
+            res.json(apiResponse)
+    })
+    .catch(function (error) {
+        res.json({ status: 500 })
+        console.log(error)
+    })
     }
 }

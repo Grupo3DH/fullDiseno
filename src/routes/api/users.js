@@ -4,6 +4,7 @@ const usersApiController = require("../../controllers/apiController/usersApiCont
 
 router.get("/", usersApiController.list); 
 router.get("/total", usersApiController.total);
+router.get("/ultimo", usersApiController.ultimo);
 router.get("/:id", usersApiController.detail);
 
 

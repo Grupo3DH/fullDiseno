@@ -45,6 +45,10 @@
                         </li>
                     <% } %>
 
+
+                    
+                    
+
                     <script src="/js/javascript.js"></script>
 
                     <!-- FORMULARIO DE INICIAR SESION -->
@@ -147,6 +151,7 @@
             </div>
 
                     <!-- FIN FORMULARIO DE REGISTRACION-->
+                   
 
                     <script>
                         // CAPTURO EL MODAL
@@ -170,15 +175,15 @@
 
         </ul>
     </nav>
-
     <div class="bar" id="contenido">
         <% if(typeof user=="undefined" ) { %>
                 <button><a class="productos" href="/products/all">Productos</a></button>
          <% } else if(user.admin==1) { %>   
-                <button><a class="productos" href="/admin/config">Configuración</a></button>      
+                <button><a class="productos" href="/admin/config" style="font-size: 12px">Configuración</a></button>      
          <% } else if(user.admin==0) { %>
                 <button> <a class="productos" href="/products/all">Productos</a></button>   
         <% } %>        
     </div>
-    <img class="img-header" src="/img/definitiva.jpg" alt="banner ropa unisex">
+    <img  class="img-header" src="/img/definitiva.jpg" alt="banner ropa unisex">
+    
 </header>

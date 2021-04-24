@@ -19,18 +19,19 @@ userController = {
         db.User.findByPk(req.params.id)
         .then(function (user){
             db.User.update({
-                name: req.body.nombre,
+                name: req.body.name,
                 email: req.body.email,
                 password: bcrypt.hashSync(toString(req.body.password), 12),
                 admin: 0,
                 avatar: req.file ? req.file.filename : req.session.user.avatar 
+                // typeof req.file.avatar != 'undefined'? req.file.avatar.filename: avatar
             },{
                 where: {
                     id: req.params.id,
                 }
             })
             .then(function(user){
-                return res.redirect("/perfil", {user})
+                return res.redirect("/user/perfil/"+req.session.user.id)
             })
         })
     },

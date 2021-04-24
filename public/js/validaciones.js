@@ -24,7 +24,7 @@ register.addEventListener("submit", function(e){
 
  if(inputPassword.value == ""){
     errors.push("El campo password se encuentra vacío");
-} else if(inputName.value.length > 8){
+} else if (inputPassword.value.length < 8){
     errors.push("La contraseña debe contener al menos 8 caracteres");
  }
 

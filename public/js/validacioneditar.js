@@ -7,7 +7,7 @@ editar.addEventListener("submit", function(e){
     
     let inputDescripcion = document.getElementById("descripcion")
     
-    if(inputNombre.value.length < 5){
+    if(inputNombre.value.length < 4){
         errores.push("El campo nombre debe contener al menos 5 caracteres");
      }
 
@@ -31,7 +31,8 @@ editar.addEventListener("submit", function(e){
         e.preventDefault();
     }
    
-    let small = document.querySelector("div.errores");
+    let small = document.getElementById("batata");
+        small.innerHTML = ""
     for (let i = 0; i  < errores.length; i++) {
         small.innerHTML += "<li>" + errores[i] + "</li>"
     }

@@ -1933,6 +1933,165 @@ margin-bottom: 2px;
 
 
 @media(max-width: 425px){
+    .hr2{
+        
+            display: block;
+            border-style: ridge;
+        margin-top: 0px;
+    }
+    .agregar-elemento1, .agregar-elemento2, .agregar-elemento3{
+        margin-left: 2px;
+    }
+    .articulo{
+        margin-right: 6px;
+    }
+    .cantidad{
+        margin-right: 6px;
+    }
+    .precio{
+        margin-right: 6px;
+    }
+    .borrar{
+        margin-right: 6px;
+    }
+    .tablaTitulos{
+        justify-content: flex-end;
+    }
+    .tablaProductos{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding-left: 2px;
+    }
+    .guide img {
+        width: 291px;
+
+    }
+    .similares{
+        font-size: 20px;
+    
+    }
+    
+    .agregarCarrito{
+        width: 200px;
+    height: 53px;
+    }
+
+    .line{
+        font-size: 13px;
+
+
+    }
+    p{
+        font-size: 14px;
+    }
+    select{
+        height: 43px;
+        font-size: 15px;
+    }
+    .imgProdSimilar{
+        flex-wrap: nowrap;
+    }
+    .colores {
+        margin-top: 10px;
+        margin-right: 1px;
+    }
+
+    .imagenesPeque img {
+        margin-bottom: 0px;
+        padding: 3px;
+        height: 76px;
+    }
+
+    .imagenesPeque {
+        display: flex;
+        flex-direction: column;
+    }
+    .imagenes {
+        display: flex;
+        justify-content: center;
+        margin-left: 4px;
+        flex-direction: row;
+    }
+
+    .fall2{
+        height: 300px;
+    }
+    .productosIndex article {
+        margin-bottom: 19px;
+    }
+
+    .novedades {
+        text-align: center;
+        margin-top: 17px;
+    }
+    .nuevo {
+        position: absolute;
+        top: 11px;
+        bottom: 0;
+        left: 210px;
+        right: 0;
+        font-size: 13px;
+    }
+    .fa-heart {
+        position: absolute;
+        top: 11px;
+        bottom: 0;
+        left: 258px;
+        right: 0;
+        font-size: 15px;
+    }
+    
+    .allproducts article {
+        margin: 10px;
+        border-radius: 9px;
+    }
+
+    .price{
+        top: 163px;
+        left: 69px;
+    }
+
+    .fall {
+        border-radius: 10px;
+        height: 400px;
+    }
+
+    .formularioRegister input {
+        position: relative;
+        padding: 11px 40px;
+        border-radius: 3px;
+        padding-left: 13px;
+        padding-right: 20px;
+        /* letter-spacing: .5px; */
+        border: 0;
+        border-bottom: 2px solid #f0f0f0;
+        background-color: #ffffff;
+        font-size: 9px;
+    }
+
+    .formularioIS input {
+        margin: 10px 0px;
+        padding: 2px 21px;
+        border-radius: 0px;
+    }
+
+    .banner{
+        height: 155px;
+        margin-bottom: 7px;
+    }
+
+    .modal{
+        padding: 35px;
+        
+    }
+
+    .newsletterInput{
+        letter-spacing: 10px;
+    }
+
+    .menuFondoBlanco{
+        padding: 5px 16px;
+    }
 
     .shopCart{
         display: inherit;
@@ -1971,7 +2130,8 @@ margin-bottom: 2px;
 
     .infoProducto{
         width: 90%;
-        margin-left: 4px;
+        margin-left: 15px;
+        margin-right: 0px;
     }
 
     .sim{
@@ -1985,9 +2145,10 @@ margin-bottom: 2px;
     }
     
   
-  .informacion {
-      padding: 4px 36px;
-  }
+    .informacion {
+        padding: 11px 45px;
+        margin-bottom: 6px;
+    }
 
   .p{
       font-size: 6px;
@@ -2015,13 +2176,13 @@ margin-bottom: 2px;
 }
 
 .productos{
-    width: 96px;
-    height: 30px;
-    font-size: 14px;
+    width: 85px;
+    height: 26px;
+    font-size: 12px;
 }
 
 .index ul input {
-    font-size: 6px;
+    font-size: 8px;
 }
 .formularioRegister label {
     margin: 7px 0px;
@@ -2033,7 +2194,7 @@ margin-bottom: 2px;
 }
 
 .fa-shopping-cart::before {
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .navFondoBlanco ul li {
@@ -2041,15 +2202,15 @@ margin-bottom: 2px;
 }
 
 
-.fa-envelope{
+li a .fa-envelope{
    display: none;
 }
 .fa-search::before{
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .fa-user-circle::before{
     
-    font-size: 25px;
+    font-size: 22px;
 }
 }

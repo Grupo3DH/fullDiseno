@@ -19,9 +19,9 @@ window.addEventListener("load",(e)=>{
             </div>
             </div>
             <div>
-           <button onclick="contadormenos()">-</button>
+           
            <input type="text" style="text-align: center; width: 30px;" value="${producto.cantProducto}">
-           <button onclick="contadormas()">+</button>
+        
            </div>
            <h2 class="precio">${producto.precioProducto}</h2>
            <i  onclick="deleteItem(${i})" class="borrar fa fa-trash"></i></a>

@@ -1,11 +1,10 @@
-let agregar = document.getElementById("agregar")
+let agregar2 = document.getElementById("agregar2");
+console.log(agregar2)
 
-agregar.addEventListener("submit", function(e){
+agregar2.addEventListener("submit", function(e){
     let errores = [];
-
     let inputNombre = document.getElementById("nombre");
-    
-    let inputDescripcion = document.getElementById("descripcion")
+    let inputDescripcion = document.getElementById("descripcion");
     
     if(inputNombre.value == ""){
         errores.push("Debes ingresarle un nombre a tu producto")
@@ -35,11 +34,13 @@ agregar.addEventListener("submit", function(e){
         e.preventDefault();
     }
    
-    let small = document.querySelector("div.errores");
+    let small = document.getElementById("errores");
+        small.innerHTML = "";
     for (let i = 0; i  < errores.length; i++) {
         small.innerHTML += "<li>" + errores[i] + "</li>"
     }
-
+    console.log(errores)
+    
 
 
 })

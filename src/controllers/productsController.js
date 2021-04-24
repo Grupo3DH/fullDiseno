@@ -51,6 +51,8 @@ module.exports = {
     cart: function (req, res) {
         res.render("productCart")
     }
-
+    // pay: function (req, res) {
+    //     res.render("pay")
+    // }
 }
 

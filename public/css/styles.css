@@ -1762,7 +1762,7 @@ margin-bottom: 2px;
     position: relative;
     display: inline-block;
     height: 36px;
-    width: 160px;
+    width: 130px;
     line-height: 35px;
     padding: 0;
     color: #fff;
@@ -1810,7 +1810,7 @@ margin-bottom: 2px;
 .contenedor-redes-sociales a span.circulo i {
     width: 100%;
     text-align: center;
-    font-size: 16px;
+    font-size: 15px;
     margin: 0px;
     padding: 7px;
     
@@ -1820,7 +1820,7 @@ margin-bottom: 2px;
     position: absolute;
     text-align: center;
     margin: 0 auto;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 400;
     transition: .5s;
 }
@@ -1883,8 +1883,18 @@ margin-bottom: 2px;
 }
   
 
+/* ===============================
+         pago
+============================== */
 
-
+ .visa{
+     height: 60px;
+    text-align: center;
+    align-content: center;
+    margin-bottom: 23px;
+    margin-left: 6px;
+}
+ 
 
 
 /* ===============================
@@ -2073,6 +2083,15 @@ margin-bottom: 2px;
 
 
 @media(max-width: 425px){
+    .contenedor-redes-sociales {
+        display: -webkit-inline-box;
+        flex-direction: column;
+        text-align: center;
+    }
+    .cuotas{
+        display: none;
+    }
+    
     .contenedor-redes-sociales a {
         
         margin: 0;

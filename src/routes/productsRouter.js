@@ -12,4 +12,6 @@ router.get("/search", productsController.search); // buscar producto
 
 router.get("/cart", productsController.cart); //CARRITO DE COMPRAS
 
+// router.get("/pay", productsController.pay);
+
 module.exports = router; 

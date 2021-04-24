@@ -638,13 +638,13 @@ hr {
 
 .informacion {
     display:flex;
-    padding: 14px 50px;
+    padding: 10px 70px;
     align-items: center;
     flex-direction: row;
     justify-content:space-between;
-    font-size: 13px;
+    font-size: 11px;
     text-align: center; 
-    margin-bottom: 10px;
+   
     transition: all .2s;
 }
 
@@ -655,8 +655,8 @@ hr {
 }
 
 .informacion i {
-    font-size: 42px;
-    margin: 13px;
+    font-size: 35px;
+    margin: 11px;
     
 }
 
@@ -1748,8 +1748,139 @@ margin-bottom: 2px;
     
  }
 
+ /* =================
+     detalles divertidos
+============================== */
+
+ .contenedor-redes-sociales {
+     display: flex;
+     flex-direction: column;
+    text-align: center;
+}
+
+.contenedor-redes-sociales a {
+    position: relative;
+    display: inline-block;
+    height: 36px;
+    width: 160px;
+    line-height: 35px;
+    padding: 0;
+    color: #fff;
+    border-radius: 50px;
+    background: #fff;
+    margin: 5px;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.contenedor-redes-sociales a:hover span.circulo {
+    left: 100%;
+    margin-left: -35px;
+    background: #fff;
+}
+
+.contenedor-redes-sociales a:hover span.titulo {
+    opacity: 0;
+}
+
+.contenedor-redes-sociales a:hover span.titulo-hover {
+    opacity: 1;
+    color: #fff;
+}
+
+.contenedor-redes-sociales a span.titulo-hover {
+    opacity: 0;
+}
+
+.contenedor-redes-sociales a span.circulo {
+    display: block;
+    color: #fff;
+    position: absolute;
+    float: left;
+    margin: 1px;
+    line-height: 30px;
+    height: 30px;
+    width: 30px;
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+    border-radius: 50%;
+}
+
+.contenedor-redes-sociales a span.circulo i {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    margin: 0px;
+    padding: 7px;
+    
+}
+
+.contenedor-redes-sociales a span.titulo, .contenedor-redes-sociales a span.titulo-hover {
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 400;
+    transition: .5s;
+}
+
+.contenedor-redes-sociales a span.titulo {
+    right: 15px
+}
+
+.contenedor-redes-sociales a span.titulo-hover {
+    left: 15px
+}
 
 
+/*----------Colores de los botones----------*/
+
+.contenedor-redes-sociales .facebook {
+    border: 2px solid #3b5998;
+}
+
+.contenedor-redes-sociales .facebook:hover, .contenedor-redes-sociales .facebook span.circulo {
+    background: #3b5998;
+}
+
+.contenedor-redes-sociales .facebook:hover span.circulo, .contenedor-redes-sociales .facebook span.titulo {
+    color: #3b5998;
+}
+
+.contenedor-redes-sociales .twitter {
+    border: 2px solid rgb(221, 33, 137,1 );
+    
+    
+    
+}
+
+.contenedor-redes-sociales .twitter:hover, .contenedor-redes-sociales .twitter span.circulo {
+    background: #dd2a7b;
+    background: -moz-linear-gradient(45deg, rgb(116, 73, 234) 0%, rgb(221, 33, 137) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgb(234, 73, 194,1)), color-stop(100%, rgb(234, 73, 194,1)));
+    background: -webkit-linear-gradient(45deg, rgb(116, 73, 234,1) 0%, rgb(234, 73, 194,1) 100%);
+    background: -o-linear-gradient(45deg, rgb(116, 73, 234,1) 0%, rgb(234, 73, 194,1) 100%);
+    background: -ms-linear-gradient(45deg, rgb(116, 73, 234,1) 0%, rgb(234, 73, 194,1) 100%);
+    background: linear-gradient(45deg, rgb(116, 73, 234,1) 0%, rgb(234, 73, 194,1) 100%);
+}
+
+.contenedor-redes-sociales .twitter:hover span.circulo, .contenedor-redes-sociales .twitter span.titulo {
+    color: #dd2a7b;
+    
+}
+
+.contenedor-redes-sociales .gplus {
+    border: 2px solid #dd4b39;
+}
+
+.contenedor-redes-sociales .gplus:hover, .contenedor-redes-sociales .gplus span.circulo {
+    background: #dd4b39;
+}
+
+.contenedor-redes-sociales .gplus:hover span.circulo, .contenedor-redes-sociales .gplus span.titulo {
+    color: #dd4b39;
+}
   
 
 
@@ -1762,6 +1893,9 @@ margin-bottom: 2px;
 
 
 @media(max-width: 1024px) {
+    .display{
+        font-size: 12px;
+    }
 
     .sim{
         height: 300px;
@@ -1841,6 +1975,9 @@ margin-bottom: 2px;
   
   
 @media(max-width: 768px){
+    .consultas{
+        display: none;
+    }
 .sim{
     height: 250px;
 }
@@ -1872,7 +2009,10 @@ margin-bottom: 2px;
       }
 
 
- @media(max-width: 660px){     
+ @media(max-width: 660px){   
+    .consultas{
+        display: none;
+    }  
       .img-header{
           position:initial;
       }
@@ -1933,6 +2073,21 @@ margin-bottom: 2px;
 
 
 @media(max-width: 425px){
+    .contenedor-redes-sociales a {
+        
+        margin: 0;
+        margin-bottom: 10px;
+        
+    }
+    .cambios{
+        display: none;
+    }
+
+    .consultas{
+        display: none;
+    }
+    
+
     .hr2{
         
             display: block;
@@ -2146,7 +2301,7 @@ margin-bottom: 2px;
     
   
     .informacion {
-        padding: 11px 45px;
+        padding: 11px 69px;
         margin-bottom: 6px;
     }
 

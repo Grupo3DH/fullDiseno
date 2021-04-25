@@ -22,7 +22,7 @@ userController = {
                 name: req.body.name,
                 email: req.body.email,
                 password: bcrypt.hashSync(toString(req.body.password), 12),
-                admin: 0,
+                // admin: 0,
                 avatar: req.file ? req.file.filename : req.session.user.avatar 
                 // typeof req.file.avatar != 'undefined'? req.file.avatar.filename: avatar
             },{

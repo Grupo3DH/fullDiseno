@@ -31,16 +31,17 @@
             
 
             <% if(typeof user=="undefined" ) { %>
-                <li>
+                <li >
                     <button title="Iniciar Sesión" onclick="document.getElementById('id01').style.display='block'"><i class="fas fa-user-circle fa-lg"></i></button>
                 </li>
                 <% } else if(user.admin==1) { %>
                     <li>  
-                        <a href="/admin" title="Configuración del sitio">HOLA ADMIN</a>
+                        <a class="logueado" href="/admin" title="Configuración del sitio">HOLA ADMIN</a>
                         <a href="/admin/logout" title="Cerrar Sesión"><i class="fas fa-sign-out-alt fa-lg"></i></a> 
                     </li>
                     <% } else if(user.admin==0) { %>
-                        <li><a href="/user/perfil/<%= user.id %>" title="Tu perfil">HOLA <%= user.name %></a>
+                        <li>
+                            <a  class="logueado" href="/user/perfil/<%= user.id %>" title="Tu perfil">HOLA <%= user.name %></a>
                             <a href="/user/logout" title="Cerrar Sesión"><i class="fas fa-sign-out-alt fa-lg"></i></a>
                         </li>
                     <% } %>

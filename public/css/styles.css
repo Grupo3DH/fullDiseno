@@ -935,6 +935,7 @@ select {
 
 .sim{
     padding: 20px;
+    height: 350px;
 }
 /* ======================
       PRODUCT CART
@@ -1554,7 +1555,7 @@ margin-bottom: 2px;
   /*  Margin top should be no more than 85px  */
   margin-top: -60px;
   border: 10px solid rgba(154, 154, 154, 0.45);
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 .caja4{
@@ -1567,7 +1568,7 @@ margin-bottom: 2px;
 
 .caja3 p{
     font-family: Roboto;
-    color: #9ad6f8;
+    color: #383e44;
     margin: 35px;
   margin-bottom: 10px;
   margin-top: 10px;
@@ -1582,6 +1583,7 @@ margin-bottom: 2px;
     padding: 0 2.4rem;
     margin-left: 2rem;
 }
+
 
 
 
@@ -1928,6 +1930,9 @@ margin-bottom: 2px;
   
   
   @media(max-width: 910px) {
+    .sim {
+        height: 273px;
+    }
     .fixed{
         display: none;
     }
@@ -1957,6 +1962,9 @@ margin-bottom: 2px;
   }
   
 @media(max-width: 813px) {
+    .icon{
+        padding-top: 20px;
+     }
   
       h2{
           font-size: 13px;
@@ -1970,27 +1978,51 @@ margin-bottom: 2px;
           height: 82px;
   
       }
+      .sim {
+        height: 223px;
+    }
   
       
   }
   
   
 @media(max-width: 802px){
-    
+    .colorProducto {
+        padding: 10px 0px;
+        margin-top: 10px;
+        width: 120px;
+    }
+    .icon{
+        padding-top: 20px;
+     }
       
       .footerWhite{
           margin: -20px 10px 10px 11px;
   }
+  .sim {
+    height: 223px;
+}
 
   
   
 @media(max-width: 768px){
+    .productDetail {
+        display: flex;
+        margin: 10px;
+        flex-direction: column;
+    }
+    .colorProducto{
+        width: 126px;
+    }
+    .icon{
+        padding-top: 20px;
+     }
     .consultas{
         display: none;
     }
-.sim{
-    height: 250px;
-}
+    .sim {
+        height: 223px;
+    }
 
 .imagenes {
     margin-left: 4px;
@@ -2019,7 +2051,16 @@ margin-bottom: 2px;
       }
 
 
- @media(max-width: 660px){   
+ @media(max-width: 660px){  
+     .infoProducto{
+        width: 90%;
+     }
+    .logueado{
+        display: none;
+    } 
+     .icon{
+        padding-top: 22px;
+     }
     .consultas{
         display: none;
     }  
@@ -2083,6 +2124,13 @@ margin-bottom: 2px;
 
 
 @media(max-width: 425px){
+    .icon{
+        padding-top: 5px;
+    }
+    .logueado{
+        display: none;
+    }
+
     .contenedor-redes-sociales {
         display: -webkit-inline-box;
         flex-direction: column;

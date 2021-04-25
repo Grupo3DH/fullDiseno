@@ -20,7 +20,7 @@ agregar2.addEventListener("submit", function(e){
 
      let inputImagen = document.getElementById("imagen");
 
-     if (!(/\.(jpg|png|jpeg|gif)$/i).test(inputImagen.value)) {
+     if (!(/\.(jpg|png|jpeg|gif|svg)$/i).test(inputImagen.value)) {
         errores.push("El archivo a adjuntar no es una imagen válida");
     }
 

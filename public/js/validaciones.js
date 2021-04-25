@@ -45,7 +45,7 @@ if(!validar_email(inputEmail.value))
 
 let imagen = document.getElementById("controlFile");
 
-if (!(/\.(jpg|png|jpeg|gif)$/i).test(imagen.value)) {
+if (!(/\.(jpg|png|jpeg|gif|svg)$/i).test(imagen.value)) {
    errors.push("El archivo a adjuntar no es una imagen válida");
 }
 
@@ -54,6 +54,7 @@ if (!(/\.(jpg|png|jpeg|gif)$/i).test(imagen.value)) {
  }
 
  let small = document.querySelector("div.errors");
+ small.innerHTML = "";
  for (let i = 0; i  < errors.length; i++) {
      small.innerHTML += "<li>" + errors[i] + "</li>"
  }

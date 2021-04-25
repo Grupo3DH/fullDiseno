@@ -21,6 +21,7 @@ login.addEventListener("submit", function(e){
     }
    
     let small = document.querySelector("div.errores");
+    small.innerHTML = "";
     for (let i = 0; i  < errores.length; i++) {
         small.innerHTML += "<li>" + errores[i] + "</li>"
     }
